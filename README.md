@@ -5,12 +5,11 @@
 
 The diverse skills we bring to the table ensures our projects can meet the demands of all our clients. As a professional group we understand security and networking is an ever changing environment and strive on a daily basis to improve our skills.
 
-- Marcus uses time management skills to achieve a MVP in an efficient manner.
-- Bill uses his confidence in communication to deliver an effective and compelling presentation.
+- Vincent specializes in Windows OS operations and Python scripting.
 - Josh specializes in networking and coding.
-- Harrison works tirelessly to ensure his personality invites engagement and professionalism.
+- Harrison is a master communicator and an Active Directory Specialist.
  
-Every day we have a standup meeting that puts us all on the same page. Meeting customer goals is the goal.
+Every day we have a standup meeting that puts us all on the same page. Meeting customer goals is THE goal.
 
 ## Conflict Resolution
 
@@ -39,13 +38,5 @@ All team members will pull a morning standup and push at the end of collaborativ
 All pull requests will go through 2 separate approvals to ensure workflow on github is seamless.
 
 System Selection:
-
-- AWS
-- Splunk
-- FileCloud(
-- Windows 10 Machine
-
-
--TBD
 
 
