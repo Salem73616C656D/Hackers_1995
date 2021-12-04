@@ -7,7 +7,7 @@ The diverse skills we bring to the table ensures our projects can meet the deman
 
 - Vincent specializes in Windows OS operations and Python scripting.
 - Josh specializes in networking and coding.
-- Harrison is a master communicator and an Active Directory Specialist.
+- Harrison is a master communicator and an Active Directory specialist.
  
 Every day we have a standup meeting that puts us all on the same page. Meeting customer goals is THE goal.
 
