@@ -38,5 +38,6 @@ All team members will pull a morning standup and push at the end of collaborativ
 All pull requests will go through 2 separate approvals to ensure workflow on github is seamless.
 
 System Selection:
+- [Trello](https://trello.com/b/YzJDJehf/red-team)
 
 
