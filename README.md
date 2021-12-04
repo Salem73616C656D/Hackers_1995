@@ -3,13 +3,11 @@
 
 ## What We Offer
 
-This team brings together years of experience. Josh specializes in networking and code. Harrison is a master communicator and Active Directory specialist. Marcus specializes in cloud technologies and secure code. Bill’s focus is in DLP, data governance and compliance.
-
-The diverse skills we bring to the table ensures our projects can meet the demands of all our clients. As a professional group we understand security and networking is an ever changing environment and strive on a daily basis to improve our skills. We each identify areas of weakness and work to improve those.
+The diverse skills we bring to the table ensures our projects can meet the demands of all our clients. As a professional group we understand security and networking is an ever changing environment and strive on a daily basis to improve our skills.
 
 - Marcus uses time management skills to achieve a MVP in an efficient manner.
 - Bill uses his confidence in communication to deliver an effective and compelling presentation.
-- Josh depends on his adept decision making skills and works to improve them.
+- Josh specializes in networking and coding.
 - Harrison works tirelessly to ensure his personality invites engagement and professionalism.
  
 Every day we have a standup meeting that puts us all on the same page. Meeting customer goals is the goal.
