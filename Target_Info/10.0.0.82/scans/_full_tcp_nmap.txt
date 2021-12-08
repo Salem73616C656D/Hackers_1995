@@ -1,0 +1,93 @@
+# Nmap 7.91 scan initiated Wed Dec  8 14:50:11 2021 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /home/kali/Desktop/results/10.0.0.82/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/results/10.0.0.82/scans/xml/_full_tcp_nmap.xml 10.0.0.82
+adjust_timeouts2: packet supposedly had rtt of -756707 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -756707 microseconds.  Ignoring time.
+Nmap scan report for 10.0.0.82
+Host is up, received user-set (0.022s latency).
+Scanned at 2021-12-08 14:50:11 EST for 113s
+Not shown: 65521 closed ports
+Reason: 65521 resets
+PORT      STATE    SERVICE        REASON          VERSION
+21/tcp    open     ftp            syn-ack ttl 127 Microsoft ftpd
+| ftp-syst: 
+|_  SYST: Windows_NT
+80/tcp    open     http           syn-ack ttl 127 Microsoft IIS httpd 7.5
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/7.5
+|_http-title: Site doesn't have a title (text/html).
+135/tcp   filtered msrpc          no-response
+139/tcp   filtered netbios-ssn    no-response
+445/tcp   filtered microsoft-ds   no-response
+3389/tcp  open     ms-wbt-server? syn-ack ttl 127
+| ssl-cert: Subject: commonName=vagrant-2008R2
+| Issuer: commonName=vagrant-2008R2
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2021-11-30T23:13:17
+| Not valid after:  2022-06-01T23:13:17
+| MD5:   e2f1 8a0f a880 6963 6045 b4bb 01b2 1158
+| SHA-1: 2c1e fd3f 9d67 eca8 0351 340d 585d 31b6 135b a13f
+| -----BEGIN CERTIFICATE-----
+| MIIC4DCCAcigAwIBAgIQLv7SWkXLkalJZvryBI/2aDANBgkqhkiG9w0BAQUFADAZ
+| MRcwFQYDVQQDEw52YWdyYW50LTIwMDhSMjAeFw0yMTExMzAyMzEzMTdaFw0yMjA2
+| MDEyMzEzMTdaMBkxFzAVBgNVBAMTDnZhZ3JhbnQtMjAwOFIyMIIBIjANBgkqhkiG
+| 9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp0izJPNUbvQyOVjAjzfAEpGHfX994zFUEjhF
+| +zUAirvnHgPocff38MIKEP9D/4lWRX4HICKD2Ohv2JcN/6zceE1Fq4QuL8mXb3Db
+| s8Bip3LHuk88G6EDQAbOD/HRGXIEaaCUXbDxS8Ygs8P1xnZloRIFbDfWQy8/vk/y
+| MIfjBzUddgGmjxNtcnKmxXo6s/ZrkATQ7WCcJNtVtBdHGU0l385HPdcC/i25/Kq0
+| hnh/rRmc85lYyY+KrDX34ld90J5Pu4a1RXwwOZshX2SgRygICHfzOoMsQPxINUx3
+| 3fkrab5nj/ICugWUWdZcdtzW1KPSg4yFyM6FCIGE8YrstNWd3QIDAQABoyQwIjAT
+| BgNVHSUEDDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQEFBQAD
+| ggEBAJz4Grah6myLTEJj7PQtD7w67PPMpOSoJDZ/s1FsmFjufH9DZ/o4VaB949Np
+| 6AYCEJRt4spyIKQhmTDPsJxwA/DycjlPGbY8P98LEnpEnSqTNOgIJYIUnDoXc3X0
+| EKA+pOSD+eEze0j9+B1y6aeaT7tZdpO2+AcXBC3R0ZicbZL4EVR0lbMowxCis8lz
+| 8lNx29IGnFdpRv9bt8wsCGpK10Z9obkOKuJkeE9VO26BojStszwwGt+4bcBN3+h3
+| Lx15yhvuYYRHxb4gLWTFF4H3imx9VQOtsxgBKG3a323c++8dLPb67aTsTlNJOaih
+| 4Na6o/0WqHFSbWb9DiSjf961ybI=
+|_-----END CERTIFICATE-----
+|_ssl-date: 2021-12-08T19:52:02+00:00; -2s from scanner time.
+5985/tcp  open     http           syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+47001/tcp open     http           syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49152/tcp open     msrpc          syn-ack ttl 127 Microsoft Windows RPC
+49153/tcp open     msrpc          syn-ack ttl 127 Microsoft Windows RPC
+49154/tcp open     msrpc          syn-ack ttl 127 Microsoft Windows RPC
+49161/tcp open     msrpc          syn-ack ttl 127 Microsoft Windows RPC
+49162/tcp open     msrpc          syn-ack ttl 127 Microsoft Windows RPC
+49165/tcp open     msrpc          syn-ack ttl 127 Microsoft Windows RPC
+Device type: general purpose
+Running: Microsoft Windows 7
+OS CPE: cpe:/o:microsoft:windows_7
+OS details: Microsoft Windows 7
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=12/8%OT=21%CT=1%CU=38568%PV=Y%DS=2%DC=T%G=Y%TM=61B10CE
+OS:4%P=x86_64-pc-linux-gnu)SEQ(SP=102%GCD=1%ISR=107%TS=7)OPS(O1=M4ECNW8ST11
+OS:%O2=M4ECNW8ST11%O3=M4ECNW8NNT11%O4=M4ECNW8ST11%O5=M4ECNW8ST11%O6=M4ECST1
+OS:1)WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=2000)ECN(R=N)ECN(R=Y%DF
+OS:=Y%T=80%W=2000%O=M4ECNW8NNS%CC=N%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS%RD=0%
+OS:Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=N)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=
+OS:0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RU
+OS:CK=G%RUD=G)U1(R=N)IE(R=N)
+
+Uptime guess: 1.136 days (since Tue Dec  7 11:35:32 2021)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=259 (Good luck!)
+IP ID Sequence Generation: Busy server or unknown class
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: -2s
+
+TRACEROUTE (using port 995/tcp)
+HOP RTT      ADDRESS
+1   23.17 ms 172.27.232.1
+2   24.75 ms 10.0.0.82
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Dec  8 14:52:04 2021 -- 1 IP address (1 host up) scanned in 113.08 seconds

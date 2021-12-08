@@ -1,0 +1,127 @@
+# Nmap 7.91 scan initiated Wed Dec  8 15:18:08 2021 as: nmap -vv --reason -Pn -sV -sC --version-all -oN /home/kali/Desktop/results/10.0.0.197/scans/_quick_tcp_nmap.txt -oX /home/kali/Desktop/results/10.0.0.197/scans/xml/_quick_tcp_nmap.xml 10.0.0.197
+Nmap scan report for 10.0.0.197
+Host is up, received user-set (0.032s latency).
+Scanned at 2021-12-08 15:18:09 EST for 50s
+Not shown: 995 closed ports
+Reason: 995 resets
+PORT     STATE SERVICE       REASON          VERSION
+135/tcp  open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+139/tcp  open  netbios-ssn   syn-ack ttl 127 Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds  syn-ack ttl 127 Windows Server 2019 Standard Evaluation 17763 microsoft-ds
+3389/tcp open  ms-wbt-server syn-ack ttl 127 Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: ACCOUNTING2
+|   NetBIOS_Domain_Name: ACCOUNTING2
+|   NetBIOS_Computer_Name: ACCOUNTING2
+|   DNS_Domain_Name: accounting2
+|   DNS_Computer_Name: accounting2
+|   Product_Version: 10.0.17763
+|_  System_Time: 2021-12-08T20:18:51+00:00
+| ssl-cert: Subject: commonName=accounting2
+| Issuer: commonName=accounting2
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-11-29T18:02:39
+| Not valid after:  2022-05-31T18:02:39
+| MD5:   8405 5f21 7b7a df29 5ec6 2f2e 3047 902a
+| SHA-1: 5c26 562a da03 e9b0 fc40 ceda 1f3b cec8 788d d00c
+| -----BEGIN CERTIFICATE-----
+| MIIC2jCCAcKgAwIBAgIQVlerumV+krNLL63kEpfvjjANBgkqhkiG9w0BAQsFADAW
+| MRQwEgYDVQQDEwthY2NvdW50aW5nMjAeFw0yMTExMjkxODAyMzlaFw0yMjA1MzEx
+| ODAyMzlaMBYxFDASBgNVBAMTC2FjY291bnRpbmcyMIIBIjANBgkqhkiG9w0BAQEF
+| AAOCAQ8AMIIBCgKCAQEAv1BQi+6JANZCo+kdNGOdNgociIHYTeTOKjt8joC4ZCph
+| ngQSTPBy81QPCWxnbdkej3nmVNVh/Up4WnBdI52/5qOj5XVIw5LVcTgG/1XyIZyU
+| OV9ODqVEBytQ7xTgMYiNl8nGQmk1dBJqs/gSDXLCsp69Mutcxz4LlqXO5WN1ZPor
+| oIg8jgUIctLLJgtH3PtCA1Ktg5dOtDzzPJXRArr94meRTcHixpVcOnRRDT+Z7QwV
+| I5DwJ7EcxMpNLpqw23oMw1LaQr4GSkdJZQvndSl/+x4aFHTK7/AZd5VWhlf3/7TB
+| x93YYARa+eUum5+ip5P9B5bHhNZzLF2y4NVOvbiJDQIDAQABoyQwIjATBgNVHSUE
+| DDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBAJV+
+| Pd+09ZWSy07WHbKmwAr2qmVzF29okc6X9SKTd5Kxt5/joCLGh20nsv88m8DQrRs4
+| HasgnXXFjlt71vIsQPSJ6k8I37O4RRkBl7bnDasKTwC9mZd6OUdBMGWW5LIJfznP
+| idlDnr8H9P5a5GCUlcyJepjG9T1qCPhLqlZDBXQRs2cJ/agTi/pvT2UnkxEQ6K91
+| l+2oIhtaW91xZrYfqAKxqbK30fS5GTfkuX4QFE0ATccf4k3PgWMOV6xXqW4EecU+
+| mwFGbV4daaySgVR6cXMInT2csa9swnCIKg6NvwE9IT5fhxJ+HSgBfRALxnwa1hJo
+| fvZXUuDkheUJ4N7xczM=
+|_-----END CERTIFICATE-----
+|_ssl-date: 2021-12-08T20:18:58+00:00; -1s from scanner time.
+8089/tcp open  ssl/http      syn-ack ttl 127 Splunkd httpd
+| http-methods: 
+|_  Supported Methods: GET HEAD OPTIONS
+| http-robots.txt: 1 disallowed entry 
+|_/
+|_http-server-header: Splunkd
+|_http-title: splunkd
+| ssl-cert: Subject: commonName=SplunkServerDefaultCert/organizationName=SplunkUser
+| Issuer: commonName=SplunkCommonCA/organizationName=Splunk/stateOrProvinceName=CA/countryName=US/emailAddress=support@splunk.com/localityName=San Francisco
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-06-07T19:35:56
+| Not valid after:  2024-06-06T19:35:56
+| MD5:   c3f5 f623 8aee 96d7 0b61 2df7 e69e 0fd1
+| SHA-1: 41dc a8c1 6a2d af54 ebdb 13ea ad46 6f69 ebde bf63
+| -----BEGIN CERTIFICATE-----
+| MIIDMjCCAhoCCQDSaX5ms7uQNzANBgkqhkiG9w0BAQsFADB/MQswCQYDVQQGEwJV
+| UzELMAkGA1UECAwCQ0ExFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xDzANBgNVBAoM
+| BlNwbHVuazEXMBUGA1UEAwwOU3BsdW5rQ29tbW9uQ0ExITAfBgkqhkiG9w0BCQEW
+| EnN1cHBvcnRAc3BsdW5rLmNvbTAeFw0yMTA2MDcxOTM1NTZaFw0yNDA2MDYxOTM1
+| NTZaMDcxIDAeBgNVBAMMF1NwbHVua1NlcnZlckRlZmF1bHRDZXJ0MRMwEQYDVQQK
+| DApTcGx1bmtVc2VyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnWqp
+| hORc00LXq0aSgV6acL00FcNhCw8cc547cQfKtO+fV37zdrf5gr2zaFIxeGazLssF
+| 5zCoytw4lFa1oi+htK0y4w+e/ylATaClcwYEcBQlpSEN6pFa0yJCdkdGlac+EF50
+| WB+JK3e/hDeGEzHYc9PEisVbZzhfEDDaJJHoxBjK38JTNoT+8ZUU28+psEOjhPMA
+| NFbU0xIagxqBKT3KANEjVxz0xA6XuGRPPNkdD19JAdCHIE+43qMs/M0Ggh9IHLJF
+| noH0/KHo2hlIarkb7CDpuIRtXfO0HjUct9jUaeD3GxTC/9NNQvKIMYbN9WUJH2FO
+| oof/glULxUcQadZrpQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBKkVF1vcIyhIk+
+| IK9ooFRE51DyeC4X6lf8oRefVE7RakbbGJ+w5lKxUK+s3oLXGvtd5BoEG3+czc0O
+| 024jjJk7hMBPSarbjaOWJChNQsYAMjTlazWjSpzw+VNPufYZBYnlAAOuu06BaPR7
+| wGCTTdzFjoWss7Pt04pWK+Nq+5TcBvyKJ44+06IXXoCwMQCWKUHsBh6rMQtbDH+5
+| w+H6Xdp+ZhvlBC8Shncutdyo37WU8Z2K8Miv7DjunyfswWj4fp2hQb17ycEWsTJf
+| 0qUMotob0z6TbcyEEZcVAdzBWELtAmDYK2IwFbxe9Lot6e/fUNVpD6qK1lxtKUrN
+| b4uISMNi
+|_-----END CERTIFICATE-----
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 1h35m59s, deviation: 3h34m39s, median: -1s
+| nbstat: NetBIOS name: ACCOUNTING2, NetBIOS user: <unknown>, NetBIOS MAC: 06:0a:5d:3d:c7:19 (unknown)
+| Names:
+|   ACCOUNTING2<00>      Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   ACCOUNTING2<20>      Flags: <unique><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+| Statistics:
+|   06 0a 5d 3d c7 19 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 41911/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 42551/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 48662/udp): CLEAN (Timeout)
+|   Check 4 (port 30104/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-os-discovery: 
+|   OS: Windows Server 2019 Standard Evaluation 17763 (Windows Server 2019 Standard Evaluation 6.3)
+|   Computer name: accounting2
+|   NetBIOS computer name: ACCOUNTING2\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2021-12-08T12:18:50-08:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2021-12-08T20:18:51
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Dec  8 15:18:59 2021 -- 1 IP address (1 host up) scanned in 51.36 seconds

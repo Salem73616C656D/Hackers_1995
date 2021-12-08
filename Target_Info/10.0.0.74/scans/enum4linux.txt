@@ -1,0 +1,125 @@
+Starting enum4linux v0.8.9 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Wed Dec  8 15:23:36 2021
+
+ ========================== 
+|    Target Information    |
+ ========================== 
+Target ........... 10.0.0.74
+RID Range ........ 500-550,1000-1050
+Username ......... ''
+Password ......... ''
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
+
+
+ ================================================= 
+|    Enumerating Workgroup/Domain on 10.0.0.74    |
+ ================================================= 
+[+] Got domain/workgroup name: WORKGROUP
+
+ ========================================= 
+|    Nbtstat Information for 10.0.0.74    |
+ ========================================= 
+Looking up status of 10.0.0.74
+	RISK-ANALYST1   <00> -         B <ACTIVE>  Workstation Service
+	WORKGROUP       <00> - <GROUP> B <ACTIVE>  Domain/Workgroup Name
+	RISK-ANALYST1   <20> -         B <ACTIVE>  File Server Service
+	WORKGROUP       <1e> - <GROUP> B <ACTIVE>  Browser Service Elections
+	WORKGROUP       <1d> -         B <ACTIVE>  Master Browser
+	..__MSBROWSE__. <01> - <GROUP> B <ACTIVE>  Master Browser
+
+	MAC Address = 06-F6-38-75-54-4B
+
+ ================================== 
+|    Session Check on 10.0.0.74    |
+ ================================== 
+[+] Server 10.0.0.74 allows sessions using username '', password ''
+
+ ================================================== 
+|    Getting information via LDAP for 10.0.0.74    |
+ ================================================== 
+[E] Connection error
+
+ ======================================== 
+|    Getting domain SID for 10.0.0.74    |
+ ======================================== 
+Could not initialise lsarpc. Error was NT_STATUS_ACCESS_DENIED
+[+] Can't determine if host is part of domain or part of a workgroup
+
+ =================================== 
+|    OS information on 10.0.0.74    |
+ =================================== 
+Use of uninitialized value $os_info in concatenation (.) or string at ./enum4linux.pl line 464.
+[+] Got OS info for 10.0.0.74 from smbclient: 
+[+] Got OS info for 10.0.0.74 from srvinfo:
+Could not initialise srvsvc. Error was NT_STATUS_ACCESS_DENIED
+
+ ========================== 
+|    Users on 10.0.0.74    |
+ ========================== 
+[E] Couldn't find users using querydispinfo: NT_STATUS_ACCESS_DENIED
+
+[E] Couldn't find users using enumdomusers: NT_STATUS_ACCESS_DENIED
+
+ ======================================== 
+|    Machine Enumeration on 10.0.0.74    |
+ ======================================== 
+[E] Internal error.  Not implmented in this version of enum4linux.
+
+ ====================================== 
+|    Share Enumeration on 10.0.0.74    |
+ ====================================== 
+
+	Sharename       Type      Comment
+	---------       ----      -------
+SMB1 disabled -- no workgroup available
+
+[+] Attempting to map shares on 10.0.0.74
+
+ ================================================= 
+|    Password Policy Information for 10.0.0.74    |
+ ================================================= 
+[E] Unexpected error from polenum:
+
+
+[+] Attaching to 10.0.0.74 using a NULL share
+
+[+] Trying protocol 139/SMB...
+
+	[!] Protocol failed: Cannot request session (Called Name:10.0.0.74)
+
+[+] Trying protocol 445/SMB...
+
+	[!] Protocol failed: SMB SessionError: STATUS_ACCESS_DENIED({Access Denied} A process has requested access to an object but has not been granted those access rights.)
+
+
+[E] Failed to get password policy with rpcclient
+
+
+ =========================== 
+|    Groups on 10.0.0.74    |
+ =========================== 
+
+[+] Getting builtin groups:
+
+[+] Getting builtin group memberships:
+
+[+] Getting local groups:
+
+[+] Getting local group memberships:
+
+[+] Getting domain groups:
+
+[+] Getting domain group memberships:
+
+ ==================================================================== 
+|    Users on 10.0.0.74 via RID cycling (RIDS: 500-550,1000-1050)    |
+ ==================================================================== 
+[E] Couldn't get SID: NT_STATUS_ACCESS_DENIED.  RID cycling not possible.
+
+ ========================================== 
+|    Getting printer info for 10.0.0.74    |
+ ========================================== 
+Could not initialise spoolss. Error was NT_STATUS_ACCESS_DENIED
+
+
+enum4linux complete on Wed Dec  8 15:23:40 2021
+

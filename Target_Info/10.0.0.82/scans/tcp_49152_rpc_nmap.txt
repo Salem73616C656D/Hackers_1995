@@ -1,0 +1,12 @@
+# Nmap 7.91 scan initiated Wed Dec  8 14:51:27 2021 as: nmap -vv --reason -Pn -sV -p 49152 --script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /home/kali/Desktop/results/10.0.0.82/scans/tcp_49152_rpc_nmap.txt -oX /home/kali/Desktop/results/10.0.0.82/scans/xml/tcp_49152_rpc_nmap.xml 10.0.0.82
+Nmap scan report for 10.0.0.82
+Host is up, received user-set (0.018s latency).
+Scanned at 2021-12-08 14:51:28 EST for 74s
+
+PORT      STATE SERVICE REASON          VERSION
+49152/tcp open  msrpc   syn-ack ttl 127 Microsoft Windows RPC
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Dec  8 14:52:42 2021 -- 1 IP address (1 host up) scanned in 74.60 seconds

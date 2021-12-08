@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Wed Dec  8 15:26:14 2021 as: nmap -vv -&#45;reason -Pn -sV -p 3389 &quot;-&#45;script=banner,(rdp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/Desktop/results/10.0.0.74/scans/tcp_3389_rdp_nmap.txt -oX /home/kali/Desktop/results/10.0.0.74/scans/xml/tcp_3389_rdp_nmap.xml 10.0.0.74 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 3389 &quot;-&#45;script=banner,(rdp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/Desktop/results/10.0.0.74/scans/tcp_3389_rdp_nmap.txt -oX /home/kali/Desktop/results/10.0.0.74/scans/xml/tcp_3389_rdp_nmap.xml 10.0.0.74" start="1638995174" startstr="Wed Dec  8 15:26:14 2021" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="3389"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1638995175"/>
+<taskend task="NSE" time="1638995175"/>
+<taskbegin task="NSE" time="1638995175"/>
+<taskend task="NSE" time="1638995175"/>
+<taskbegin task="NSE" time="1638995175"/>
+<taskend task="NSE" time="1638995175"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1638995175"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1638995175"/>
+<taskbegin task="SYN Stealth Scan" time="1638995175"/>
+<taskend task="SYN Stealth Scan" time="1638995175" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1638995175"/>
+<taskend task="Service scan" time="1638995186" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1638995186"/>
+<taskend task="NSE" time="1638995196"/>
+<taskbegin task="NSE" time="1638995196"/>
+<taskend task="NSE" time="1638995199"/>
+<taskbegin task="NSE" time="1638995199"/>
+<taskend task="NSE" time="1638995199"/>
+<host starttime="1638995175" endtime="1638995199"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.0.0.74" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ms-wbt-server" tunnel="ssl" method="table" conf="3"/><script id="rdp-enum-encryption" output="&#xa;  Security layer&#xa;    CredSSP (NLA): SUCCESS&#xa;    CredSSP with Early User Auth: SUCCESS&#xa;    Native RDP: SUCCESS&#xa;    RDSTLS: SUCCESS&#xa;    SSL: SUCCESS&#xa;  RDP Encryption level: Client Compatible&#xa;    40-bit RC4: SUCCESS&#xa;    56-bit RC4: SUCCESS&#xa;    128-bit RC4: SUCCESS&#xa;    FIPS 140-1: SUCCESS&#xa;  RDP Protocol Version:  RDP 5.x, 6.x, 7.x, or 8.x server&#xa;"/><script id="ssl-cert" output="Subject: commonName=RISK-ANALYST1&#xa;Issuer: commonName=RISK-ANALYST1&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha1WithRSAEncryption&#xa;Not valid before: 2021-11-30T22:43:59&#xa;Not valid after:  2022-06-01T22:43:59&#xa;MD5:   e77f dce7 41ad c8bc 1cdf 3e2e 458c 270c&#xa;SHA-1: cb73 4cd1 ad10 9cf4 37a3 28dc f08e db62 1820 af6a&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC3jCCAcagAwIBAgIQEp+bYDduWoJPrI8/3hFrVDANBgkqhkiG9w0BAQUFADAY&#xa;MRYwFAYDVQQDEw1SSVNLLUFOQUxZU1QxMB4XDTIxMTEzMDIyNDM1OVoXDTIyMDYw&#xa;MTIyNDM1OVowGDEWMBQGA1UEAxMNUklTSy1BTkFMWVNUMTCCASIwDQYJKoZIhvcN&#xa;AQEBBQADggEPADCCAQoCggEBAMXvbQ6uHbW2qoU7Wd6D0zgNerYQD+2/PezBXE8V&#xa;m/nOtZCBx8rXMcYTmaB7RIAjNOkoSuR96KcWG22UHrp+97ex4Tcda/HDBPvZcnXZ&#xa;FpUIHVQIqahJvK+JMg/2t9RQNuu5w4BamzfvqLwj0pm+wLNIUxrv+i5yj5yEFILk&#xa;pyKFDeAlk3EU9M6BupwSKjpQbog1XKv7wCuFw2xldK69Nd4hqNS53l3/yEBMOAek&#xa;KnkXp5/lM9rBGorwOzB23UmI8uPgsqEgu2PYsRWSMYQND6KmbjPClWmr6apU5kIl&#xa;/wJl7hbrUNZrRgR96/4WuulDrK4syYCsYS+wFa3xnqTgk2cCAwEAAaMkMCIwEwYD&#xa;VR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgQwMA0GCSqGSIb3DQEBBQUAA4IB&#xa;AQBPshd2mrmD1CiaHFiHbJNLAr6ttJlHAPYg8Qeo6saCnecY6MTxJLuBAdeXjEf1&#xa;kDc+erkxtULcY69AoJnOvVmcyGxFviS1BRZma+0MdqA6F7K2qgVXEBQPnyhanCFC&#xa;HZ9NgzqAB7s60n8jtGVRxcmOShPEhXsNwvukoDpq7M8nJtqcjqP960WboV/Fzc3g&#xa;15X2y7GCBjpHUwWGP/qz3YAcRgrsLjl8OOS8Y0N1stWYF14x0XvzO9IZ1Pw/AwMj&#xa;Nctr4JhVBRW/q2Iwd1U+1A1AjeuUy+Tk4VeD8RNMczDlAQo+Wv/LYnar9YnvF+GZ&#xa;cBCPgRHqpnJ6lT1wFqNLOVFx&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">RISK-ANALYST1</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">RISK-ANALYST1</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">C5EF6D0EAE1DB5B6AA853B59DE83D3380D7AB6100FEDBF3DECC15C4F159BF9CEB59081C7CAD731C61399A07B44802334E9284AE47DE8A7161B6D941EBA7EF7B7B1E1371D6BF1C304FBD97275D91695081D5408A9A849BCAF89320FF6B7D45036EBB9C3805A9B37EFA8BC23D299BEC0B348531AEFFA2E728F9C841482E4A722850DE025937114F4CE81BA9C122A3A506E88355CABFBC02B85C36C6574AEBD35DE21A8D4B9DE5DFFC8404C3807A42A7917A79FE533DAC11A8AF03B3076DD4988F2E3E0B2A120BB63D8B1159231840D0FA2A66E33C29569ABE9AA54E64225FF0265EE16EB50D66B46047DEBFE16BAE943ACAE2CC980AC612FB015ADF19EA4E09367</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2021-11-30T22:43:59</elem>
+<elem key="notAfter">2022-06-01T22:43:59</elem>
+</table>
+<elem key="md5">e77fdce741adc8bc1cdf3e2e458c270c</elem>
+<elem key="sha1">cb734cd1ad109cf437a328dcf08edb621820af6a</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC3jCCAcagAwIBAgIQEp+bYDduWoJPrI8/3hFrVDANBgkqhkiG9w0BAQUFADAY&#xa;MRYwFAYDVQQDEw1SSVNLLUFOQUxZU1QxMB4XDTIxMTEzMDIyNDM1OVoXDTIyMDYw&#xa;MTIyNDM1OVowGDEWMBQGA1UEAxMNUklTSy1BTkFMWVNUMTCCASIwDQYJKoZIhvcN&#xa;AQEBBQADggEPADCCAQoCggEBAMXvbQ6uHbW2qoU7Wd6D0zgNerYQD+2/PezBXE8V&#xa;m/nOtZCBx8rXMcYTmaB7RIAjNOkoSuR96KcWG22UHrp+97ex4Tcda/HDBPvZcnXZ&#xa;FpUIHVQIqahJvK+JMg/2t9RQNuu5w4BamzfvqLwj0pm+wLNIUxrv+i5yj5yEFILk&#xa;pyKFDeAlk3EU9M6BupwSKjpQbog1XKv7wCuFw2xldK69Nd4hqNS53l3/yEBMOAek&#xa;KnkXp5/lM9rBGorwOzB23UmI8uPgsqEgu2PYsRWSMYQND6KmbjPClWmr6apU5kIl&#xa;/wJl7hbrUNZrRgR96/4WuulDrK4syYCsYS+wFa3xnqTgk2cCAwEAAaMkMCIwEwYD&#xa;VR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgQwMA0GCSqGSIb3DQEBBQUAA4IB&#xa;AQBPshd2mrmD1CiaHFiHbJNLAr6ttJlHAPYg8Qeo6saCnecY6MTxJLuBAdeXjEf1&#xa;kDc+erkxtULcY69AoJnOvVmcyGxFviS1BRZma+0MdqA6F7K2qgVXEBQPnyhanCFC&#xa;HZ9NgzqAB7s60n8jtGVRxcmOShPEhXsNwvukoDpq7M8nJtqcjqP960WboV/Fzc3g&#xa;15X2y7GCBjpHUwWGP/qz3YAcRgrsLjl8OOS8Y0N1stWYF14x0XvzO9IZ1Pw/AwMj&#xa;Nctr4JhVBRW/q2Iwd1U+1A1AjeuUy+Tk4VeD8RNMczDlAQo+Wv/LYnar9YnvF+GZ&#xa;cBCPgRHqpnJ6lT1wFqNLOVFx&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-dh-params" output="&#xa;  VULNERABLE:&#xa;  Diffie-Hellman Key Exchange Insufficient Group Strength&#xa;    State: VULNERABLE&#xa;      Transport Layer Security (TLS) services that use Diffie-Hellman groups&#xa;      of insufficient strength, especially those using one of a few commonly&#xa;      shared groups, may be susceptible to passive eavesdropping attacks.&#xa;    Check results:&#xa;      WEAK DH GROUP 1&#xa;            Cipher Suite: TLS_DHE_RSA_WITH_AES_256_GCM_SHA384&#xa;            Modulus Type: Safe prime&#xa;            Modulus Source: RFC2409/Oakley Group 2&#xa;            Modulus Length: 1024&#xa;            Generator Length: 1024&#xa;            Public Key Length: 1024&#xa;    References:&#xa;      https://weakdh.org&#xa;"><table key="NMAP-4">
+<elem key="title">Diffie-Hellman Key Exchange Insufficient Group Strength</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="description">
+<elem>Transport Layer Security (TLS) services that use Diffie-Hellman groups&#xa;of insufficient strength, especially those using one of a few commonly&#xa;shared groups, may be susceptible to passive eavesdropping attacks.</elem>
+</table>
+<table key="check_results">
+<elem>WEAK DH GROUP 1&#xa;      Cipher Suite: TLS_DHE_RSA_WITH_AES_256_GCM_SHA384&#xa;      Modulus Type: Safe prime&#xa;      Modulus Source: RFC2409/Oakley Group 2&#xa;      Modulus Length: 1024&#xa;      Generator Length: 1024&#xa;      Public Key Length: 1024</elem>
+</table>
+<table key="refs">
+<elem>https://weakdh.org</elem>
+</table>
+</table>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C&#xa;      TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      Ciphersuite uses MD5 for message integrity&#xa;      Key exchange (dh 1024) of lower strength than certificate key&#xa;      Weak certificate signature: SHA1&#xa;  TLSv1.1: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C&#xa;      TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      Ciphersuite uses MD5 for message integrity&#xa;      Key exchange (dh 1024) of lower strength than certificate key&#xa;      Weak certificate signature: SHA1&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A&#xa;      TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C&#xa;      TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      Ciphersuite uses MD5 for message integrity&#xa;      Key exchange (dh 1024) of lower strength than certificate key&#xa;      Weak certificate signature: SHA1&#xa;  least strength: C"><table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">C</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+<elem key="strength">C</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_MD5</elem>
+<elem key="strength">C</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+<elem>Key exchange (dh 1024) of lower strength than certificate key</elem>
+<elem>Weak certificate signature: SHA1</elem>
+</table>
+</table>
+<table key="TLSv1.1">
+<table key="ciphers">
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">C</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+<elem key="strength">C</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_MD5</elem>
+<elem key="strength">C</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+<elem>Key exchange (dh 1024) of lower strength than certificate key</elem>
+<elem>Weak certificate signature: SHA1</elem>
+</table>
+</table>
+<table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">C</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+<elem key="strength">C</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_MD5</elem>
+<elem key="strength">C</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+<elem>Key exchange (dh 1024) of lower strength than certificate key</elem>
+<elem>Weak certificate signature: SHA1</elem>
+</table>
+</table>
+<elem key="least strength">C</elem>
+</script><script id="sslv2-drown" output="&#xa;"></script></port>
+</ports>
+<times srtt="30317" rttvar="30317" to="151585"/>
+</host>
+<taskbegin task="NSE" time="1638995199"/>
+<taskend task="NSE" time="1638995199"/>
+<taskbegin task="NSE" time="1638995199"/>
+<taskend task="NSE" time="1638995199"/>
+<taskbegin task="NSE" time="1638995199"/>
+<taskend task="NSE" time="1638995199"/>
+<runstats><finished time="1638995199" timestr="Wed Dec  8 15:26:39 2021" summary="Nmap done at Wed Dec  8 15:26:39 2021; 1 IP address (1 host up) scanned in 24.87 seconds" elapsed="24.87" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

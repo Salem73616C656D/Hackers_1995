@@ -1,0 +1,30 @@
+# Nmap 7.91 scan initiated Wed Dec  8 14:50:11 2021 as: nmap -vv --reason -Pn -sV -sC --version-all -oN /home/kali/Desktop/results/10.0.0.82/scans/_quick_tcp_nmap.txt -oX /home/kali/Desktop/results/10.0.0.82/scans/xml/_quick_tcp_nmap.xml 10.0.0.82
+Nmap scan report for 10.0.0.82
+Host is up, received user-set (0.022s latency).
+Scanned at 2021-12-08 14:50:11 EST for 75s
+Not shown: 989 closed ports
+Reason: 989 resets
+PORT      STATE    SERVICE        REASON          VERSION
+21/tcp    open     ftp            syn-ack ttl 127 Microsoft ftpd
+| ftp-syst: 
+|_  SYST: Windows_NT
+80/tcp    open     http           syn-ack ttl 127 Microsoft IIS httpd 7.5
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/7.5
+|_http-title: Site doesn't have a title (text/html).
+135/tcp   filtered msrpc          no-response
+139/tcp   filtered netbios-ssn    no-response
+445/tcp   filtered microsoft-ds   no-response
+3389/tcp  open     ms-wbt-server? syn-ack ttl 127
+49152/tcp open     msrpc          syn-ack ttl 127 Microsoft Windows RPC
+49153/tcp open     msrpc          syn-ack ttl 127 Microsoft Windows RPC
+49154/tcp open     msrpc          syn-ack ttl 127 Microsoft Windows RPC
+49161/tcp open     msrpc          syn-ack ttl 127 Microsoft Windows RPC
+49165/tcp open     msrpc          syn-ack ttl 127 Microsoft Windows RPC
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Dec  8 14:51:26 2021 -- 1 IP address (1 host up) scanned in 75.51 seconds

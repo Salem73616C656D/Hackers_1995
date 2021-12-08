@@ -1,0 +1,130 @@
+nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN "/home/kali/Desktop/results/10.0.0.197/scans/_full_tcp_nmap.txt" -oX "/home/kali/Desktop/results/10.0.0.197/scans/xml/_full_tcp_nmap.xml" 10.0.0.197
+
+nmap -vv --reason -Pn -sV -sC --version-all -oN "/home/kali/Desktop/results/10.0.0.197/scans/_quick_tcp_nmap.txt" -oX "/home/kali/Desktop/results/10.0.0.197/scans/xml/_quick_tcp_nmap.xml" 10.0.0.197
+
+nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN "/home/kali/Desktop/results/10.0.0.197/scans/_top_20_udp_nmap.txt" -oX "/home/kali/Desktop/results/10.0.0.197/scans/xml/_top_20_udp_nmap.xml" 10.0.0.197
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.0.0.197:135 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/tcp_135_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 135 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/kali/Desktop/results/10.0.0.197/scans/tcp_135_rpc_nmap.txt" -oX "/home/kali/Desktop/results/10.0.0.197/scans/xml/tcp_135_rpc_nmap.xml" 10.0.0.197
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.0.0.197:139 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/tcp_139_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 139 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="unsafe=1" -oN "/home/kali/Desktop/results/10.0.0.197/scans/tcp_139_smb_nmap.txt" -oX "/home/kali/Desktop/results/10.0.0.197/scans/xml/tcp_139_smb_nmap.xml" 10.0.0.197
+
+enum4linux -a -M -l -d 10.0.0.197 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/enum4linux.txt"
+
+smbclient -L\\ -N -I 10.0.0.197 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/smbclient.txt"
+
+smbmap -H 10.0.0.197 -P 139 2>&1 | tee -a "/home/kali/Desktop/results/10.0.0.197/scans/smbmap-share-permissions.txt"; smbmap -u null -p "" -H 10.0.0.197 -P 139 2>&1 | tee -a "/home/kali/Desktop/results/10.0.0.197/scans/smbmap-share-permissions.txt"
+
+smbmap -H 10.0.0.197 -P 139 -R 2>&1 | tee -a "/home/kali/Desktop/results/10.0.0.197/scans/smbmap-list-contents.txt"; smbmap -u null -p "" -H 10.0.0.197 -P 139 -R 2>&1 | tee -a "/home/kali/Desktop/results/10.0.0.197/scans/smbmap-list-contents.txt"
+
+smbmap -H 10.0.0.197 -P 139 -x "ipconfig /all" 2>&1 | tee -a "/home/kali/Desktop/results/10.0.0.197/scans/smbmap-execute-command.txt"; smbmap -u null -p "" -H 10.0.0.197 -P 139 -x "ipconfig /all" 2>&1 | tee -a "/home/kali/Desktop/results/10.0.0.197/scans/smbmap-execute-command.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.0.0.197:445 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/tcp_445_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 445 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="unsafe=1" -oN "/home/kali/Desktop/results/10.0.0.197/scans/tcp_445_smb_nmap.txt" -oX "/home/kali/Desktop/results/10.0.0.197/scans/xml/tcp_445_smb_nmap.xml" 10.0.0.197
+
+smbmap -H 10.0.0.197 -P 445 2>&1 | tee -a "/home/kali/Desktop/results/10.0.0.197/scans/smbmap-share-permissions.txt"; smbmap -u null -p "" -H 10.0.0.197 -P 445 2>&1 | tee -a "/home/kali/Desktop/results/10.0.0.197/scans/smbmap-share-permissions.txt"
+
+smbmap -H 10.0.0.197 -P 445 -R 2>&1 | tee -a "/home/kali/Desktop/results/10.0.0.197/scans/smbmap-list-contents.txt"; smbmap -u null -p "" -H 10.0.0.197 -P 445 -R 2>&1 | tee -a "/home/kali/Desktop/results/10.0.0.197/scans/smbmap-list-contents.txt"
+
+smbmap -H 10.0.0.197 -P 445 -x "ipconfig /all" 2>&1 | tee -a "/home/kali/Desktop/results/10.0.0.197/scans/smbmap-execute-command.txt"; smbmap -u null -p "" -H 10.0.0.197 -P 445 -x "ipconfig /all" 2>&1 | tee -a "/home/kali/Desktop/results/10.0.0.197/scans/smbmap-execute-command.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.0.0.197:3389 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/tcp_3389_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 3389 --script="banner,(rdp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/home/kali/Desktop/results/10.0.0.197/scans/tcp_3389_rdp_nmap.txt" -oX "/home/kali/Desktop/results/10.0.0.197/scans/xml/tcp_3389_rdp_nmap.xml" 10.0.0.197
+
+if [ "True" == "True" ]; then sslscan --show-certificate --no-colour 10.0.0.197:8089 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/tcp_8089_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 8089 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/home/kali/Desktop/results/10.0.0.197/scans/tcp_8089_http_nmap.txt" -oX "/home/kali/Desktop/results/10.0.0.197/scans/xml/tcp_8089_https_nmap.xml" 10.0.0.197
+
+curl -sSik https://10.0.0.197:8089/ -m 10 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/tcp_8089_https_index.html"
+
+curl -sSik https://10.0.0.197:8089/robots.txt -m 10 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/tcp_8089_https_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png https://10.0.0.197:8089/ /home/kali/Desktop/results/10.0.0.197/scans/tcp_8089_https_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v https://10.0.0.197:8089 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/tcp_8089_https_whatweb.txt"
+
+nikto -ask=no -h https://10.0.0.197:8089 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/tcp_8089_https_nikto.txt"
+
+if [[ `gobuster -h 2>&1 | grep -F "mode (dir)"` ]]; then gobuster -u https://10.0.0.197:8089/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/results/10.0.0.197/scans/tcp_8089_https_gobuster.txt"; else gobuster dir -u https://10.0.0.197:8089/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -k -l -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/results/10.0.0.197/scans/tcp_8089_https_gobuster.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.0.0.197:5985 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/tcp_5985_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 5985 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/home/kali/Desktop/results/10.0.0.197/scans/tcp_5985_http_nmap.txt" -oX "/home/kali/Desktop/results/10.0.0.197/scans/xml/tcp_5985_http_nmap.xml" 10.0.0.197
+
+curl -sSik http://10.0.0.197:5985/ -m 10 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/tcp_5985_http_index.html"
+
+curl -sSik http://10.0.0.197:5985/robots.txt -m 10 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/tcp_5985_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://10.0.0.197:5985/ /home/kali/Desktop/results/10.0.0.197/scans/tcp_5985_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://10.0.0.197:5985 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/tcp_5985_http_whatweb.txt"
+
+nikto -ask=no -h http://10.0.0.197:5985 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/tcp_5985_http_nikto.txt"
+
+if [[ `gobuster -h 2>&1 | grep -F "mode (dir)"` ]]; then gobuster -u http://10.0.0.197:5985/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/results/10.0.0.197/scans/tcp_5985_http_gobuster.txt"; else gobuster dir -u http://10.0.0.197:5985/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -k -l -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/results/10.0.0.197/scans/tcp_5985_http_gobuster.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.0.0.197:47001 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/tcp_47001_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 47001 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/home/kali/Desktop/results/10.0.0.197/scans/tcp_47001_http_nmap.txt" -oX "/home/kali/Desktop/results/10.0.0.197/scans/xml/tcp_47001_http_nmap.xml" 10.0.0.197
+
+curl -sSik http://10.0.0.197:47001/ -m 10 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/tcp_47001_http_index.html"
+
+curl -sSik http://10.0.0.197:47001/robots.txt -m 10 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/tcp_47001_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://10.0.0.197:47001/ /home/kali/Desktop/results/10.0.0.197/scans/tcp_47001_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://10.0.0.197:47001 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/tcp_47001_http_whatweb.txt"
+
+nikto -ask=no -h http://10.0.0.197:47001 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/tcp_47001_http_nikto.txt"
+
+if [[ `gobuster -h 2>&1 | grep -F "mode (dir)"` ]]; then gobuster -u http://10.0.0.197:47001/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/results/10.0.0.197/scans/tcp_47001_http_gobuster.txt"; else gobuster dir -u http://10.0.0.197:47001/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -k -l -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/results/10.0.0.197/scans/tcp_47001_http_gobuster.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.0.0.197:49664 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/tcp_49664_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49664 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/kali/Desktop/results/10.0.0.197/scans/tcp_49664_rpc_nmap.txt" -oX "/home/kali/Desktop/results/10.0.0.197/scans/xml/tcp_49664_rpc_nmap.xml" 10.0.0.197
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.0.0.197:49665 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/tcp_49665_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49665 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/kali/Desktop/results/10.0.0.197/scans/tcp_49665_rpc_nmap.txt" -oX "/home/kali/Desktop/results/10.0.0.197/scans/xml/tcp_49665_rpc_nmap.xml" 10.0.0.197
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.0.0.197:49666 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/tcp_49666_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49666 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/kali/Desktop/results/10.0.0.197/scans/tcp_49666_rpc_nmap.txt" -oX "/home/kali/Desktop/results/10.0.0.197/scans/xml/tcp_49666_rpc_nmap.xml" 10.0.0.197
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.0.0.197:49667 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/tcp_49667_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49667 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/kali/Desktop/results/10.0.0.197/scans/tcp_49667_rpc_nmap.txt" -oX "/home/kali/Desktop/results/10.0.0.197/scans/xml/tcp_49667_rpc_nmap.xml" 10.0.0.197
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.0.0.197:49669 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/tcp_49669_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49669 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/kali/Desktop/results/10.0.0.197/scans/tcp_49669_rpc_nmap.txt" -oX "/home/kali/Desktop/results/10.0.0.197/scans/xml/tcp_49669_rpc_nmap.xml" 10.0.0.197
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.0.0.197:49673 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/tcp_49673_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49673 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/kali/Desktop/results/10.0.0.197/scans/tcp_49673_rpc_nmap.txt" -oX "/home/kali/Desktop/results/10.0.0.197/scans/xml/tcp_49673_rpc_nmap.xml" 10.0.0.197
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.0.0.197:49674 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/tcp_49674_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49674 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/kali/Desktop/results/10.0.0.197/scans/tcp_49674_rpc_nmap.txt" -oX "/home/kali/Desktop/results/10.0.0.197/scans/xml/tcp_49674_rpc_nmap.xml" 10.0.0.197
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.0.0.197:49688 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/tcp_49688_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49688 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/kali/Desktop/results/10.0.0.197/scans/tcp_49688_rpc_nmap.txt" -oX "/home/kali/Desktop/results/10.0.0.197/scans/xml/tcp_49688_rpc_nmap.xml" 10.0.0.197
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.0.0.197:137 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/udp_137_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sU -sV -p 137 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="unsafe=1" -oN "/home/kali/Desktop/results/10.0.0.197/scans/udp_137_smb_nmap.txt" -oX "/home/kali/Desktop/results/10.0.0.197/scans/xml/udp_137_smb_nmap.xml" 10.0.0.197
+
+nbtscan -rvh 10.0.0.197 2>&1 | tee "/home/kali/Desktop/results/10.0.0.197/scans/nbtscan.txt"
+
+smbmap -H 10.0.0.197 -P 137 2>&1 | tee -a "/home/kali/Desktop/results/10.0.0.197/scans/smbmap-share-permissions.txt"; smbmap -u null -p "" -H 10.0.0.197 -P 137 2>&1 | tee -a "/home/kali/Desktop/results/10.0.0.197/scans/smbmap-share-permissions.txt"
+
+smbmap -H 10.0.0.197 -P 137 -R 2>&1 | tee -a "/home/kali/Desktop/results/10.0.0.197/scans/smbmap-list-contents.txt"; smbmap -u null -p "" -H 10.0.0.197 -P 137 -R 2>&1 | tee -a "/home/kali/Desktop/results/10.0.0.197/scans/smbmap-list-contents.txt"
+
+smbmap -H 10.0.0.197 -P 137 -x "ipconfig /all" 2>&1 | tee -a "/home/kali/Desktop/results/10.0.0.197/scans/smbmap-execute-command.txt"; smbmap -u null -p "" -H 10.0.0.197 -P 137 -x "ipconfig /all" 2>&1 | tee -a "/home/kali/Desktop/results/10.0.0.197/scans/smbmap-execute-command.txt"
+

@@ -1,0 +1,104 @@
+# Nmap 7.91 scan initiated Wed Dec  8 15:19:03 2021 as: nmap -vv --reason -Pn -sV -p 3389 "--script=banner,(rdp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /home/kali/Desktop/results/10.0.0.197/scans/tcp_3389_rdp_nmap.txt -oX /home/kali/Desktop/results/10.0.0.197/scans/xml/tcp_3389_rdp_nmap.xml 10.0.0.197
+Nmap scan report for 10.0.0.197
+Host is up, received user-set (0.027s latency).
+Scanned at 2021-12-08 15:19:03 EST for 29s
+
+PORT     STATE SERVICE       REASON          VERSION
+3389/tcp open  ms-wbt-server syn-ack ttl 127 Microsoft Terminal Services
+| rdp-enum-encryption: 
+|   Security layer
+|     CredSSP (NLA): SUCCESS
+|     CredSSP with Early User Auth: SUCCESS
+|     RDSTLS: SUCCESS
+|     SSL: SUCCESS
+|_  RDP Protocol Version:  RDP 10.6 server
+| rdp-ntlm-info: 
+|   Target_Name: ACCOUNTING2
+|   NetBIOS_Domain_Name: ACCOUNTING2
+|   NetBIOS_Computer_Name: ACCOUNTING2
+|   DNS_Domain_Name: accounting2
+|   DNS_Computer_Name: accounting2
+|   Product_Version: 10.0.17763
+|_  System_Time: 2021-12-08T20:19:09+00:00
+| ssl-cert: Subject: commonName=accounting2
+| Issuer: commonName=accounting2
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-11-29T18:02:39
+| Not valid after:  2022-05-31T18:02:39
+| MD5:   8405 5f21 7b7a df29 5ec6 2f2e 3047 902a
+| SHA-1: 5c26 562a da03 e9b0 fc40 ceda 1f3b cec8 788d d00c
+| -----BEGIN CERTIFICATE-----
+| MIIC2jCCAcKgAwIBAgIQVlerumV+krNLL63kEpfvjjANBgkqhkiG9w0BAQsFADAW
+| MRQwEgYDVQQDEwthY2NvdW50aW5nMjAeFw0yMTExMjkxODAyMzlaFw0yMjA1MzEx
+| ODAyMzlaMBYxFDASBgNVBAMTC2FjY291bnRpbmcyMIIBIjANBgkqhkiG9w0BAQEF
+| AAOCAQ8AMIIBCgKCAQEAv1BQi+6JANZCo+kdNGOdNgociIHYTeTOKjt8joC4ZCph
+| ngQSTPBy81QPCWxnbdkej3nmVNVh/Up4WnBdI52/5qOj5XVIw5LVcTgG/1XyIZyU
+| OV9ODqVEBytQ7xTgMYiNl8nGQmk1dBJqs/gSDXLCsp69Mutcxz4LlqXO5WN1ZPor
+| oIg8jgUIctLLJgtH3PtCA1Ktg5dOtDzzPJXRArr94meRTcHixpVcOnRRDT+Z7QwV
+| I5DwJ7EcxMpNLpqw23oMw1LaQr4GSkdJZQvndSl/+x4aFHTK7/AZd5VWhlf3/7TB
+| x93YYARa+eUum5+ip5P9B5bHhNZzLF2y4NVOvbiJDQIDAQABoyQwIjATBgNVHSUE
+| DDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBAJV+
+| Pd+09ZWSy07WHbKmwAr2qmVzF29okc6X9SKTd5Kxt5/joCLGh20nsv88m8DQrRs4
+| HasgnXXFjlt71vIsQPSJ6k8I37O4RRkBl7bnDasKTwC9mZd6OUdBMGWW5LIJfznP
+| idlDnr8H9P5a5GCUlcyJepjG9T1qCPhLqlZDBXQRs2cJ/agTi/pvT2UnkxEQ6K91
+| l+2oIhtaW91xZrYfqAKxqbK30fS5GTfkuX4QFE0ATccf4k3PgWMOV6xXqW4EecU+
+| mwFGbV4daaySgVR6cXMInT2csa9swnCIKg6NvwE9IT5fhxJ+HSgBfRALxnwa1hJo
+| fvZXUuDkheUJ4N7xczM=
+|_-----END CERTIFICATE-----
+|_ssl-date: 2021-12-08T20:19:29+00:00; -1s from scanner time.
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+|_sslv2-drown: 
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Dec  8 15:19:32 2021 -- 1 IP address (1 host up) scanned in 29.87 seconds

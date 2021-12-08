@@ -1,0 +1,139 @@
+# Nmap 7.91 scan initiated Wed Dec  8 15:26:14 2021 as: nmap -vv --reason -Pn -sV -p 3389 "--script=banner,(rdp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /home/kali/Desktop/results/10.0.0.74/scans/tcp_3389_rdp_nmap.txt -oX /home/kali/Desktop/results/10.0.0.74/scans/xml/tcp_3389_rdp_nmap.xml 10.0.0.74
+Nmap scan report for 10.0.0.74
+Host is up, received user-set (0.030s latency).
+Scanned at 2021-12-08 15:26:15 EST for 24s
+
+PORT     STATE SERVICE            REASON          VERSION
+3389/tcp open  ssl/ms-wbt-server? syn-ack ttl 127
+| rdp-enum-encryption: 
+|   Security layer
+|     CredSSP (NLA): SUCCESS
+|     CredSSP with Early User Auth: SUCCESS
+|     Native RDP: SUCCESS
+|     RDSTLS: SUCCESS
+|     SSL: SUCCESS
+|   RDP Encryption level: Client Compatible
+|     40-bit RC4: SUCCESS
+|     56-bit RC4: SUCCESS
+|     128-bit RC4: SUCCESS
+|     FIPS 140-1: SUCCESS
+|_  RDP Protocol Version:  RDP 5.x, 6.x, 7.x, or 8.x server
+| ssl-cert: Subject: commonName=RISK-ANALYST1
+| Issuer: commonName=RISK-ANALYST1
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2021-11-30T22:43:59
+| Not valid after:  2022-06-01T22:43:59
+| MD5:   e77f dce7 41ad c8bc 1cdf 3e2e 458c 270c
+| SHA-1: cb73 4cd1 ad10 9cf4 37a3 28dc f08e db62 1820 af6a
+| -----BEGIN CERTIFICATE-----
+| MIIC3jCCAcagAwIBAgIQEp+bYDduWoJPrI8/3hFrVDANBgkqhkiG9w0BAQUFADAY
+| MRYwFAYDVQQDEw1SSVNLLUFOQUxZU1QxMB4XDTIxMTEzMDIyNDM1OVoXDTIyMDYw
+| MTIyNDM1OVowGDEWMBQGA1UEAxMNUklTSy1BTkFMWVNUMTCCASIwDQYJKoZIhvcN
+| AQEBBQADggEPADCCAQoCggEBAMXvbQ6uHbW2qoU7Wd6D0zgNerYQD+2/PezBXE8V
+| m/nOtZCBx8rXMcYTmaB7RIAjNOkoSuR96KcWG22UHrp+97ex4Tcda/HDBPvZcnXZ
+| FpUIHVQIqahJvK+JMg/2t9RQNuu5w4BamzfvqLwj0pm+wLNIUxrv+i5yj5yEFILk
+| pyKFDeAlk3EU9M6BupwSKjpQbog1XKv7wCuFw2xldK69Nd4hqNS53l3/yEBMOAek
+| KnkXp5/lM9rBGorwOzB23UmI8uPgsqEgu2PYsRWSMYQND6KmbjPClWmr6apU5kIl
+| /wJl7hbrUNZrRgR96/4WuulDrK4syYCsYS+wFa3xnqTgk2cCAwEAAaMkMCIwEwYD
+| VR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgQwMA0GCSqGSIb3DQEBBQUAA4IB
+| AQBPshd2mrmD1CiaHFiHbJNLAr6ttJlHAPYg8Qeo6saCnecY6MTxJLuBAdeXjEf1
+| kDc+erkxtULcY69AoJnOvVmcyGxFviS1BRZma+0MdqA6F7K2qgVXEBQPnyhanCFC
+| HZ9NgzqAB7s60n8jtGVRxcmOShPEhXsNwvukoDpq7M8nJtqcjqP960WboV/Fzc3g
+| 15X2y7GCBjpHUwWGP/qz3YAcRgrsLjl8OOS8Y0N1stWYF14x0XvzO9IZ1Pw/AwMj
+| Nctr4JhVBRW/q2Iwd1U+1A1AjeuUy+Tk4VeD8RNMczDlAQo+Wv/LYnar9YnvF+GZ
+| cBCPgRHqpnJ6lT1wFqNLOVFx
+|_-----END CERTIFICATE-----
+| ssl-dh-params: 
+|   VULNERABLE:
+|   Diffie-Hellman Key Exchange Insufficient Group Strength
+|     State: VULNERABLE
+|       Transport Layer Security (TLS) services that use Diffie-Hellman groups
+|       of insufficient strength, especially those using one of a few commonly
+|       shared groups, may be susceptible to passive eavesdropping attacks.
+|     Check results:
+|       WEAK DH GROUP 1
+|             Cipher Suite: TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+|             Modulus Type: Safe prime
+|             Modulus Source: RFC2409/Oakley Group 2
+|             Modulus Length: 1024
+|             Generator Length: 1024
+|             Public Key Length: 1024
+|     References:
+|_      https://weakdh.org
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Key exchange (dh 1024) of lower strength than certificate key
+|       Weak certificate signature: SHA1
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Key exchange (dh 1024) of lower strength than certificate key
+|       Weak certificate signature: SHA1
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Key exchange (dh 1024) of lower strength than certificate key
+|       Weak certificate signature: SHA1
+|_  least strength: C
+|_sslv2-drown: 
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Dec  8 15:26:39 2021 -- 1 IP address (1 host up) scanned in 24.87 seconds

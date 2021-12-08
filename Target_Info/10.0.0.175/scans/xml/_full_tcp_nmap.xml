@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Wed Dec  8 15:18:09 2021 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/results/10.0.0.175/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/results/10.0.0.175/scans/xml/_full_tcp_nmap.xml 10.0.0.175 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/results/10.0.0.175/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/results/10.0.0.175/scans/xml/_full_tcp_nmap.xml 10.0.0.175" start="1638994689" startstr="Wed Dec  8 15:18:09 2021" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1638994689"/>
+<taskend task="NSE" time="1638994689"/>
+<taskbegin task="NSE" time="1638994689"/>
+<taskend task="NSE" time="1638994689"/>
+<taskbegin task="NSE" time="1638994689"/>
+<taskend task="NSE" time="1638994689"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1638994690"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1638994690"/>
+<taskbegin task="SYN Stealth Scan" time="1638994690"/>
+<taskend task="SYN Stealth Scan" time="1638994713" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1638994713"/>
+<taskend task="Service scan" time="1638994750" extrainfo="3 services on 1 host"/>
+<taskbegin task="Traceroute" time="1638994764"/>
+<taskend task="Traceroute" time="1638994764"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1638994764"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1638994764"/>
+<taskbegin task="NSE" time="1638994765"/>
+<taskend task="NSE" time="1638994772"/>
+<taskbegin task="NSE" time="1638994772"/>
+<taskend task="NSE" time="1638994773"/>
+<taskbegin task="NSE" time="1638994773"/>
+<taskend task="NSE" time="1638994773"/>
+<host starttime="1638994690" endtime="1638994773"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.0.0.175" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65532">
+<extrareasons reason="resets" count="65532"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="8.2p1 Ubuntu 4ubuntu0.2" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.2p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  3072 8c:47:e5:d6:2c:e3:73:eb:a4:e3:1a:d1:8e:10:50:a8 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCv8KXwGMTuNzLUftVIa7Ms8YXi3h0mggKoDgJOQ+ZGvTsLDtkKW3sX8rSzsp3dpJB9OuA2KIhymhsGXO93liZV7vCI5QqTAhq9WroVUVITeQvPUaj0mwycyJHqhZ1YkjQ62IAqtJbzn3pFZ1xhikqi4Gt4tIzMxqSJzrOMUY9XzZOmcrfoyGsD89+MiyBJHcpgp4gIZuTj505436agDouzfb9Xc0qPjo+Lfwb0ViAvdfy/Cb+jyrG0hU094SrA4Q+N3+26wUbvEEm6LKTyFxSrEu640f7lSi71SHnP7+SD+E6RnxaHDggqVlLGX6Ml48Vkwr2rTDCex+HqdMRtiPSRScSFC72/r5uvkAv5dkvRA7X1AtMPly3tlerxT7VZrhl7kwEVP8nsYw2y8g9noknmw5lysvf9RMZsFUoKK+FNNnQezHmmwDuHwpDAEWtlLNnqiNsRcIRr0nSV4+zz38lMCPPOl4zeRO1ltnx8+4Ki+OoFCcJUAoc6qrfadQtYA9s=&#xa;  256 a7:29:bb:a0:42:9b:2b:76:5e:7b:24:13:f6:8a:44:cd (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBBj0ZuuFGrAYwamLPhKnnbQma5h6RdoU1pYazibUZAyelwtuwBYMR9NbjV6ide9vE+Q5fSZ53MD36kZtuNu26yw=&#xa;  256 8b:dc:48:dc:ab:ab:41:40:db:db:2b:1e:73:d0:a3:ea (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE8glDz1lGqLP3M7qMPo21tX24l11bP/CSU/rZseg6+4"><table>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">8c47e5d62ce373eba4e31ad18e1050a8</elem>
+<elem key="bits">3072</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABgQCv8KXwGMTuNzLUftVIa7Ms8YXi3h0mggKoDgJOQ+ZGvTsLDtkKW3sX8rSzsp3dpJB9OuA2KIhymhsGXO93liZV7vCI5QqTAhq9WroVUVITeQvPUaj0mwycyJHqhZ1YkjQ62IAqtJbzn3pFZ1xhikqi4Gt4tIzMxqSJzrOMUY9XzZOmcrfoyGsD89+MiyBJHcpgp4gIZuTj505436agDouzfb9Xc0qPjo+Lfwb0ViAvdfy/Cb+jyrG0hU094SrA4Q+N3+26wUbvEEm6LKTyFxSrEu640f7lSi71SHnP7+SD+E6RnxaHDggqVlLGX6Ml48Vkwr2rTDCex+HqdMRtiPSRScSFC72/r5uvkAv5dkvRA7X1AtMPly3tlerxT7VZrhl7kwEVP8nsYw2y8g9noknmw5lysvf9RMZsFUoKK+FNNnQezHmmwDuHwpDAEWtlLNnqiNsRcIRr0nSV4+zz38lMCPPOl4zeRO1ltnx8+4Ki+OoFCcJUAoc6qrfadQtYA9s=</elem>
+</table>
+<table>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="fingerprint">a729bba0429b2b765e7b2413f68a44cd</elem>
+<elem key="bits">256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBBj0ZuuFGrAYwamLPhKnnbQma5h6RdoU1pYazibUZAyelwtuwBYMR9NbjV6ide9vE+Q5fSZ53MD36kZtuNu26yw=</elem>
+</table>
+<table>
+<elem key="type">ssh-ed25519</elem>
+<elem key="fingerprint">8bdc48dcabab4140dbdb2b1e73d0a3ea</elem>
+<elem key="bits">256</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIE8glDz1lGqLP3M7qMPo21tX24l11bP/CSU/rZseg6+4</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.41" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.41</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET POST OPTIONS HEAD"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+<elem>HEAD</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.41 (Ubuntu)"><elem>Apache/2.4.41 (Ubuntu)</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script></port>
+<port protocol="tcp" portid="8089"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Splunkd httpd" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:splunk:splunk</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-robots.txt" output="1 disallowed entry &#xa;/"/><script id="http-server-header" output="Splunkd"><elem>Splunkd</elem>
+</script><script id="http-title" output="splunkd"><elem key="title">splunkd</elem>
+</script><script id="ssl-cert" output="Subject: commonName=SplunkServerDefaultCert/organizationName=SplunkUser&#xa;Issuer: commonName=SplunkCommonCA/organizationName=Splunk/stateOrProvinceName=CA/countryName=US/emailAddress=support@splunk.com/localityName=San Francisco&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2021-06-08T20:26:34&#xa;Not valid after:  2024-06-07T20:26:34&#xa;MD5:   5936 8553 715b 6ec0 63f5 97b3 4876 b918&#xa;SHA-1: ed6d d916 d756 7734 be76 8624 e15a fe0b 55b6 b5fa&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDMjCCAhoCCQD//AN2su+5tTANBgkqhkiG9w0BAQsFADB/MQswCQYDVQQGEwJV&#xa;UzELMAkGA1UECAwCQ0ExFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xDzANBgNVBAoM&#xa;BlNwbHVuazEXMBUGA1UEAwwOU3BsdW5rQ29tbW9uQ0ExITAfBgkqhkiG9w0BCQEW&#xa;EnN1cHBvcnRAc3BsdW5rLmNvbTAeFw0yMTA2MDgyMDI2MzRaFw0yNDA2MDcyMDI2&#xa;MzRaMDcxIDAeBgNVBAMMF1NwbHVua1NlcnZlckRlZmF1bHRDZXJ0MRMwEQYDVQQK&#xa;DApTcGx1bmtVc2VyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwaAI&#xa;z6BUsKocjYVwcGA6gYEdxDFbpXRWlX+5mDRJVLajurk92cZTim4aADDdxUMryn1M&#xa;XP1DD2cixGv4hXy1ehL2ObaeiBcV9nuirWen47G6qJCDRD1j2c4yj5A1aXujkMFU&#xa;QfZ4cR2CW4CEeqHZ0ndJkc1dHrV7CQNw+Gny0L/4Yp3neQKNbjC18utg4XeXmscZ&#xa;TZwUhQaJ3FEFbb7QF2Lh1gn8Dq+NHPMgtMRDpTArHOmy/5WB5xJz0M5GgucU3bvA&#xa;yXLtnvpTBkdq8VeiFJQSzh5nwmkswaCZAKJg89Br5eAHfg/5hU0LBOxnQ+93LvwM&#xa;TjI4MuveWaq9eej4fwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQA1b7IiYEy7yt/c&#xa;59iNQD5/3+ozBijzwlOma946czOKlsUiVermyjFVvXMNFSJDS2LT8/2R5jWHft76&#xa;O1DHV9zp725NED9gt3UbUS65kJCI5MWr4j2Dbe/Xz3PVWpU23t0I4t5tL7Kfg/dk&#xa;Is3jpCmVghRm2mn3h6MA+rEdQ/+qCoZoBNtBUZPtLk89cKoaUHxj36axIttPGYIK&#xa;gImILJm4YQvwHx9Q8Rt8QfvGHiyKQ8mdH32Jj70xYTdNSZXFQ4x707zc72Gw6tNk&#xa;IgXjLCRgyYLzl6X7JjZuZh+k0KYZHRWdD0H1PIHb8RTW5LmSBd6FXEpYe1usMdPb&#xa;LPE+Qpfr&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">SplunkServerDefaultCert</elem>
+<elem key="organizationName">SplunkUser</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">SplunkCommonCA</elem>
+<elem key="countryName">US</elem>
+<elem key="emailAddress">support@splunk.com</elem>
+<elem key="localityName">San Francisco</elem>
+<elem key="organizationName">Splunk</elem>
+<elem key="stateOrProvinceName">CA</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">C1A008CFA054B0AA1C8D857070603A81811DC4315BA57456957FB998344954B6A3BAB93DD9C6538A6E1A0030DDC5432BCA7D4C5CFD430F6722C46BF8857CB57A12F639B69E881715F67BA2AD67A7E3B1BAA89083443D63D9CE328F9035697BA390C15441F678711D825B80847AA1D9D2774991CD5D1EB57B090370F869F2D0BFF8629DE779028D6E30B5F2EB60E177979AC7194D9C14850689DC51056DBED01762E1D609FC0EAF8D1CF320B4C443A5302B1CE9B2FF9581E71273D0CE4682E714DDBBC0C972ED9EFA5306476AF157A2149412CE1E67C2692CC1A09900A260F3D06BE5E0077E0FF9854D0B04EC6743EF772EFC0C4E323832EBDE59AABD79E8F87F</elem>
+<elem key="exponent">65537</elem>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2021-06-08T20:26:34</elem>
+<elem key="notAfter">2024-06-07T20:26:34</elem>
+</table>
+<elem key="md5">59368553715b6ec063f597b34876b918</elem>
+<elem key="sha1">ed6dd916d7567734be768624e15afe0b55b6b5fa</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDMjCCAhoCCQD//AN2su+5tTANBgkqhkiG9w0BAQsFADB/MQswCQYDVQQGEwJV&#xa;UzELMAkGA1UECAwCQ0ExFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xDzANBgNVBAoM&#xa;BlNwbHVuazEXMBUGA1UEAwwOU3BsdW5rQ29tbW9uQ0ExITAfBgkqhkiG9w0BCQEW&#xa;EnN1cHBvcnRAc3BsdW5rLmNvbTAeFw0yMTA2MDgyMDI2MzRaFw0yNDA2MDcyMDI2&#xa;MzRaMDcxIDAeBgNVBAMMF1NwbHVua1NlcnZlckRlZmF1bHRDZXJ0MRMwEQYDVQQK&#xa;DApTcGx1bmtVc2VyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwaAI&#xa;z6BUsKocjYVwcGA6gYEdxDFbpXRWlX+5mDRJVLajurk92cZTim4aADDdxUMryn1M&#xa;XP1DD2cixGv4hXy1ehL2ObaeiBcV9nuirWen47G6qJCDRD1j2c4yj5A1aXujkMFU&#xa;QfZ4cR2CW4CEeqHZ0ndJkc1dHrV7CQNw+Gny0L/4Yp3neQKNbjC18utg4XeXmscZ&#xa;TZwUhQaJ3FEFbb7QF2Lh1gn8Dq+NHPMgtMRDpTArHOmy/5WB5xJz0M5GgucU3bvA&#xa;yXLtnvpTBkdq8VeiFJQSzh5nwmkswaCZAKJg89Br5eAHfg/5hU0LBOxnQ+93LvwM&#xa;TjI4MuveWaq9eej4fwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQA1b7IiYEy7yt/c&#xa;59iNQD5/3+ozBijzwlOma946czOKlsUiVermyjFVvXMNFSJDS2LT8/2R5jWHft76&#xa;O1DHV9zp725NED9gt3UbUS65kJCI5MWr4j2Dbe/Xz3PVWpU23t0I4t5tL7Kfg/dk&#xa;Is3jpCmVghRm2mn3h6MA+rEdQ/+qCoZoBNtBUZPtLk89cKoaUHxj36axIttPGYIK&#xa;gImILJm4YQvwHx9Q8Rt8QfvGHiyKQ8mdH32Jj70xYTdNSZXFQ4x707zc72Gw6tNk&#xa;IgXjLCRgyYLzl6X7JjZuZh+k0KYZHRWdD0H1PIHb8RTW5LmSBd6FXEpYe1usMdPb&#xa;LPE+Qpfr&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="31621"/>
+<osmatch name="Linux 2.6.32" accuracy="91" line="54319">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32 or 3.10" accuracy="91" line="56843">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3.10</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.4" accuracy="91" line="67443">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
+</osmatch>
+<osmatch name="WatchGuard Fireware 11.8" accuracy="91" line="104852">
+<osclass type="firewall" vendor="WatchGuard" osfamily="Fireware" osgen="11.X" accuracy="91"><cpe>cpe:/o:watchguard:fireware:11.8</cpe></osclass>
+</osmatch>
+<osmatch name="Synology DiskStation Manager 5.1" accuracy="90" line="68507">
+<osclass type="storage-misc" vendor="Linux" osfamily="Linux" accuracy="90"><cpe>cpe:/o:linux:linux_kernel</cpe></osclass>
+<osclass type="storage-misc" vendor="Synology" osfamily="DiskStation Manager" osgen="5.X" accuracy="90"><cpe>cpe:/a:synology:diskstation_manager:5.1</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.35" accuracy="90" line="57208">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:2.6.35</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.39" accuracy="90" line="58229">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:2.6.39</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10 - 3.12" accuracy="90" line="63342">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.4" accuracy="90" line="65500">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.5" accuracy="90" line="65596">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:3.5</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.91%E=4%D=12/8%OT=22%CT=1%CU=31621%PV=Y%DS=2%DC=T%G=Y%TM=61B1135&#xa;OS:5%P=x86_64-pc-linux-gnu)SEQ(SP=FE%GCD=1%ISR=108%TI=Z%TS=A)SEQ(SP=FE%GCD=&#xa;OS:1%ISR=108%TI=Z%II=I%TS=A)SEQ(SP=FE%GCD=1%ISR=108%TI=Z%CI=Z%II=I%TS=A)OPS&#xa;OS:(O1=M4ECST11NW7%O2=M4ECST11NW7%O3=M4ECNNT11NW7%O4=M4ECST11NW7%O5=M4ECST1&#xa;OS:1NW7%O6=M4ECST11)WIN(W1=F4B3%W2=F4B3%W3=F4B3%W4=F4B3%W5=F4B3%W6=F4B3)ECN&#xa;OS:(R=Y%DF=Y%T=40%W=F507%O=M4ECNNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=A&#xa;OS:S%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=&#xa;OS:0%Q=)T6(R=N)T6(R=Y%DF=Y%T=40%W=F4B3%S=O%A=O%F=AS%O=M4ECST11NW7%RD=0%Q=)T&#xa;OS:7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)U1&#xa;OS:(R=N)IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="1435672" lastboot="Mon Nov 22 00:31:41 2021"/>
+<distance value="2"/>
+<tcpsequence index="254" difficulty="Good luck!" values="23394110,EB36063D,381E6D7B,49DF3F53,1666C708,4FA874CE"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="559275AA,55927614,55927678,559276D6,55927749,559277B4"/>
+<trace port="995" proto="tcp">
+<hop ttl="1" ipaddr="172.27.232.1" rtt="24.47"/>
+<hop ttl="2" ipaddr="10.0.0.175" rtt="24.56"/>
+</trace>
+<times srtt="28022" rttvar="6337" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1638994773"/>
+<taskend task="NSE" time="1638994773"/>
+<taskbegin task="NSE" time="1638994773"/>
+<taskend task="NSE" time="1638994773"/>
+<taskbegin task="NSE" time="1638994773"/>
+<taskend task="NSE" time="1638994773"/>
+<runstats><finished time="1638994773" timestr="Wed Dec  8 15:19:33 2021" summary="Nmap done at Wed Dec  8 15:19:33 2021; 1 IP address (1 host up) scanned in 84.58 seconds" elapsed="84.58" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

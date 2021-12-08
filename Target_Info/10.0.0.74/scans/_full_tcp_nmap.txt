@@ -1,0 +1,163 @@
+# Nmap 7.91 scan initiated Wed Dec  8 15:18:09 2021 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /home/kali/Desktop/results/10.0.0.74/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/results/10.0.0.74/scans/xml/_full_tcp_nmap.xml 10.0.0.74
+Nmap scan report for 10.0.0.74
+Host is up, received user-set (0.032s latency).
+Scanned at 2021-12-08 15:18:10 EST for 519s
+Not shown: 65518 closed ports
+Reason: 65518 resets
+PORT      STATE SERVICE            REASON          VERSION
+135/tcp   open  msrpc              syn-ack ttl 127 Microsoft Windows RPC
+139/tcp   open  netbios-ssn        syn-ack ttl 127 Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds       syn-ack ttl 127 Windows 7 Professional 7601 Service Pack 1 microsoft-ds (workgroup: WORKGROUP)
+554/tcp   open  rtsp?              syn-ack ttl 127
+2869/tcp  open  http               syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+3389/tcp  open  ssl/ms-wbt-server? syn-ack ttl 127
+| ssl-cert: Subject: commonName=RISK-ANALYST1
+| Issuer: commonName=RISK-ANALYST1
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2021-11-30T22:43:59
+| Not valid after:  2022-06-01T22:43:59
+| MD5:   e77f dce7 41ad c8bc 1cdf 3e2e 458c 270c
+| SHA-1: cb73 4cd1 ad10 9cf4 37a3 28dc f08e db62 1820 af6a
+| -----BEGIN CERTIFICATE-----
+| MIIC3jCCAcagAwIBAgIQEp+bYDduWoJPrI8/3hFrVDANBgkqhkiG9w0BAQUFADAY
+| MRYwFAYDVQQDEw1SSVNLLUFOQUxZU1QxMB4XDTIxMTEzMDIyNDM1OVoXDTIyMDYw
+| MTIyNDM1OVowGDEWMBQGA1UEAxMNUklTSy1BTkFMWVNUMTCCASIwDQYJKoZIhvcN
+| AQEBBQADggEPADCCAQoCggEBAMXvbQ6uHbW2qoU7Wd6D0zgNerYQD+2/PezBXE8V
+| m/nOtZCBx8rXMcYTmaB7RIAjNOkoSuR96KcWG22UHrp+97ex4Tcda/HDBPvZcnXZ
+| FpUIHVQIqahJvK+JMg/2t9RQNuu5w4BamzfvqLwj0pm+wLNIUxrv+i5yj5yEFILk
+| pyKFDeAlk3EU9M6BupwSKjpQbog1XKv7wCuFw2xldK69Nd4hqNS53l3/yEBMOAek
+| KnkXp5/lM9rBGorwOzB23UmI8uPgsqEgu2PYsRWSMYQND6KmbjPClWmr6apU5kIl
+| /wJl7hbrUNZrRgR96/4WuulDrK4syYCsYS+wFa3xnqTgk2cCAwEAAaMkMCIwEwYD
+| VR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgQwMA0GCSqGSIb3DQEBBQUAA4IB
+| AQBPshd2mrmD1CiaHFiHbJNLAr6ttJlHAPYg8Qeo6saCnecY6MTxJLuBAdeXjEf1
+| kDc+erkxtULcY69AoJnOvVmcyGxFviS1BRZma+0MdqA6F7K2qgVXEBQPnyhanCFC
+| HZ9NgzqAB7s60n8jtGVRxcmOShPEhXsNwvukoDpq7M8nJtqcjqP960WboV/Fzc3g
+| 15X2y7GCBjpHUwWGP/qz3YAcRgrsLjl8OOS8Y0N1stWYF14x0XvzO9IZ1Pw/AwMj
+| Nctr4JhVBRW/q2Iwd1U+1A1AjeuUy+Tk4VeD8RNMczDlAQo+Wv/LYnar9YnvF+GZ
+| cBCPgRHqpnJ6lT1wFqNLOVFx
+|_-----END CERTIFICATE-----
+|_ssl-date: 2021-12-08T20:26:30+00:00; -12s from scanner time.
+5357/tcp  open  http               syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Service Unavailable
+5985/tcp  open  http               syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+8089/tcp  open  ssl/http           syn-ack ttl 127 Splunkd httpd
+| http-methods: 
+|_  Supported Methods: GET HEAD OPTIONS
+| http-robots.txt: 1 disallowed entry 
+|_/
+|_http-server-header: Splunkd
+|_http-title: splunkd
+| ssl-cert: Subject: commonName=SplunkServerDefaultCert/organizationName=SplunkUser
+| Issuer: commonName=SplunkCommonCA/organizationName=Splunk/stateOrProvinceName=CA/countryName=US/emailAddress=support@splunk.com/localityName=San Francisco
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-06-09T20:57:41
+| Not valid after:  2024-06-08T20:57:41
+| MD5:   128c ba03 3f47 f93b bd1d 4181 fe74 abc5
+| SHA-1: 8553 a7ba 2f4c ca56 fb35 b77b af2d 9bc9 bd7d 406d
+| -----BEGIN CERTIFICATE-----
+| MIIDMjCCAhoCCQDJDIzWYekwpjANBgkqhkiG9w0BAQsFADB/MQswCQYDVQQGEwJV
+| UzELMAkGA1UECAwCQ0ExFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xDzANBgNVBAoM
+| BlNwbHVuazEXMBUGA1UEAwwOU3BsdW5rQ29tbW9uQ0ExITAfBgkqhkiG9w0BCQEW
+| EnN1cHBvcnRAc3BsdW5rLmNvbTAeFw0yMTA2MDkyMDU3NDFaFw0yNDA2MDgyMDU3
+| NDFaMDcxIDAeBgNVBAMMF1NwbHVua1NlcnZlckRlZmF1bHRDZXJ0MRMwEQYDVQQK
+| DApTcGx1bmtVc2VyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvMPZ
+| NE5JT5IysV2RrEQ+LI4+N1Hh2R9wUk6vnvPG2o0VXpyI217N7UBQf3Od48/RzuLX
+| NvogHRtSyQPx7NxjfPZ2qAMq/3ix4eB8k4SThwnWeN7OfXsUviFfsTnnLIyrPfJ/
+| 1JRPe2dCnGKA6lfsBSYfz8to+e534obpgUzIraBh2kJVDa7vAU8nCUc1YkjnY75n
+| iaqoKBIjsQdrWvt1g7REWpzmojK4WAb9Y/BdHJ7t0wtriVpEp2n/eeJr2n+IYzI+
+| iy3mFAMxVdCsNgfo4bWINA9PhKWK2yn4cWiFhrVZqe6S3lJYGb0C4LrSuc1Wjw/2
+| Vsqgc6Oti73lSg8KbQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQAQXQQ6aDUlMx+d
+| yX8HF0RgnpltwsZbix09JcFwS40AURF333a23yIAVdyQlX2GccKttphNe8H1hcwd
+| wFA3v7AY7BBt0M4SzuZQPqXYuABmSNj1tw/DnEMAwTN2tfd3LvKfbx/EyeB6e7SQ
+| yrcZS1X0wafjVzyCw7/GFlxW9a8j3M0B1z5gS2EaVvAhejKg7m46KAPmcFGuNQMZ
+| MC/NbZIYsWwu5Zdv4qrcGKwNap/lNf63I59HjOyOXmqVzVmjqjLQbnpvCO9sa0sl
+| es3yQ31fgwEdIiFcqIvcxL4hGr3Gq+rdtYJqpTIWJI3ZkgOHCDFZxrJYXO74hfUE
+| N/Rr3HOQ
+|_-----END CERTIFICATE-----
+10243/tcp open  http               syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+47001/tcp open  http               syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49152/tcp open  msrpc              syn-ack ttl 127 Microsoft Windows RPC
+49153/tcp open  msrpc              syn-ack ttl 127 Microsoft Windows RPC
+49154/tcp open  msrpc              syn-ack ttl 127 Microsoft Windows RPC
+49164/tcp open  msrpc              syn-ack ttl 127 Microsoft Windows RPC
+49170/tcp open  msrpc              syn-ack ttl 127 Microsoft Windows RPC
+49172/tcp open  msrpc              syn-ack ttl 127 Microsoft Windows RPC
+Device type: general purpose
+Running: Microsoft Windows 7
+OS CPE: cpe:/o:microsoft:windows_7
+OS details: Microsoft Windows 7
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=12/8%OT=135%CT=1%CU=33172%PV=Y%DS=2%DC=T%G=Y%TM=61B115
+OS:09%P=x86_64-pc-linux-gnu)SEQ(SP=105%GCD=1%ISR=10D%TI=I%TS=7)OPS(O1=M4ECN
+OS:W8ST11%O2=M4ECNW8ST11%O3=M4ECNW8NNT11%O4=M4ECNW8ST11%O5=M4ECNW8ST11%O6=M
+OS:4ECST11)WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=2000)ECN(R=Y%DF=Y
+OS:%T=80%W=2000%O=M4ECNW8NNS%CC=N%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS%RD=0%Q=
+OS:)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R
+OS:=N)T7(R=N)U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=
+OS:G)IE(R=N)
+
+Uptime guess: 1.161 days (since Tue Dec  7 11:35:37 2021)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: Host: RISK-ANALYST1; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 1h59m48s, deviation: 4h00m00s, median: -11s
+| nbstat: NetBIOS name: RISK-ANALYST1, NetBIOS user: <unknown>, NetBIOS MAC: 06:f6:38:75:54:4b (unknown)
+| Names:
+|   RISK-ANALYST1<00>    Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   RISK-ANALYST1<20>    Flags: <unique><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+| Statistics:
+|   06 f6 38 75 54 4b 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 36654/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 18353/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 58865/udp): CLEAN (Timeout)
+|   Check 4 (port 26665/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-os-discovery: 
+|   OS: Windows 7 Professional 7601 Service Pack 1 (Windows 7 Professional 6.1)
+|   OS CPE: cpe:/o:microsoft:windows_7::sp1:professional
+|   Computer name: RISK-ANALYST1
+|   NetBIOS computer name: RISK-ANALYST1\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2021-12-08T12:25:26-08:00
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2021-12-08T20:25:28
+|_  start_date: 2021-12-07T16:36:02
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT      ADDRESS
+1   25.16 ms 172.27.232.1
+2   25.50 ms 10.0.0.74
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Dec  8 15:26:49 2021 -- 1 IP address (1 host up) scanned in 520.77 seconds

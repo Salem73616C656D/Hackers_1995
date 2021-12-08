@@ -1,0 +1,52 @@
+[*] ftp found on tcp/21.
+
+
+
+[*] http found on tcp/80.
+
+
+
+[*] ms-wbt-server found on tcp/3389.
+
+
+
+[*] msrpc found on tcp/49152.
+
+
+
+[*] msrpc found on tcp/49153.
+
+
+
+[*] msrpc found on tcp/49154.
+
+
+
+[*] msrpc found on tcp/49161.
+
+
+
+[*] msrpc found on tcp/49165.
+
+
+
+[*] http found on tcp/5985.
+
+
+
+[*] http found on tcp/47001.
+
+
+
+[*] msrpc found on tcp/49162.
+
+
+
+[*] netbios-ns found on udp/137.
+
+
+
+[*] snmp found on udp/161.
+
+
+

@@ -1,0 +1,14 @@
+tcp/3389/nmap-rdp - Nmap script found a potential vulnerability. (State: VULNERABLE)
+
+tcp/5357/nmap-http - Identified HTTP Server: Microsoft-HTTPAPI/2.0
+
+tcp/10243/nmap-http - Identified HTTP Server: Microsoft-HTTPAPI/2.0
+
+tcp/8089/nmap-http - Matched Pattern: Unauthorized
+
+tcp/8089/nmap-http - Identified HTTP Server: Splunkd
+
+tcp/5985/nmap-http - Identified HTTP Server: Microsoft-HTTPAPI/2.0
+
+tcp/47001/nmap-http - Identified HTTP Server: Microsoft-HTTPAPI/2.0
+

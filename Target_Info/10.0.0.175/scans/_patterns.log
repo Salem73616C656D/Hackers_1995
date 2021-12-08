@@ -1,0 +1,6 @@
+tcp/80/nmap-http - Identified HTTP Server: Apache/2.4.41 (Ubuntu)
+
+tcp/8089/nmap-http - Matched Pattern: Unauthorized
+
+tcp/8089/nmap-http - Identified HTTP Server: Splunkd
+

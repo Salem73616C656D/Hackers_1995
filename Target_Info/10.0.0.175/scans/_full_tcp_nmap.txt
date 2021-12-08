@@ -1,0 +1,94 @@
+# Nmap 7.91 scan initiated Wed Dec  8 15:18:09 2021 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /home/kali/Desktop/results/10.0.0.175/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/results/10.0.0.175/scans/xml/_full_tcp_nmap.xml 10.0.0.175
+adjust_timeouts2: packet supposedly had rtt of -483801 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -483801 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -594781 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -594781 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -443675 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -443675 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -358189 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -358189 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -425086 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -425086 microseconds.  Ignoring time.
+Nmap scan report for 10.0.0.175
+Host is up, received user-set (0.028s latency).
+Scanned at 2021-12-08 15:18:10 EST for 83s
+Not shown: 65532 closed ports
+Reason: 65532 resets
+PORT     STATE SERVICE  REASON         VERSION
+22/tcp   open  ssh      syn-ack ttl 63 OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 8c:47:e5:d6:2c:e3:73:eb:a4:e3:1a:d1:8e:10:50:a8 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCv8KXwGMTuNzLUftVIa7Ms8YXi3h0mggKoDgJOQ+ZGvTsLDtkKW3sX8rSzsp3dpJB9OuA2KIhymhsGXO93liZV7vCI5QqTAhq9WroVUVITeQvPUaj0mwycyJHqhZ1YkjQ62IAqtJbzn3pFZ1xhikqi4Gt4tIzMxqSJzrOMUY9XzZOmcrfoyGsD89+MiyBJHcpgp4gIZuTj505436agDouzfb9Xc0qPjo+Lfwb0ViAvdfy/Cb+jyrG0hU094SrA4Q+N3+26wUbvEEm6LKTyFxSrEu640f7lSi71SHnP7+SD+E6RnxaHDggqVlLGX6Ml48Vkwr2rTDCex+HqdMRtiPSRScSFC72/r5uvkAv5dkvRA7X1AtMPly3tlerxT7VZrhl7kwEVP8nsYw2y8g9noknmw5lysvf9RMZsFUoKK+FNNnQezHmmwDuHwpDAEWtlLNnqiNsRcIRr0nSV4+zz38lMCPPOl4zeRO1ltnx8+4Ki+OoFCcJUAoc6qrfadQtYA9s=
+|   256 a7:29:bb:a0:42:9b:2b:76:5e:7b:24:13:f6:8a:44:cd (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBBj0ZuuFGrAYwamLPhKnnbQma5h6RdoU1pYazibUZAyelwtuwBYMR9NbjV6ide9vE+Q5fSZ53MD36kZtuNu26yw=
+|   256 8b:dc:48:dc:ab:ab:41:40:db:db:2b:1e:73:d0:a3:ea (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE8glDz1lGqLP3M7qMPo21tX24l11bP/CSU/rZseg6+4
+80/tcp   open  http     syn-ack ttl 63 Apache httpd 2.4.41 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET POST OPTIONS HEAD
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-title: Site doesn't have a title (text/html).
+8089/tcp open  ssl/http syn-ack ttl 63 Splunkd httpd
+| http-methods: 
+|_  Supported Methods: GET HEAD OPTIONS
+| http-robots.txt: 1 disallowed entry 
+|_/
+|_http-server-header: Splunkd
+|_http-title: splunkd
+| ssl-cert: Subject: commonName=SplunkServerDefaultCert/organizationName=SplunkUser
+| Issuer: commonName=SplunkCommonCA/organizationName=Splunk/stateOrProvinceName=CA/countryName=US/emailAddress=support@splunk.com/localityName=San Francisco
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-06-08T20:26:34
+| Not valid after:  2024-06-07T20:26:34
+| MD5:   5936 8553 715b 6ec0 63f5 97b3 4876 b918
+| SHA-1: ed6d d916 d756 7734 be76 8624 e15a fe0b 55b6 b5fa
+| -----BEGIN CERTIFICATE-----
+| MIIDMjCCAhoCCQD//AN2su+5tTANBgkqhkiG9w0BAQsFADB/MQswCQYDVQQGEwJV
+| UzELMAkGA1UECAwCQ0ExFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xDzANBgNVBAoM
+| BlNwbHVuazEXMBUGA1UEAwwOU3BsdW5rQ29tbW9uQ0ExITAfBgkqhkiG9w0BCQEW
+| EnN1cHBvcnRAc3BsdW5rLmNvbTAeFw0yMTA2MDgyMDI2MzRaFw0yNDA2MDcyMDI2
+| MzRaMDcxIDAeBgNVBAMMF1NwbHVua1NlcnZlckRlZmF1bHRDZXJ0MRMwEQYDVQQK
+| DApTcGx1bmtVc2VyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwaAI
+| z6BUsKocjYVwcGA6gYEdxDFbpXRWlX+5mDRJVLajurk92cZTim4aADDdxUMryn1M
+| XP1DD2cixGv4hXy1ehL2ObaeiBcV9nuirWen47G6qJCDRD1j2c4yj5A1aXujkMFU
+| QfZ4cR2CW4CEeqHZ0ndJkc1dHrV7CQNw+Gny0L/4Yp3neQKNbjC18utg4XeXmscZ
+| TZwUhQaJ3FEFbb7QF2Lh1gn8Dq+NHPMgtMRDpTArHOmy/5WB5xJz0M5GgucU3bvA
+| yXLtnvpTBkdq8VeiFJQSzh5nwmkswaCZAKJg89Br5eAHfg/5hU0LBOxnQ+93LvwM
+| TjI4MuveWaq9eej4fwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQA1b7IiYEy7yt/c
+| 59iNQD5/3+ozBijzwlOma946czOKlsUiVermyjFVvXMNFSJDS2LT8/2R5jWHft76
+| O1DHV9zp725NED9gt3UbUS65kJCI5MWr4j2Dbe/Xz3PVWpU23t0I4t5tL7Kfg/dk
+| Is3jpCmVghRm2mn3h6MA+rEdQ/+qCoZoBNtBUZPtLk89cKoaUHxj36axIttPGYIK
+| gImILJm4YQvwHx9Q8Rt8QfvGHiyKQ8mdH32Jj70xYTdNSZXFQ4x707zc72Gw6tNk
+| IgXjLCRgyYLzl6X7JjZuZh+k0KYZHRWdD0H1PIHb8RTW5LmSBd6FXEpYe1usMdPb
+| LPE+Qpfr
+|_-----END CERTIFICATE-----
+Aggressive OS guesses: Linux 2.6.32 (91%), Linux 2.6.32 or 3.10 (91%), Linux 4.4 (91%), WatchGuard Fireware 11.8 (91%), Synology DiskStation Manager 5.1 (90%), Linux 2.6.35 (90%), Linux 2.6.39 (90%), Linux 3.10 - 3.12 (90%), Linux 3.4 (90%), Linux 3.5 (90%)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=12/8%OT=22%CT=1%CU=31621%PV=Y%DS=2%DC=T%G=Y%TM=61B1135
+OS:5%P=x86_64-pc-linux-gnu)SEQ(SP=FE%GCD=1%ISR=108%TI=Z%TS=A)SEQ(SP=FE%GCD=
+OS:1%ISR=108%TI=Z%II=I%TS=A)SEQ(SP=FE%GCD=1%ISR=108%TI=Z%CI=Z%II=I%TS=A)OPS
+OS:(O1=M4ECST11NW7%O2=M4ECST11NW7%O3=M4ECNNT11NW7%O4=M4ECST11NW7%O5=M4ECST1
+OS:1NW7%O6=M4ECST11)WIN(W1=F4B3%W2=F4B3%W3=F4B3%W4=F4B3%W5=F4B3%W6=F4B3)ECN
+OS:(R=Y%DF=Y%T=40%W=F507%O=M4ECNNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=A
+OS:S%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=
+OS:0%Q=)T6(R=N)T6(R=Y%DF=Y%T=40%W=F4B3%S=O%A=O%F=AS%O=M4ECST11NW7%RD=0%Q=)T
+OS:7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)U1
+OS:(R=N)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 16.617 days (since Mon Nov 22 00:31:41 2021)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=254 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 995/tcp)
+HOP RTT      ADDRESS
+1   24.47 ms 172.27.232.1
+2   24.56 ms 10.0.0.175
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Dec  8 15:19:33 2021 -- 1 IP address (1 host up) scanned in 84.58 seconds

@@ -1,0 +1,71 @@
+# Nmap 7.91 scan initiated Wed Dec  8 15:19:00 2021 as: nmap -vv --reason -Pn -sV -p 139 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args=unsafe=1 -oN /home/kali/Desktop/results/10.0.0.197/scans/tcp_139_smb_nmap.txt -oX /home/kali/Desktop/results/10.0.0.197/scans/xml/tcp_139_smb_nmap.xml 10.0.0.197
+Nmap scan report for 10.0.0.197
+Host is up, received user-set (0.027s latency).
+Scanned at 2021-12-08 15:19:01 EST for 30s
+
+PORT    STATE SERVICE     REASON          VERSION
+139/tcp open  netbios-ssn syn-ack ttl 127 Windows Server 2019 Standard Evaluation 17763 netbios-ssn
+|_smb-enum-services: ERROR: Script execution failed (use -d to debug)
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| nbstat: NetBIOS name: ACCOUNTING2, NetBIOS user: <unknown>, NetBIOS MAC: 06:0a:5d:3d:c7:19 (unknown)
+| Names:
+|   ACCOUNTING2<00>      Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   ACCOUNTING2<20>      Flags: <unique><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+| Statistics:
+|   06 0a 5d 3d c7 19 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+| smb-mbenum: 
+|_  ERROR: Call to Browser Service failed with status = 2184
+| smb-os-discovery: 
+|   OS: Windows Server 2019 Standard Evaluation 17763 (Windows Server 2019 Standard Evaluation 6.3)
+|   Computer name: accounting2
+|   NetBIOS computer name: ACCOUNTING2\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2021-12-08T12:19:07-08:00
+|_smb-print-text: false
+| smb-protocols: 
+|   dialects: 
+|     NT LM 0.12 (SMBv1) [dangerous, but default]
+|     2.02
+|     2.10
+|     3.00
+|     3.02
+|_    3.11
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb-vuln-ms10-061: NT_STATUS_ACCESS_DENIED
+| smb2-capabilities: 
+|   2.02: 
+|     Distributed File System
+|   2.10: 
+|     Distributed File System
+|     Leasing
+|   3.00: 
+|     Distributed File System
+|     Leasing
+|   3.02: 
+|     Distributed File System
+|     Leasing
+|   3.11: 
+|     Distributed File System
+|_    Leasing
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2021-12-08T20:19:07
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Dec  8 15:19:31 2021 -- 1 IP address (1 host up) scanned in 31.31 seconds

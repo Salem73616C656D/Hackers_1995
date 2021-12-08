@@ -1,0 +1,4 @@
+iso.3.6.1.2.1.25.6.3.1.2.1 = STRING: "EC2ConfigService"
+iso.3.6.1.2.1.25.6.3.1.2.2 = STRING: "Microsoft .NET Framework 4.5.1"
+iso.3.6.1.2.1.25.6.3.1.2.3 = STRING: "Microsoft .NET Framework 4.5.1"
+iso.3.6.1.2.1.25.6.3.1.2.4 = STRING: "Amazon SSM Agent"

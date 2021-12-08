@@ -1,0 +1,14 @@
+Doing NBT name scan for addresses from 10.0.0.82
+
+
+NetBIOS Name Table for Host 10.0.0.82:
+
+Incomplete packet, 155 bytes long.
+Name             Service          Type             
+----------------------------------------
+VAGRANT-2008R2   File Server Service
+VAGRANT-2008R2   Workstation Service
+WORKGROUP        Domain Name
+
+Adapter address: 06:5b:a7:cb:24:39
+----------------------------------------

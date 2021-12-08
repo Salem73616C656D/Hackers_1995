@@ -1,0 +1,136 @@
+Version: 2.0.6-static
+OpenSSL 1.1.1i-dev  xx XXX xxxx
+
+Connected to 10.0.0.74
+
+Testing SSL server 10.0.0.74 on port 3389 using SNI name 10.0.0.74
+
+  SSL/TLS Protocols:
+SSLv2     disabled
+SSLv3     disabled
+TLSv1.0   enabled
+TLSv1.1   enabled
+TLSv1.2   enabled
+TLSv1.3   disabled
+
+  TLS Fallback SCSV:
+Server does not support TLS Fallback SCSV
+
+  TLS renegotiation:
+Secure session renegotiation supported
+
+  TLS Compression:
+Compression disabled
+
+  Heartbleed:
+TLSv1.2 not vulnerable to heartbleed
+TLSv1.1 not vulnerable to heartbleed
+TLSv1.0 not vulnerable to heartbleed
+
+  Supported Server Cipher(s):
+Preferred TLSv1.2  256 bits  ECDHE-RSA-AES256-SHA384       Curve P-256 DHE 256
+Accepted  TLSv1.2  128 bits  ECDHE-RSA-AES128-SHA256       Curve P-256 DHE 256
+Accepted  TLSv1.2  256 bits  ECDHE-RSA-AES256-SHA          Curve P-256 DHE 256
+Accepted  TLSv1.2  128 bits  ECDHE-RSA-AES128-SHA          Curve P-256 DHE 256
+Accepted  TLSv1.2  256 bits  DHE-RSA-AES256-GCM-SHA384     DHE 1024 bits
+Accepted  TLSv1.2  128 bits  DHE-RSA-AES128-GCM-SHA256     DHE 1024 bits
+Accepted  TLSv1.2  256 bits  DHE-RSA-AES256-SHA            DHE 1024 bits
+Accepted  TLSv1.2  128 bits  DHE-RSA-AES128-SHA            DHE 1024 bits
+Accepted  TLSv1.2  256 bits  AES256-GCM-SHA384            
+Accepted  TLSv1.2  128 bits  AES128-GCM-SHA256            
+Accepted  TLSv1.2  256 bits  AES256-SHA256                
+Accepted  TLSv1.2  128 bits  AES128-SHA256                
+Accepted  TLSv1.2  256 bits  AES256-SHA                   
+Accepted  TLSv1.2  128 bits  AES128-SHA                   
+Accepted  TLSv1.2  112 bits  DES-CBC3-SHA                 
+Accepted  TLSv1.2  128 bits  RC4-SHA                      
+Accepted  TLSv1.2  128 bits  RC4-MD5                      
+Preferred TLSv1.1  256 bits  ECDHE-RSA-AES256-SHA          Curve P-256 DHE 256
+Accepted  TLSv1.1  128 bits  ECDHE-RSA-AES128-SHA          Curve P-256 DHE 256
+Accepted  TLSv1.1  256 bits  DHE-RSA-AES256-SHA            DHE 1024 bits
+Accepted  TLSv1.1  128 bits  DHE-RSA-AES128-SHA            DHE 1024 bits
+Accepted  TLSv1.1  256 bits  AES256-SHA                   
+Accepted  TLSv1.1  128 bits  AES128-SHA                   
+Accepted  TLSv1.1  112 bits  DES-CBC3-SHA                 
+Accepted  TLSv1.1  128 bits  RC4-SHA                      
+Accepted  TLSv1.1  128 bits  RC4-MD5                      
+Preferred TLSv1.0  256 bits  ECDHE-RSA-AES256-SHA          Curve P-256 DHE 256
+Accepted  TLSv1.0  128 bits  ECDHE-RSA-AES128-SHA          Curve P-256 DHE 256
+Accepted  TLSv1.0  256 bits  DHE-RSA-AES256-SHA            DHE 1024 bits
+Accepted  TLSv1.0  128 bits  DHE-RSA-AES128-SHA            DHE 1024 bits
+Accepted  TLSv1.0  256 bits  AES256-SHA                   
+Accepted  TLSv1.0  128 bits  AES128-SHA                   
+Accepted  TLSv1.0  112 bits  DES-CBC3-SHA                 
+Accepted  TLSv1.0  128 bits  RC4-SHA                      
+Accepted  TLSv1.0  128 bits  RC4-MD5                      
+
+  Server Signature Algorithm(s):
+TLSv1.2  rsa_pkcs1_sha1
+
+  SSL Certificate:
+    Certificate blob:
+-----BEGIN CERTIFICATE-----
+MIIC3jCCAcagAwIBAgIQEp+bYDduWoJPrI8/3hFrVDANBgkqhkiG9w0BAQUFADAY
+MRYwFAYDVQQDEw1SSVNLLUFOQUxZU1QxMB4XDTIxMTEzMDIyNDM1OVoXDTIyMDYw
+MTIyNDM1OVowGDEWMBQGA1UEAxMNUklTSy1BTkFMWVNUMTCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAMXvbQ6uHbW2qoU7Wd6D0zgNerYQD+2/PezBXE8V
+m/nOtZCBx8rXMcYTmaB7RIAjNOkoSuR96KcWG22UHrp+97ex4Tcda/HDBPvZcnXZ
+FpUIHVQIqahJvK+JMg/2t9RQNuu5w4BamzfvqLwj0pm+wLNIUxrv+i5yj5yEFILk
+pyKFDeAlk3EU9M6BupwSKjpQbog1XKv7wCuFw2xldK69Nd4hqNS53l3/yEBMOAek
+KnkXp5/lM9rBGorwOzB23UmI8uPgsqEgu2PYsRWSMYQND6KmbjPClWmr6apU5kIl
+/wJl7hbrUNZrRgR96/4WuulDrK4syYCsYS+wFa3xnqTgk2cCAwEAAaMkMCIwEwYD
+VR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgQwMA0GCSqGSIb3DQEBBQUAA4IB
+AQBPshd2mrmD1CiaHFiHbJNLAr6ttJlHAPYg8Qeo6saCnecY6MTxJLuBAdeXjEf1
+kDc+erkxtULcY69AoJnOvVmcyGxFviS1BRZma+0MdqA6F7K2qgVXEBQPnyhanCFC
+HZ9NgzqAB7s60n8jtGVRxcmOShPEhXsNwvukoDpq7M8nJtqcjqP960WboV/Fzc3g
+15X2y7GCBjpHUwWGP/qz3YAcRgrsLjl8OOS8Y0N1stWYF14x0XvzO9IZ1Pw/AwMj
+Nctr4JhVBRW/q2Iwd1U+1A1AjeuUy+Tk4VeD8RNMczDlAQo+Wv/LYnar9YnvF+GZ
+cBCPgRHqpnJ6lT1wFqNLOVFx
+-----END CERTIFICATE-----
+    Version: 2
+    Serial Number: 12:9f:9b:60:37:6e:5a:82:4f:ac:8f:3f:de:11:6b:54
+    Signature Algorithm: sha1WithRSAEncryption
+    Issuer: /CN=RISK-ANALYST1
+    Not valid before: Nov 30 22:43:59 2021 GMT
+    Not valid after: Jun  1 22:43:59 2022 GMT
+    Subject: /CN=RISK-ANALYST1
+    Public Key Algorithm: NULL
+    RSA Public Key: (2048 bit)
+      RSA Public-Key: (2048 bit)
+      Modulus:
+          00:c5:ef:6d:0e:ae:1d:b5:b6:aa:85:3b:59:de:83:
+          d3:38:0d:7a:b6:10:0f:ed:bf:3d:ec:c1:5c:4f:15:
+          9b:f9:ce:b5:90:81:c7:ca:d7:31:c6:13:99:a0:7b:
+          44:80:23:34:e9:28:4a:e4:7d:e8:a7:16:1b:6d:94:
+          1e:ba:7e:f7:b7:b1:e1:37:1d:6b:f1:c3:04:fb:d9:
+          72:75:d9:16:95:08:1d:54:08:a9:a8:49:bc:af:89:
+          32:0f:f6:b7:d4:50:36:eb:b9:c3:80:5a:9b:37:ef:
+          a8:bc:23:d2:99:be:c0:b3:48:53:1a:ef:fa:2e:72:
+          8f:9c:84:14:82:e4:a7:22:85:0d:e0:25:93:71:14:
+          f4:ce:81:ba:9c:12:2a:3a:50:6e:88:35:5c:ab:fb:
+          c0:2b:85:c3:6c:65:74:ae:bd:35:de:21:a8:d4:b9:
+          de:5d:ff:c8:40:4c:38:07:a4:2a:79:17:a7:9f:e5:
+          33:da:c1:1a:8a:f0:3b:30:76:dd:49:88:f2:e3:e0:
+          b2:a1:20:bb:63:d8:b1:15:92:31:84:0d:0f:a2:a6:
+          6e:33:c2:95:69:ab:e9:aa:54:e6:42:25:ff:02:65:
+          ee:16:eb:50:d6:6b:46:04:7d:eb:fe:16:ba:e9:43:
+          ac:ae:2c:c9:80:ac:61:2f:b0:15:ad:f1:9e:a4:e0:
+          93:67
+      Exponent: 65537 (0x10001)
+    X509v3 Extensions:
+      X509v3 Extended Key Usage: 
+        TLS Web Server Authentication
+      X509v3 Key Usage: 
+        Key Encipherment, Data Encipherment
+  Verify Certificate:
+    self signed certificate
+
+  SSL Certificate:
+Signature Algorithm: sha1WithRSAEncryption
+RSA Key Strength:    2048
+
+Subject:  RISK-ANALYST1
+Issuer:   RISK-ANALYST1
+
+Not valid before: Nov 30 22:43:59 2021 GMT
+Not valid after:  Jun  1 22:43:59 2022 GMT

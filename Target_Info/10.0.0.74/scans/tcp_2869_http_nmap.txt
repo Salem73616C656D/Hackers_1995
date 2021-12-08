@@ -1,0 +1,1 @@
+# Nmap 7.91 scan initiated Wed Dec  8 15:26:04 2021 as: nmap -vv --reason -Pn -sV -p 2869 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /home/kali/Desktop/results/10.0.0.74/scans/tcp_2869_http_nmap.txt -oX /home/kali/Desktop/results/10.0.0.74/scans/xml/tcp_2869_http_nmap.xml 10.0.0.74

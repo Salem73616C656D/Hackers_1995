@@ -1,0 +1,41 @@
+# Nmap 7.91 scan initiated Wed Dec  8 14:25:24 2021 as: nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN /home/kali/Desktop/results/10.0.0.6/scans/_top_20_udp_nmap.txt -oX /home/kali/Desktop/results/10.0.0.6/scans/xml/_top_20_udp_nmap.xml 10.0.0.6
+Nmap scan report for 10.0.0.6
+Host is up, received user-set.
+Scanned at 2021-12-08 14:25:25 EST for 589s
+
+PORT      STATE         SERVICE      REASON      VERSION
+53/udp    open|filtered domain       no-response
+67/udp    open|filtered dhcps        no-response
+68/udp    open|filtered dhcpc        no-response
+69/udp    open|filtered tftp         no-response
+123/udp   open|filtered ntp          no-response
+135/udp   open|filtered msrpc        no-response
+137/udp   open|filtered netbios-ns   no-response
+138/udp   open|filtered netbios-dgm  no-response
+139/udp   open|filtered netbios-ssn  no-response
+161/udp   open|filtered snmp         no-response
+162/udp   open|filtered snmptrap     no-response
+445/udp   open|filtered microsoft-ds no-response
+500/udp   open|filtered isakmp       no-response
+514/udp   open|filtered syslog       no-response
+520/udp   open|filtered route        no-response
+631/udp   open|filtered ipp          no-response
+1434/udp  open|filtered ms-sql-m     no-response
+1900/udp  open|filtered upnp         no-response
+4500/udp  open|filtered nat-t-ike    no-response
+49152/udp open|filtered unknown      no-response
+Too many fingerprints match this host to give specific OS details
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=12/8%OT=%CT=%CU=%PV=Y%G=N%TM=61B108F2%P=x86_64-pc-linux-gnu)
+U1(R=N)
+IE(R=N)
+
+
+TRACEROUTE (using proto 1/icmp)
+HOP RTT      ADDRESS
+1   25.84 ms 172.27.232.1
+2   ... 30
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Dec  8 14:35:14 2021 -- 1 IP address (1 host up) scanned in 590.35 seconds

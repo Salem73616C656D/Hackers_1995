@@ -1,0 +1,6 @@
+tcp/80/nmap-http - Identified HTTP Server: Microsoft-IIS/7.5
+
+tcp/5985/nmap-http - Identified HTTP Server: Microsoft-HTTPAPI/2.0
+
+tcp/47001/nmap-http - Identified HTTP Server: Microsoft-HTTPAPI/2.0
+

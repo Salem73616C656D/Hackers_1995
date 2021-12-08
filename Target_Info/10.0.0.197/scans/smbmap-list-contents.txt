@@ -1,0 +1,8 @@
+[!] RPC Authentication error occurred
+[!] Authentication error on 10.0.0.197
+[!] Authentication error on 10.0.0.197
+[!] RPC Authentication error occurred
+[!] Authentication error on 10.0.0.197
+[!] Authentication error on 10.0.0.197
+[!] 445 not open on 10.0.0.197....
+[!] 445 not open on 10.0.0.197....

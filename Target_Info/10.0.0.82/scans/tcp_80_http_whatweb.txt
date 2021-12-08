@@ -1,0 +1,44 @@
+WhatWeb report for http://10.0.0.82:80
+Status    : 200 OK
+Title     : <None>
+IP        : 10.0.0.82
+Country   : RESERVED, ZZ
+
+Summary   : HTTPServer[Microsoft-IIS/7.5], X-Powered-By[ASP.NET], Microsoft-IIS[7.5]
+
+Detected Plugins:
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : Microsoft-IIS/7.5 (from server string)
+
+[ Microsoft-IIS ]
+	Microsoft Internet Information Services (IIS) for Windows 
+	Server is a flexible, secure and easy-to-manage Web server 
+	for hosting anything on the Web. From media streaming to 
+	web application hosting, IIS's scalable and open 
+	architecture is ready to handle the most demanding tasks. 
+
+	Version      : 7.5
+	Website     : http://www.iis.net/
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header 
+
+	String       : ASP.NET (from x-powered-by string)
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Content-Type: text/html
+	Content-Encoding: gzip
+	Last-Modified: Fri, 11 Jun 2021 21:32:03 GMT
+	Accept-Ranges: bytes
+	ETag: "804b63895fd71:0"
+	Vary: Accept-Encoding
+	Server: Microsoft-IIS/7.5
+	X-Powered-By: ASP.NET
+	Date: Wed, 08 Dec 2021 19:51:26 GMT
+	Connection: close
+	Content-Length: 630424
+	

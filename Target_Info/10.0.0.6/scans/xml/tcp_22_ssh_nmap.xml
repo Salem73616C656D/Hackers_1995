@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Wed Dec  8 14:26:16 2021 as: nmap -vv -&#45;reason -Pn -sV -p 22 -&#45;script=banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods -oN /home/kali/Desktop/results/10.0.0.6/scans/tcp_22_ssh_nmap.txt -oX /home/kali/Desktop/results/10.0.0.6/scans/xml/tcp_22_ssh_nmap.xml 10.0.0.6 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 22 -&#45;script=banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods -oN /home/kali/Desktop/results/10.0.0.6/scans/tcp_22_ssh_nmap.txt -oX /home/kali/Desktop/results/10.0.0.6/scans/xml/tcp_22_ssh_nmap.xml 10.0.0.6" start="1638991576" startstr="Wed Dec  8 14:26:16 2021" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="22"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1638991576"/>
+<taskend task="NSE" time="1638991576"/>
+<taskbegin task="NSE" time="1638991576"/>
+<taskend task="NSE" time="1638991576"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1638991576"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1638991576"/>
+<taskbegin task="SYN Stealth Scan" time="1638991577"/>
+<taskend task="SYN Stealth Scan" time="1638991577" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1638991577"/>
+<taskend task="Service scan" time="1638991577" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1638991577"/>
+<taskend task="NSE" time="1638991578"/>
+<taskbegin task="NSE" time="1638991578"/>
+<taskend task="NSE" time="1638991578"/>
+<host starttime="1638991577" endtime="1638991578"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.0.0.6" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="254"/><service name="ssh" product="OpenSSH" version="7.4" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.4</cpe></service><script id="banner" output="SSH-2.0-OpenSSH_7.4"/><script id="ssh-auth-methods" output="&#xa;  Supported authentication methods: &#xa;    publickey&#xa;    gssapi-keyex&#xa;    gssapi-with-mic"><table key="Supported authentication methods">
+<elem>publickey</elem>
+<elem>gssapi-keyex</elem>
+<elem>gssapi-with-mic</elem>
+</table>
+</script><script id="ssh-hostkey" output="&#xa;  2048 9e:c4:c9:e3:bf:eb:8e:82:4d:49:df:b6:93:e7:7f:cb (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDXs7POvFO9JbCDr6BtDLoQk1f+tsvkFWzSsbv2ubWtRHXOl8PQAaUqDjvN4i6h35YN1hrl381wrvtQvc0xh4FhIDG3E/hc7/IGsevjkEENbo/xtL0iGwDzNqafmh9fOv7SiGukm9qn9v/JFxQjIFlxJMGeN7EF5EYO/6My/JEKUP/r5Bp1WzWCYc4DMvvavUOxhtjG8pbmIn0iVRj9iPDdraAuwwsMgCxuKn9jQw7IqDsNHcqcf6rkuGlUqnY12XoZ5WiEcCe/E4/l4WEm4SZQLbLaW6Kdr64W2UG0X46QpvvNzNVOu1mAC5D4/4vICkCUa7mfP9jkOqmpmP6r4Krp&#xa;  256 7e:c3:4e:f5:d3:50:84:13:3c:e9:9e:9d:00:34:24:15 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBC2jeM26qZa2nWjO4LlNOxOcXb6Cf17DUhVBQbSxHq+pjlDT5GPrTV2I1KAeWhsPi4FBDyXDM59rcBPMZBOMu/w=&#xa;  256 c0:06:a8:29:18:a3:1d:d9:c3:df:7d:f9:74:3f:45:b1 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINHfKcve7kHc8nu1OizlqlULqmgXlM75JaJVja641BxB"><table>
+<elem key="type">ssh-rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDXs7POvFO9JbCDr6BtDLoQk1f+tsvkFWzSsbv2ubWtRHXOl8PQAaUqDjvN4i6h35YN1hrl381wrvtQvc0xh4FhIDG3E/hc7/IGsevjkEENbo/xtL0iGwDzNqafmh9fOv7SiGukm9qn9v/JFxQjIFlxJMGeN7EF5EYO/6My/JEKUP/r5Bp1WzWCYc4DMvvavUOxhtjG8pbmIn0iVRj9iPDdraAuwwsMgCxuKn9jQw7IqDsNHcqcf6rkuGlUqnY12XoZ5WiEcCe/E4/l4WEm4SZQLbLaW6Kdr64W2UG0X46QpvvNzNVOu1mAC5D4/4vICkCUa7mfP9jkOqmpmP6r4Krp</elem>
+<elem key="fingerprint">9ec4c9e3bfeb8e824d49dfb693e77fcb</elem>
+</table>
+<table>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="bits">256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBC2jeM26qZa2nWjO4LlNOxOcXb6Cf17DUhVBQbSxHq+pjlDT5GPrTV2I1KAeWhsPi4FBDyXDM59rcBPMZBOMu/w=</elem>
+<elem key="fingerprint">7ec34ef5d35084133ce99e9d00342415</elem>
+</table>
+<table>
+<elem key="type">ssh-ed25519</elem>
+<elem key="bits">256</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAINHfKcve7kHc8nu1OizlqlULqmgXlM75JaJVja641BxB</elem>
+<elem key="fingerprint">c006a82918a31dd9c3df7df9743f45b1</elem>
+</table>
+</script><script id="ssh2-enum-algos" output="&#xa;  kex_algorithms: (12)&#xa;      curve25519-sha256&#xa;      curve25519-sha256@libssh.org&#xa;      ecdh-sha2-nistp256&#xa;      ecdh-sha2-nistp384&#xa;      ecdh-sha2-nistp521&#xa;      diffie-hellman-group-exchange-sha256&#xa;      diffie-hellman-group16-sha512&#xa;      diffie-hellman-group18-sha512&#xa;      diffie-hellman-group-exchange-sha1&#xa;      diffie-hellman-group14-sha256&#xa;      diffie-hellman-group14-sha1&#xa;      diffie-hellman-group1-sha1&#xa;  server_host_key_algorithms: (5)&#xa;      ssh-rsa&#xa;      rsa-sha2-512&#xa;      rsa-sha2-256&#xa;      ecdsa-sha2-nistp256&#xa;      ssh-ed25519&#xa;  encryption_algorithms: (12)&#xa;      chacha20-poly1305@openssh.com&#xa;      aes128-ctr&#xa;      aes192-ctr&#xa;      aes256-ctr&#xa;      aes128-gcm@openssh.com&#xa;      aes256-gcm@openssh.com&#xa;      aes128-cbc&#xa;      aes192-cbc&#xa;      aes256-cbc&#xa;      blowfish-cbc&#xa;      cast128-cbc&#xa;      3des-cbc&#xa;  mac_algorithms: (10)&#xa;      umac-64-etm@openssh.com&#xa;      umac-128-etm@openssh.com&#xa;      hmac-sha2-256-etm@openssh.com&#xa;      hmac-sha2-512-etm@openssh.com&#xa;      hmac-sha1-etm@openssh.com&#xa;      umac-64@openssh.com&#xa;      umac-128@openssh.com&#xa;      hmac-sha2-256&#xa;      hmac-sha2-512&#xa;      hmac-sha1&#xa;  compression_algorithms: (2)&#xa;      none&#xa;      zlib@openssh.com"><table key="kex_algorithms">
+<elem>curve25519-sha256</elem>
+<elem>curve25519-sha256@libssh.org</elem>
+<elem>ecdh-sha2-nistp256</elem>
+<elem>ecdh-sha2-nistp384</elem>
+<elem>ecdh-sha2-nistp521</elem>
+<elem>diffie-hellman-group-exchange-sha256</elem>
+<elem>diffie-hellman-group16-sha512</elem>
+<elem>diffie-hellman-group18-sha512</elem>
+<elem>diffie-hellman-group-exchange-sha1</elem>
+<elem>diffie-hellman-group14-sha256</elem>
+<elem>diffie-hellman-group14-sha1</elem>
+<elem>diffie-hellman-group1-sha1</elem>
+</table>
+<table key="server_host_key_algorithms">
+<elem>ssh-rsa</elem>
+<elem>rsa-sha2-512</elem>
+<elem>rsa-sha2-256</elem>
+<elem>ecdsa-sha2-nistp256</elem>
+<elem>ssh-ed25519</elem>
+</table>
+<table key="encryption_algorithms">
+<elem>chacha20-poly1305@openssh.com</elem>
+<elem>aes128-ctr</elem>
+<elem>aes192-ctr</elem>
+<elem>aes256-ctr</elem>
+<elem>aes128-gcm@openssh.com</elem>
+<elem>aes256-gcm@openssh.com</elem>
+<elem>aes128-cbc</elem>
+<elem>aes192-cbc</elem>
+<elem>aes256-cbc</elem>
+<elem>blowfish-cbc</elem>
+<elem>cast128-cbc</elem>
+<elem>3des-cbc</elem>
+</table>
+<table key="mac_algorithms">
+<elem>umac-64-etm@openssh.com</elem>
+<elem>umac-128-etm@openssh.com</elem>
+<elem>hmac-sha2-256-etm@openssh.com</elem>
+<elem>hmac-sha2-512-etm@openssh.com</elem>
+<elem>hmac-sha1-etm@openssh.com</elem>
+<elem>umac-64@openssh.com</elem>
+<elem>umac-128@openssh.com</elem>
+<elem>hmac-sha2-256</elem>
+<elem>hmac-sha2-512</elem>
+<elem>hmac-sha1</elem>
+</table>
+<table key="compression_algorithms">
+<elem>none</elem>
+<elem>zlib@openssh.com</elem>
+</table>
+</script></port>
+</ports>
+<times srtt="22058" rttvar="22058" to="110290"/>
+</host>
+<taskbegin task="NSE" time="1638991578"/>
+<taskend task="NSE" time="1638991578"/>
+<taskbegin task="NSE" time="1638991578"/>
+<taskend task="NSE" time="1638991578"/>
+<runstats><finished time="1638991578" timestr="Wed Dec  8 14:26:18 2021" summary="Nmap done at Wed Dec  8 14:26:18 2021; 1 IP address (1 host up) scanned in 1.94 seconds" elapsed="1.94" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,48 @@
+# Nmap 7.91 scan initiated Wed Dec  8 15:18:09 2021 as: nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN /home/kali/Desktop/results/10.0.0.175/scans/_top_20_udp_nmap.txt -oX /home/kali/Desktop/results/10.0.0.175/scans/xml/_top_20_udp_nmap.xml 10.0.0.175
+adjust_timeouts2: packet supposedly had rtt of -63523 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -63523 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -83534 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -83534 microseconds.  Ignoring time.
+Nmap scan report for 10.0.0.175
+Host is up, received user-set (0.030s latency).
+Scanned at 2021-12-08 15:18:10 EST for 290s
+
+PORT      STATE         SERVICE      REASON              VERSION
+53/udp    open|filtered domain       no-response
+67/udp    closed        dhcps        port-unreach ttl 63
+68/udp    open|filtered dhcpc        no-response
+69/udp    closed        tftp         port-unreach ttl 63
+123/udp   closed        ntp          port-unreach ttl 63
+135/udp   closed        msrpc        port-unreach ttl 63
+137/udp   closed        netbios-ns   port-unreach ttl 63
+138/udp   open|filtered netbios-dgm  no-response
+139/udp   closed        netbios-ssn  port-unreach ttl 63
+161/udp   closed        snmp         port-unreach ttl 63
+162/udp   closed        snmptrap     port-unreach ttl 63
+445/udp   closed        microsoft-ds port-unreach ttl 63
+500/udp   closed        isakmp       port-unreach ttl 63
+514/udp   closed        syslog       port-unreach ttl 63
+520/udp   closed        route        port-unreach ttl 63
+631/udp   closed        ipp          port-unreach ttl 63
+1434/udp  closed        ms-sql-m     port-unreach ttl 63
+1900/udp  closed        upnp         port-unreach ttl 63
+4500/udp  closed        nat-t-ike    port-unreach ttl 63
+49152/udp closed        unknown      port-unreach ttl 63
+Too many fingerprints match this host to give specific OS details
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=12/8%OT=%CT=%CU=67%PV=Y%DS=2%DC=T%G=N%TM=61B11424%P=x86_64-pc-linux-gnu)
+SEQ(II=I)
+T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 2 hops
+
+TRACEROUTE (using port 514/udp)
+HOP RTT      ADDRESS
+1   21.08 ms 172.27.232.1
+2   23.25 ms 10.0.0.175
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Dec  8 15:23:00 2021 -- 1 IP address (1 host up) scanned in 291.52 seconds

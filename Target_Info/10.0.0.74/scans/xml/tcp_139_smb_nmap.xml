@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Wed Dec  8 15:26:00 2021 as: nmap -vv -&#45;reason -Pn -sV -p 139 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /home/kali/Desktop/results/10.0.0.74/scans/tcp_139_smb_nmap.txt -oX /home/kali/Desktop/results/10.0.0.74/scans/xml/tcp_139_smb_nmap.xml 10.0.0.74 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 139 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /home/kali/Desktop/results/10.0.0.74/scans/tcp_139_smb_nmap.txt -oX /home/kali/Desktop/results/10.0.0.74/scans/xml/tcp_139_smb_nmap.xml 10.0.0.74" start="1638995160" startstr="Wed Dec  8 15:26:00 2021" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="139"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1638995161"/>
+<taskend task="NSE" time="1638995161"/>
+<taskbegin task="NSE" time="1638995161"/>
+<taskend task="NSE" time="1638995161"/>
+<taskbegin task="NSE" time="1638995161"/>
+<taskend task="NSE" time="1638995161"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1638995161"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1638995161"/>
+<taskbegin task="SYN Stealth Scan" time="1638995161"/>
+<taskend task="SYN Stealth Scan" time="1638995162" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1638995162"/>
+<taskend task="Service scan" time="1638995168" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1638995168"/>
+<taskprogress task="NSE" time="1638995199" percent="97.14" remaining="1" etc="1638995200"/>
+<taskend task="NSE" time="1638995202"/>
+<taskbegin task="NSE" time="1638995202"/>
+<taskend task="NSE" time="1638995202"/>
+<taskbegin task="NSE" time="1638995202"/>
+<taskend task="NSE" time="1638995202"/>
+<host starttime="1638995161" endtime="1638995202"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.0.0.74" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Windows 7 Professional 7601 Service Pack 1 netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="smb-enum-services" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<hostscript><script id="nbstat" output="NetBIOS name: RISK-ANALYST1, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 06:f6:38:75:54:4b (unknown)&#xa;Names:&#xa;  RISK-ANALYST1&lt;00&gt;    Flags: &lt;unique&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;00&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;  RISK-ANALYST1&lt;20&gt;    Flags: &lt;unique&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1e&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1d&gt;        Flags: &lt;unique&gt;&lt;active&gt;&#xa;  \x01\x02__MSBROWSE__\x02&lt;01&gt;  Flags: &lt;group&gt;&lt;active&gt;&#xa;Statistics:&#xa;  06 f6 38 75 54 4b 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00"/><script id="smb-enum-shares" output="&#xa;  note: ERROR: Enumerating shares failed, guessing at common ones (NT_STATUS_ACCESS_DENIED)&#xa;  account_used: &lt;blank&gt;&#xa;  \\10.0.0.74\ADMIN$: &#xa;    warning: Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED&#xa;    Anonymous access: &lt;none&gt;&#xa;  \\10.0.0.74\C$: &#xa;    warning: Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED&#xa;    Anonymous access: &lt;none&gt;&#xa;  \\10.0.0.74\IPC$: &#xa;    warning: Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED&#xa;    Anonymous access: READ&#xa;  \\10.0.0.74\USERS: &#xa;    warning: Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED&#xa;    Anonymous access: &lt;none&gt;"><elem key="note">ERROR: Enumerating shares failed, guessing at common ones (NT_STATUS_ACCESS_DENIED)</elem>
+<elem key="account_used">&lt;blank&gt;</elem>
+<table key="\\10.0.0.74\ADMIN$">
+<elem key="warning">Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+</table>
+<table key="\\10.0.0.74\C$">
+<elem key="warning">Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+</table>
+<table key="\\10.0.0.74\IPC$">
+<elem key="warning">Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED</elem>
+<elem key="Anonymous access">READ</elem>
+</table>
+<table key="\\10.0.0.74\USERS">
+<elem key="warning">Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+</table>
+</script><script id="smb-mbenum" output="&#xa;  Master Browser&#xa;    RISK-ANALYST1  6.1  &#xa;  Potential Browser&#xa;    RISK-ANALYST1  6.1  &#xa;  Server service&#xa;    RISK-ANALYST1  6.1  &#xa;  Windows NT/2000/XP/2003 server&#xa;    RISK-ANALYST1  6.1  &#xa;  Workstation&#xa;    RISK-ANALYST1  6.1  &#xa;"/><script id="smb-os-discovery" output="&#xa;  OS: Windows 7 Professional 7601 Service Pack 1 (Windows 7 Professional 6.1)&#xa;  OS CPE: cpe:/o:microsoft:windows_7::sp1:professional&#xa;  Computer name: RISK-ANALYST1&#xa;  NetBIOS computer name: RISK-ANALYST1\x00&#xa;  Workgroup: WORKGROUP\x00&#xa;  System time: 2021-12-08T12:25:57-08:00&#xa;"><elem key="os">Windows 7 Professional 7601 Service Pack 1</elem>
+<elem key="lanmanager">Windows 7 Professional 6.1</elem>
+<elem key="server">RISK-ANALYST1\x00</elem>
+<elem key="date">2021-12-08T12:25:57-08:00</elem>
+<elem key="fqdn">RISK-ANALYST1</elem>
+<elem key="domain_dns">RISK-ANALYST1</elem>
+<elem key="workgroup">WORKGROUP\x00</elem>
+<elem key="cpe">cpe:/o:microsoft:windows_7::sp1:professional</elem>
+</script><script id="smb-print-text" output="false">false</script><script id="smb-protocols" output="&#xa;  dialects: &#xa;    NT LM 0.12 (SMBv1) [dangerous, but default]&#xa;    2.02&#xa;    2.10"><table key="dialects">
+<elem>NT LM 0.12 (SMBv1) [dangerous, but default]</elem>
+<elem>2.02</elem>
+<elem>2.10</elem>
+</table>
+</script><script id="smb-security-mode" output="&#xa;  account_used: &lt;blank&gt;&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">&lt;blank&gt;</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb-vuln-ms10-061" output="NT_STATUS_ACCESS_DENIED">false</script><script id="smb2-capabilities" output="&#xa;  2.02: &#xa;    Distributed File System&#xa;  2.10: &#xa;    Distributed File System&#xa;    Leasing"><table key="2.02">
+<elem>Distributed File System</elem>
+</table>
+<table key="2.10">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+</table>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2021-12-08T20:25:58&#xa;  start_date: 2021-12-07T16:36:02"><elem key="date">2021-12-08T20:25:58</elem>
+<elem key="start_date">2021-12-07T16:36:02</elem>
+</script></hostscript><times srtt="67122" rttvar="67122" to="335610"/>
+</host>
+<taskbegin task="NSE" time="1638995203"/>
+<taskend task="NSE" time="1638995203"/>
+<taskbegin task="NSE" time="1638995203"/>
+<taskend task="NSE" time="1638995203"/>
+<taskbegin task="NSE" time="1638995203"/>
+<taskend task="NSE" time="1638995203"/>
+<runstats><finished time="1638995203" timestr="Wed Dec  8 15:26:43 2021" summary="Nmap done at Wed Dec  8 15:26:43 2021; 1 IP address (1 host up) scanned in 42.05 seconds" elapsed="42.05" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

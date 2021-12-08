@@ -1,0 +1,58 @@
+# Nmap 7.91 scan initiated Wed Dec  8 15:18:09 2021 as: nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN /home/kali/Desktop/results/10.0.0.74/scans/_top_20_udp_nmap.txt -oX /home/kali/Desktop/results/10.0.0.74/scans/xml/_top_20_udp_nmap.xml 10.0.0.74
+Nmap scan report for 10.0.0.74
+Host is up, received user-set (0.024s latency).
+Scanned at 2021-12-08 15:18:10 EST for 326s
+
+PORT      STATE         SERVICE      REASON               VERSION
+53/udp    closed        domain       port-unreach ttl 127
+67/udp    closed        dhcps        port-unreach ttl 127
+68/udp    closed        dhcpc        port-unreach ttl 127
+69/udp    open|filtered tftp         no-response
+123/udp   open|filtered ntp          no-response
+135/udp   closed        msrpc        port-unreach ttl 127
+137/udp   open          netbios-ns   udp-response         Microsoft Windows netbios-ns (workgroup: WORKGROUP)
+138/udp   open|filtered netbios-dgm  no-response
+139/udp   closed        netbios-ssn  port-unreach ttl 127
+161/udp   closed        snmp         port-unreach ttl 127
+162/udp   closed        snmptrap     port-unreach ttl 127
+445/udp   closed        microsoft-ds port-unreach ttl 127
+500/udp   open|filtered isakmp       no-response
+514/udp   closed        syslog       port-unreach ttl 127
+520/udp   closed        route        port-unreach ttl 127
+631/udp   closed        ipp          port-unreach ttl 127
+1434/udp  closed        ms-sql-m     port-unreach ttl 127
+1900/udp  open|filtered upnp         no-response
+4500/udp  open|filtered nat-t-ike    no-response
+49152/udp closed        unknown      port-unreach ttl 127
+Too many fingerprints match this host to give specific OS details
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=12/8%OT=%CT=%CU=53%PV=Y%DS=2%DC=T%G=N%TM=61B11448%P=x86_64-pc-linux-gnu)
+T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=N)
+
+Network Distance: 2 hops
+Service Info: Host: RISK-ANALYST1; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| nbstat: NetBIOS name: RISK-ANALYST1, NetBIOS user: <unknown>, NetBIOS MAC: 06:f6:38:75:54:4b (unknown)
+| Names:
+|   RISK-ANALYST1<00>    Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   RISK-ANALYST1<20>    Flags: <unique><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+| Statistics:
+|   06 f6 38 75 54 4b 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+TRACEROUTE (using port 445/udp)
+HOP RTT      ADDRESS
+1   18.35 ms 172.27.232.1
+2   22.20 ms 10.0.0.74
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Dec  8 15:23:36 2021 -- 1 IP address (1 host up) scanned in 327.68 seconds
