@@ -1,0 +1,122 @@
+Version: 2.0.6-static
+OpenSSL 1.1.1i-dev  xx XXX xxxx
+
+Connected to 10.0.0.123
+
+Testing SSL server 10.0.0.123 on port 8089 using SNI name 10.0.0.123
+
+  SSL/TLS Protocols:
+SSLv2     disabled
+SSLv3     disabled
+TLSv1.0   disabled
+TLSv1.1   disabled
+TLSv1.2   enabled
+TLSv1.3   disabled
+
+  TLS Fallback SCSV:
+Server supports TLS Fallback SCSV
+
+  TLS renegotiation:
+Session renegotiation not supported
+
+  TLS Compression:
+Compression disabled
+
+  Heartbleed:
+TLSv1.2 not vulnerable to heartbleed
+
+  Supported Server Cipher(s):
+Preferred TLSv1.2  256 bits  ECDHE-RSA-AES256-GCM-SHA384   Curve P-256 DHE 256
+Accepted  TLSv1.2  128 bits  ECDHE-RSA-AES128-GCM-SHA256   Curve P-256 DHE 256
+Accepted  TLSv1.2  256 bits  ECDHE-RSA-AES256-SHA384       Curve P-256 DHE 256
+Accepted  TLSv1.2  128 bits  ECDHE-RSA-AES128-SHA256       Curve P-256 DHE 256
+Accepted  TLSv1.2  256 bits  AES256-GCM-SHA384            
+Accepted  TLSv1.2  128 bits  AES128-GCM-SHA256            
+Accepted  TLSv1.2  128 bits  AES128-SHA256                
+
+  Server Key Exchange Group(s):
+TLSv1.2  128 bits  secp256r1 (NIST P-256)
+TLSv1.2  192 bits  secp384r1 (NIST P-384)
+TLSv1.2  260 bits  secp521r1 (NIST P-521)
+
+  Server Signature Algorithm(s):
+TLSv1.2  rsa_pkcs1_sha1
+TLSv1.2  dsa_sha1
+TLSv1.2  ecdsa_sha1
+TLSv1.2  rsa_pkcs1_sha224
+TLSv1.2  dsa_sha224
+TLSv1.2  ecdsa_sha224
+TLSv1.2  rsa_pkcs1_sha256
+TLSv1.2  dsa_sha256
+TLSv1.2  ecdsa_secp256r1_sha256
+TLSv1.2  rsa_pkcs1_sha384
+TLSv1.2  dsa_sha384
+TLSv1.2  ecdsa_secp384r1_sha384
+TLSv1.2  rsa_pkcs1_sha512
+TLSv1.2  dsa_sha512
+TLSv1.2  ecdsa_secp521r1_sha512
+
+  SSL Certificate:
+    Certificate blob:
+-----BEGIN CERTIFICATE-----
+MIIDMjCCAhoCCQC68qye6Hu8CTANBgkqhkiG9w0BAQsFADB/MQswCQYDVQQGEwJV
+UzELMAkGA1UECAwCQ0ExFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xDzANBgNVBAoM
+BlNwbHVuazEXMBUGA1UEAwwOU3BsdW5rQ29tbW9uQ0ExITAfBgkqhkiG9w0BCQEW
+EnN1cHBvcnRAc3BsdW5rLmNvbTAeFw0yMTEyMDkwNjAyMjFaFw0yNDEyMDgwNjAy
+MjFaMDcxIDAeBgNVBAMMF1NwbHVua1NlcnZlckRlZmF1bHRDZXJ0MRMwEQYDVQQK
+DApTcGx1bmtVc2VyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqdm3
+m/cvLcj359GHWcRw8y1iFHW3JkcueK+WkffMuZQrmwnX0SR6tjXolv6RDBuMjuEa
+wiR3ZUv5k/7nY3aid5exdbOVr5rpBN2nRFXJQJKMAa5zxNOnzK3BByOLZbje3WQz
+vKW+7LMVNxw6mQbvaBumPSut+T+W1RBlLoQTrACJqWQWMsXuMb884Fh1DiWtCW/W
+iPsBuzzv1ijrf44/8ocbSR8+Ih8dR+1nk3ZwtXga81kUFDeROPvzPC30oRKydqPA
+BrwgIvkhVjKHK3hxSEVPkE8tZD+CZvEdUoMiJPR5JwM2OugbVzVooKMqtBZ/gD18
+GM67reaTBJekHU2MwwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQA7R04r4VrZCYkL
+chADe40IFPC+nuTCc9tcihmOHdQffQA0hXcLTkhE1k/wf66+0Db1nOs179BK+naV
+4YB8rNkE9SF5/y5k0jjEbxNiJmEKY6oJ5AomMqxCXm6e7yrT8gsoK9fXSkE0qTAo
+2hO8BFAP1dT4417YXkT0ssPMNE8D/CIjgZxmjQjT0PnJv1tEImdynumBDjNkAuSn
+XG7Sf8XI2QYCocvRo8yra6jnuP3OTPV6K5Lfx+ZGZyNll2bOOXq51dmVCXoYydk3
+9eRUlNRTZwep8cuNGeS7VbCKEJcV2HGHj8TagVas8N2Dbk4ShDHJfyHIaPDikEhi
+N/PIJk3B
+-----END CERTIFICATE-----
+    Version: 0
+    Serial Number: ba:f2:ac:9e:e8:7b:bc:09
+    Signature Algorithm: sha256WithRSAEncryption
+    Issuer: /C=US/ST=CA/L=San Francisco/O=Splunk/CN=SplunkCommonCA/emailAddress=support@splunk.com
+    Not valid before: Dec  9 06:02:21 2021 GMT
+    Not valid after: Dec  8 06:02:21 2024 GMT
+    Subject: /CN=SplunkServerDefaultCert/O=SplunkUser
+    Public Key Algorithm: NULL
+    RSA Public Key: (2048 bit)
+      RSA Public-Key: (2048 bit)
+      Modulus:
+          00:a9:d9:b7:9b:f7:2f:2d:c8:f7:e7:d1:87:59:c4:
+          70:f3:2d:62:14:75:b7:26:47:2e:78:af:96:91:f7:
+          cc:b9:94:2b:9b:09:d7:d1:24:7a:b6:35:e8:96:fe:
+          91:0c:1b:8c:8e:e1:1a:c2:24:77:65:4b:f9:93:fe:
+          e7:63:76:a2:77:97:b1:75:b3:95:af:9a:e9:04:dd:
+          a7:44:55:c9:40:92:8c:01:ae:73:c4:d3:a7:cc:ad:
+          c1:07:23:8b:65:b8:de:dd:64:33:bc:a5:be:ec:b3:
+          15:37:1c:3a:99:06:ef:68:1b:a6:3d:2b:ad:f9:3f:
+          96:d5:10:65:2e:84:13:ac:00:89:a9:64:16:32:c5:
+          ee:31:bf:3c:e0:58:75:0e:25:ad:09:6f:d6:88:fb:
+          01:bb:3c:ef:d6:28:eb:7f:8e:3f:f2:87:1b:49:1f:
+          3e:22:1f:1d:47:ed:67:93:76:70:b5:78:1a:f3:59:
+          14:14:37:91:38:fb:f3:3c:2d:f4:a1:12:b2:76:a3:
+          c0:06:bc:20:22:f9:21:56:32:87:2b:78:71:48:45:
+          4f:90:4f:2d:64:3f:82:66:f1:1d:52:83:22:24:f4:
+          79:27:03:36:3a:e8:1b:57:35:68:a0:a3:2a:b4:16:
+          7f:80:3d:7c:18:ce:bb:ad:e6:93:04:97:a4:1d:4d:
+          8c:c3
+      Exponent: 65537 (0x10001)
+  Verify Certificate:
+    self signed certificate in certificate chain
+
+  SSL Certificate:
+Signature Algorithm: sha256WithRSAEncryption
+RSA Key Strength:    2048
+
+Subject:  SplunkServerDefaultCert
+Issuer:   SplunkCommonCA
+
+Not valid before: Dec  9 06:02:21 2021 GMT
+Not valid after:  Dec  8 06:02:21 2024 GMT

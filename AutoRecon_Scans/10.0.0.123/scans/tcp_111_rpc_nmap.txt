@@ -1,0 +1,33 @@
+# Nmap 7.91 scan initiated Thu Dec  9 15:11:26 2021 as: nmap -vv --reason -Pn -sV -p 111 --script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /home/kali/Desktop/results/10.0.0.123/scans/tcp_111_rpc_nmap.txt -oX /home/kali/Desktop/results/10.0.0.123/scans/xml/tcp_111_rpc_nmap.xml 10.0.0.123
+Nmap scan report for 10.0.0.123
+Host is up, received user-set (0.031s latency).
+Scanned at 2021-12-09 15:11:26 EST for 16s
+
+PORT    STATE SERVICE REASON         VERSION
+111/tcp open  rpcbind syn-ack ttl 63 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|   100000  3,4          111/udp6  rpcbind
+|   100003  3           2049/udp   nfs
+|   100003  3           2049/udp6  nfs
+|   100003  3,4         2049/tcp   nfs
+|   100003  3,4         2049/tcp6  nfs
+|   100005  1,2,3      38361/tcp6  mountd
+|   100005  1,2,3      45271/tcp   mountd
+|   100005  1,2,3      49297/udp   mountd
+|   100005  1,2,3      52810/udp6  mountd
+|   100021  1,3,4      37822/udp6  nlockmgr
+|   100021  1,3,4      39959/tcp   nlockmgr
+|   100021  1,3,4      41461/tcp6  nlockmgr
+|   100021  1,3,4      59372/udp   nlockmgr
+|   100227  3           2049/tcp   nfs_acl
+|   100227  3           2049/tcp6  nfs_acl
+|   100227  3           2049/udp   nfs_acl
+|_  100227  3           2049/udp6  nfs_acl
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Dec  9 15:11:42 2021 -- 1 IP address (1 host up) scanned in 17.00 seconds

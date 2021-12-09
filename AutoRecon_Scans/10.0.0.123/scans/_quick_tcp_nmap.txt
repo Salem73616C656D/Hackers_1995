@@ -1,0 +1,80 @@
+# Nmap 7.91 scan initiated Thu Dec  9 15:10:38 2021 as: nmap -vv --reason -Pn -sV -sC --version-all -oN /home/kali/Desktop/results/10.0.0.123/scans/_quick_tcp_nmap.txt -oX /home/kali/Desktop/results/10.0.0.123/scans/xml/_quick_tcp_nmap.xml 10.0.0.123
+Nmap scan report for 10.0.0.123
+Host is up, received user-set (0.033s latency).
+Scanned at 2021-12-09 15:10:39 EST for 46s
+Not shown: 996 closed ports
+Reason: 996 resets
+PORT     STATE SERVICE  REASON         VERSION
+22/tcp   open  ssh      syn-ack ttl 63 OpenSSH 7.6p1 Ubuntu 4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 7a:9b:b9:32:6f:95:77:10:c0:a0:80:35:34:b1:c0:00 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6IO+zWqbr1ygGx4JPZUC/turDfHidMFqfTWv8glTZnpLnY6ZTTdQ8/HfSgAtwXSdOvSy6QwzSFxamx+TlV0mdrc8oJrcltmA31M0JwrGvCIQspLPuPDNgG3TwJitEb+HyS+PX0/hIIxnPz2LDl6E4/o0Va6HjA4p7qFKCt4PESN47lRvwMBiQjCucTf08yy9VZ7k2JJOvK9X/ebBz2OF3tJJHN3wiezMTIi7xAYSaT8XBHjf/3awUVqASEowf2gd14V8MM6ASwMVhcFGt0/DKxdXuiddphI67Z+3HCR3JsHgKl3nvhSmgTf5ZHt3HPgoe5XmL6LDjmkUGIdNrBya9
+|   256 24:0c:7a:82:78:18:2d:66:46:3b:1a:36:22:06:e1:a1 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEGq7yVBMw51IUPgAkmf4d8s6nVCPvcgXngPgU6tbTbFeFMUy1Do5mJziIp3eyLrFgZlTkfhjRdYhBoX/ZkM36Q=
+|   256 b9:15:59:78:85:78:9e:a5:e6:16:f6:cf:96:2d:1d:36 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICl+R8URLpkAb92x1+AMcdkp8qCHXphnD8fI+ObeoNs/
+111/tcp  open  rpcbind  syn-ack ttl 63 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|   100000  3,4          111/udp6  rpcbind
+|   100003  3           2049/udp   nfs
+|   100003  3           2049/udp6  nfs
+|   100003  3,4         2049/tcp   nfs
+|   100003  3,4         2049/tcp6  nfs
+|   100005  1,2,3      38361/tcp6  mountd
+|   100005  1,2,3      45271/tcp   mountd
+|   100005  1,2,3      49297/udp   mountd
+|   100005  1,2,3      52810/udp6  mountd
+|   100021  1,3,4      37822/udp6  nlockmgr
+|   100021  1,3,4      39959/tcp   nlockmgr
+|   100021  1,3,4      41461/tcp6  nlockmgr
+|   100021  1,3,4      59372/udp   nlockmgr
+|   100227  3           2049/tcp   nfs_acl
+|   100227  3           2049/tcp6  nfs_acl
+|   100227  3           2049/udp   nfs_acl
+|_  100227  3           2049/udp6  nfs_acl
+2049/tcp open  nfs_acl  syn-ack ttl 63 3 (RPC #100227)
+8089/tcp open  ssl/http syn-ack ttl 63 Splunkd httpd
+| http-methods: 
+|_  Supported Methods: GET HEAD OPTIONS
+| http-robots.txt: 1 disallowed entry 
+|_/
+|_http-server-header: Splunkd
+|_http-title: splunkd
+| ssl-cert: Subject: commonName=SplunkServerDefaultCert/organizationName=SplunkUser
+| Issuer: commonName=SplunkCommonCA/organizationName=Splunk/stateOrProvinceName=CA/countryName=US/localityName=San Francisco/emailAddress=support@splunk.com
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-12-09T06:02:21
+| Not valid after:  2024-12-08T06:02:21
+| MD5:   faeb 54f1 cf42 5d6d bdc7 be48 e9cc 0da1
+| SHA-1: 0fcc 9e96 89e5 e23e cc01 21ab 7dba 4366 520d 6d2c
+| -----BEGIN CERTIFICATE-----
+| MIIDMjCCAhoCCQC68qye6Hu8CTANBgkqhkiG9w0BAQsFADB/MQswCQYDVQQGEwJV
+| UzELMAkGA1UECAwCQ0ExFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xDzANBgNVBAoM
+| BlNwbHVuazEXMBUGA1UEAwwOU3BsdW5rQ29tbW9uQ0ExITAfBgkqhkiG9w0BCQEW
+| EnN1cHBvcnRAc3BsdW5rLmNvbTAeFw0yMTEyMDkwNjAyMjFaFw0yNDEyMDgwNjAy
+| MjFaMDcxIDAeBgNVBAMMF1NwbHVua1NlcnZlckRlZmF1bHRDZXJ0MRMwEQYDVQQK
+| DApTcGx1bmtVc2VyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqdm3
+| m/cvLcj359GHWcRw8y1iFHW3JkcueK+WkffMuZQrmwnX0SR6tjXolv6RDBuMjuEa
+| wiR3ZUv5k/7nY3aid5exdbOVr5rpBN2nRFXJQJKMAa5zxNOnzK3BByOLZbje3WQz
+| vKW+7LMVNxw6mQbvaBumPSut+T+W1RBlLoQTrACJqWQWMsXuMb884Fh1DiWtCW/W
+| iPsBuzzv1ijrf44/8ocbSR8+Ih8dR+1nk3ZwtXga81kUFDeROPvzPC30oRKydqPA
+| BrwgIvkhVjKHK3hxSEVPkE8tZD+CZvEdUoMiJPR5JwM2OugbVzVooKMqtBZ/gD18
+| GM67reaTBJekHU2MwwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQA7R04r4VrZCYkL
+| chADe40IFPC+nuTCc9tcihmOHdQffQA0hXcLTkhE1k/wf66+0Db1nOs179BK+naV
+| 4YB8rNkE9SF5/y5k0jjEbxNiJmEKY6oJ5AomMqxCXm6e7yrT8gsoK9fXSkE0qTAo
+| 2hO8BFAP1dT4417YXkT0ssPMNE8D/CIjgZxmjQjT0PnJv1tEImdynumBDjNkAuSn
+| XG7Sf8XI2QYCocvRo8yra6jnuP3OTPV6K5Lfx+ZGZyNll2bOOXq51dmVCXoYydk3
+| 9eRUlNRTZwep8cuNGeS7VbCKEJcV2HGHj8TagVas8N2Dbk4ShDHJfyHIaPDikEhi
+| N/PIJk3B
+|_-----END CERTIFICATE-----
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Dec  9 15:11:25 2021 -- 1 IP address (1 host up) scanned in 47.07 seconds

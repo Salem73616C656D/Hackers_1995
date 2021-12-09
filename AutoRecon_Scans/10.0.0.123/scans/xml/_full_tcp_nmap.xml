@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Thu Dec  9 15:10:39 2021 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/results/10.0.0.123/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/results/10.0.0.123/scans/xml/_full_tcp_nmap.xml 10.0.0.123 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/results/10.0.0.123/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/results/10.0.0.123/scans/xml/_full_tcp_nmap.xml 10.0.0.123" start="1639080639" startstr="Thu Dec  9 15:10:39 2021" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1639080639"/>
+<taskend task="NSE" time="1639080639"/>
+<taskbegin task="NSE" time="1639080639"/>
+<taskend task="NSE" time="1639080639"/>
+<taskbegin task="NSE" time="1639080639"/>
+<taskend task="NSE" time="1639080639"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1639080639"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1639080639"/>
+<taskbegin task="SYN Stealth Scan" time="1639080639"/>
+<taskend task="SYN Stealth Scan" time="1639080654" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1639080654"/>
+<taskend task="Service scan" time="1639080692" extrainfo="8 services on 1 host"/>
+<taskbegin task="Traceroute" time="1639080704"/>
+<taskend task="Traceroute" time="1639080704"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1639080704"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1639080704"/>
+<taskbegin task="NSE" time="1639080704"/>
+<taskend task="NSE" time="1639080712"/>
+<taskbegin task="NSE" time="1639080712"/>
+<taskend task="NSE" time="1639080712"/>
+<taskbegin task="NSE" time="1639080712"/>
+<taskend task="NSE" time="1639080712"/>
+<host starttime="1639080639" endtime="1639080712"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.0.0.123" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65527">
+<extrareasons reason="resets" count="65527"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.6p1 Ubuntu 4" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.6p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 7a:9b:b9:32:6f:95:77:10:c0:a0:80:35:34:b1:c0:00 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6IO+zWqbr1ygGx4JPZUC/turDfHidMFqfTWv8glTZnpLnY6ZTTdQ8/HfSgAtwXSdOvSy6QwzSFxamx+TlV0mdrc8oJrcltmA31M0JwrGvCIQspLPuPDNgG3TwJitEb+HyS+PX0/hIIxnPz2LDl6E4/o0Va6HjA4p7qFKCt4PESN47lRvwMBiQjCucTf08yy9VZ7k2JJOvK9X/ebBz2OF3tJJHN3wiezMTIi7xAYSaT8XBHjf/3awUVqASEowf2gd14V8MM6ASwMVhcFGt0/DKxdXuiddphI67Z+3HCR3JsHgKl3nvhSmgTf5ZHt3HPgoe5XmL6LDjmkUGIdNrBya9&#xa;  256 24:0c:7a:82:78:18:2d:66:46:3b:1a:36:22:06:e1:a1 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEGq7yVBMw51IUPgAkmf4d8s6nVCPvcgXngPgU6tbTbFeFMUy1Do5mJziIp3eyLrFgZlTkfhjRdYhBoX/ZkM36Q=&#xa;  256 b9:15:59:78:85:78:9e:a5:e6:16:f6:cf:96:2d:1d:36 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICl+R8URLpkAb92x1+AMcdkp8qCHXphnD8fI+ObeoNs/"><table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQC6IO+zWqbr1ygGx4JPZUC/turDfHidMFqfTWv8glTZnpLnY6ZTTdQ8/HfSgAtwXSdOvSy6QwzSFxamx+TlV0mdrc8oJrcltmA31M0JwrGvCIQspLPuPDNgG3TwJitEb+HyS+PX0/hIIxnPz2LDl6E4/o0Va6HjA4p7qFKCt4PESN47lRvwMBiQjCucTf08yy9VZ7k2JJOvK9X/ebBz2OF3tJJHN3wiezMTIi7xAYSaT8XBHjf/3awUVqASEowf2gd14V8MM6ASwMVhcFGt0/DKxdXuiddphI67Z+3HCR3JsHgKl3nvhSmgTf5ZHt3HPgoe5XmL6LDjmkUGIdNrBya9</elem>
+<elem key="fingerprint">7a9bb9326f957710c0a0803534b1c000</elem>
+<elem key="bits">2048</elem>
+<elem key="type">ssh-rsa</elem>
+</table>
+<table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEGq7yVBMw51IUPgAkmf4d8s6nVCPvcgXngPgU6tbTbFeFMUy1Do5mJziIp3eyLrFgZlTkfhjRdYhBoX/ZkM36Q=</elem>
+<elem key="fingerprint">240c7a8278182d66463b1a362206e1a1</elem>
+<elem key="bits">256</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+</table>
+<table>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAICl+R8URLpkAb92x1+AMcdkp8qCHXphnD8fI+ObeoNs/</elem>
+<elem key="fingerprint">b915597885789ea5e616f6cf962d1d36</elem>
+<elem key="bits">256</elem>
+<elem key="type">ssh-ed25519</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="rpcbind" version="2-4" extrainfo="RPC #100000" method="probed" conf="10"/><script id="rpcinfo" output="&#xa;  program version    port/proto  service&#xa;  100000  2,3,4        111/tcp   rpcbind&#xa;  100000  2,3,4        111/udp   rpcbind&#xa;  100000  3,4          111/tcp6  rpcbind&#xa;  100000  3,4          111/udp6  rpcbind&#xa;  100003  3           2049/udp   nfs&#xa;  100003  3           2049/udp6  nfs&#xa;  100003  3,4         2049/tcp   nfs&#xa;  100003  3,4         2049/tcp6  nfs&#xa;  100005  1,2,3      38361/tcp6  mountd&#xa;  100005  1,2,3      45271/tcp   mountd&#xa;  100005  1,2,3      49297/udp   mountd&#xa;  100005  1,2,3      52810/udp6  mountd&#xa;  100021  1,3,4      37822/udp6  nlockmgr&#xa;  100021  1,3,4      39959/tcp   nlockmgr&#xa;  100021  1,3,4      41461/tcp6  nlockmgr&#xa;  100021  1,3,4      59372/udp   nlockmgr&#xa;  100227  3           2049/tcp   nfs_acl&#xa;  100227  3           2049/tcp6  nfs_acl&#xa;  100227  3           2049/udp   nfs_acl&#xa;  100227  3           2049/udp6  nfs_acl&#xa;"><table key="100021">
+<table key="tcp">
+<table key="version">
+<elem>1</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">39959</elem>
+<elem key="addr">0.0.0.0</elem>
+</table>
+<table key="tcp6">
+<table key="version">
+<elem>1</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">41461</elem>
+<elem key="addr">::</elem>
+</table>
+<table key="udp">
+<table key="version">
+<elem>1</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">59372</elem>
+<elem key="addr">0.0.0.0</elem>
+</table>
+<table key="udp6">
+<table key="version">
+<elem>1</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">37822</elem>
+<elem key="addr">::</elem>
+</table>
+</table>
+<table key="100003">
+<table key="tcp">
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">2049</elem>
+<elem key="addr">0.0.0.0</elem>
+</table>
+<table key="tcp6">
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">2049</elem>
+<elem key="addr">::</elem>
+</table>
+<table key="udp">
+<table key="version">
+<elem>3</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">2049</elem>
+<elem key="addr">0.0.0.0</elem>
+</table>
+<table key="udp6">
+<table key="version">
+<elem>3</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">2049</elem>
+<elem key="addr">::</elem>
+</table>
+</table>
+<table key="100005">
+<table key="tcp">
+<table key="version">
+<elem>1</elem>
+<elem>2</elem>
+<elem>3</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">45271</elem>
+<elem key="addr">0.0.0.0</elem>
+</table>
+<table key="tcp6">
+<table key="version">
+<elem>1</elem>
+<elem>2</elem>
+<elem>3</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">38361</elem>
+<elem key="addr">::</elem>
+</table>
+<table key="udp">
+<table key="version">
+<elem>1</elem>
+<elem>2</elem>
+<elem>3</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">49297</elem>
+<elem key="addr">0.0.0.0</elem>
+</table>
+<table key="udp6">
+<table key="version">
+<elem>1</elem>
+<elem>2</elem>
+<elem>3</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">52810</elem>
+<elem key="addr">::</elem>
+</table>
+</table>
+<table key="100227">
+<table key="tcp">
+<table key="version">
+<elem>3</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">2049</elem>
+<elem key="addr">0.0.0.0</elem>
+</table>
+<table key="tcp6">
+<table key="version">
+<elem>3</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">2049</elem>
+<elem key="addr">::</elem>
+</table>
+<table key="udp">
+<table key="version">
+<elem>3</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">2049</elem>
+<elem key="addr">0.0.0.0</elem>
+</table>
+<table key="udp6">
+<table key="version">
+<elem>3</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">2049</elem>
+<elem key="addr">::</elem>
+</table>
+</table>
+<table key="100000">
+<table key="local">
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="addr">/run/rpcbind.sock</elem>
+</table>
+<table key="tcp6">
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">111</elem>
+<elem key="addr">::</elem>
+</table>
+<table key="tcp">
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">111</elem>
+<elem key="addr">0.0.0.0</elem>
+</table>
+<table key="udp">
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">111</elem>
+<elem key="addr">0.0.0.0</elem>
+</table>
+<table key="udp6">
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">111</elem>
+<elem key="addr">::</elem>
+</table>
+</table>
+</script></port>
+<port protocol="tcp" portid="2049"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="nfs_acl" version="3" extrainfo="RPC #100227" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="8089"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Splunkd httpd" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:splunk:splunk</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-robots.txt" output="1 disallowed entry &#xa;/"/><script id="http-server-header" output="Splunkd"><elem>Splunkd</elem>
+</script><script id="http-title" output="splunkd"><elem key="title">splunkd</elem>
+</script><script id="ssl-cert" output="Subject: commonName=SplunkServerDefaultCert/organizationName=SplunkUser&#xa;Issuer: commonName=SplunkCommonCA/organizationName=Splunk/stateOrProvinceName=CA/countryName=US/localityName=San Francisco/emailAddress=support@splunk.com&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2021-12-09T06:02:21&#xa;Not valid after:  2024-12-08T06:02:21&#xa;MD5:   faeb 54f1 cf42 5d6d bdc7 be48 e9cc 0da1&#xa;SHA-1: 0fcc 9e96 89e5 e23e cc01 21ab 7dba 4366 520d 6d2c&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDMjCCAhoCCQC68qye6Hu8CTANBgkqhkiG9w0BAQsFADB/MQswCQYDVQQGEwJV&#xa;UzELMAkGA1UECAwCQ0ExFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xDzANBgNVBAoM&#xa;BlNwbHVuazEXMBUGA1UEAwwOU3BsdW5rQ29tbW9uQ0ExITAfBgkqhkiG9w0BCQEW&#xa;EnN1cHBvcnRAc3BsdW5rLmNvbTAeFw0yMTEyMDkwNjAyMjFaFw0yNDEyMDgwNjAy&#xa;MjFaMDcxIDAeBgNVBAMMF1NwbHVua1NlcnZlckRlZmF1bHRDZXJ0MRMwEQYDVQQK&#xa;DApTcGx1bmtVc2VyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqdm3&#xa;m/cvLcj359GHWcRw8y1iFHW3JkcueK+WkffMuZQrmwnX0SR6tjXolv6RDBuMjuEa&#xa;wiR3ZUv5k/7nY3aid5exdbOVr5rpBN2nRFXJQJKMAa5zxNOnzK3BByOLZbje3WQz&#xa;vKW+7LMVNxw6mQbvaBumPSut+T+W1RBlLoQTrACJqWQWMsXuMb884Fh1DiWtCW/W&#xa;iPsBuzzv1ijrf44/8ocbSR8+Ih8dR+1nk3ZwtXga81kUFDeROPvzPC30oRKydqPA&#xa;BrwgIvkhVjKHK3hxSEVPkE8tZD+CZvEdUoMiJPR5JwM2OugbVzVooKMqtBZ/gD18&#xa;GM67reaTBJekHU2MwwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQA7R04r4VrZCYkL&#xa;chADe40IFPC+nuTCc9tcihmOHdQffQA0hXcLTkhE1k/wf66+0Db1nOs179BK+naV&#xa;4YB8rNkE9SF5/y5k0jjEbxNiJmEKY6oJ5AomMqxCXm6e7yrT8gsoK9fXSkE0qTAo&#xa;2hO8BFAP1dT4417YXkT0ssPMNE8D/CIjgZxmjQjT0PnJv1tEImdynumBDjNkAuSn&#xa;XG7Sf8XI2QYCocvRo8yra6jnuP3OTPV6K5Lfx+ZGZyNll2bOOXq51dmVCXoYydk3&#xa;9eRUlNRTZwep8cuNGeS7VbCKEJcV2HGHj8TagVas8N2Dbk4ShDHJfyHIaPDikEhi&#xa;N/PIJk3B&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">SplunkServerDefaultCert</elem>
+<elem key="organizationName">SplunkUser</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">SplunkCommonCA</elem>
+<elem key="countryName">US</elem>
+<elem key="emailAddress">support@splunk.com</elem>
+<elem key="localityName">San Francisco</elem>
+<elem key="organizationName">Splunk</elem>
+<elem key="stateOrProvinceName">CA</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">A9D9B79BF72F2DC8F7E7D18759C470F32D621475B726472E78AF9691F7CCB9942B9B09D7D1247AB635E896FE910C1B8C8EE11AC22477654BF993FEE76376A27797B175B395AF9AE904DDA74455C940928C01AE73C4D3A7CCADC107238B65B8DEDD6433BCA5BEECB315371C3A9906EF681BA63D2BADF93F96D510652E8413AC0089A9641632C5EE31BF3CE058750E25AD096FD688FB01BB3CEFD628EB7F8E3FF2871B491F3E221F1D47ED67937670B5781AF3591414379138FBF33C2DF4A112B276A3C006BC2022F9215632872B787148454F904F2D643F8266F11D52832224F4792703363AE81B573568A0A32AB4167F803D7C18CEBBADE6930497A41D4D8CC3</elem>
+<elem key="exponent">65537</elem>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2021-12-09T06:02:21</elem>
+<elem key="notAfter">2024-12-08T06:02:21</elem>
+</table>
+<elem key="md5">faeb54f1cf425d6dbdc7be48e9cc0da1</elem>
+<elem key="sha1">0fcc9e9689e5e23ecc0121ab7dba4366520d6d2c</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDMjCCAhoCCQC68qye6Hu8CTANBgkqhkiG9w0BAQsFADB/MQswCQYDVQQGEwJV&#xa;UzELMAkGA1UECAwCQ0ExFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xDzANBgNVBAoM&#xa;BlNwbHVuazEXMBUGA1UEAwwOU3BsdW5rQ29tbW9uQ0ExITAfBgkqhkiG9w0BCQEW&#xa;EnN1cHBvcnRAc3BsdW5rLmNvbTAeFw0yMTEyMDkwNjAyMjFaFw0yNDEyMDgwNjAy&#xa;MjFaMDcxIDAeBgNVBAMMF1NwbHVua1NlcnZlckRlZmF1bHRDZXJ0MRMwEQYDVQQK&#xa;DApTcGx1bmtVc2VyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqdm3&#xa;m/cvLcj359GHWcRw8y1iFHW3JkcueK+WkffMuZQrmwnX0SR6tjXolv6RDBuMjuEa&#xa;wiR3ZUv5k/7nY3aid5exdbOVr5rpBN2nRFXJQJKMAa5zxNOnzK3BByOLZbje3WQz&#xa;vKW+7LMVNxw6mQbvaBumPSut+T+W1RBlLoQTrACJqWQWMsXuMb884Fh1DiWtCW/W&#xa;iPsBuzzv1ijrf44/8ocbSR8+Ih8dR+1nk3ZwtXga81kUFDeROPvzPC30oRKydqPA&#xa;BrwgIvkhVjKHK3hxSEVPkE8tZD+CZvEdUoMiJPR5JwM2OugbVzVooKMqtBZ/gD18&#xa;GM67reaTBJekHU2MwwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQA7R04r4VrZCYkL&#xa;chADe40IFPC+nuTCc9tcihmOHdQffQA0hXcLTkhE1k/wf66+0Db1nOs179BK+naV&#xa;4YB8rNkE9SF5/y5k0jjEbxNiJmEKY6oJ5AomMqxCXm6e7yrT8gsoK9fXSkE0qTAo&#xa;2hO8BFAP1dT4417YXkT0ssPMNE8D/CIjgZxmjQjT0PnJv1tEImdynumBDjNkAuSn&#xa;XG7Sf8XI2QYCocvRo8yra6jnuP3OTPV6K5Lfx+ZGZyNll2bOOXq51dmVCXoYydk3&#xa;9eRUlNRTZwep8cuNGeS7VbCKEJcV2HGHj8TagVas8N2Dbk4ShDHJfyHIaPDikEhi&#xa;N/PIJk3B&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="39959"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="nlockmgr" version="1-4" extrainfo="RPC #100021" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="45271"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="mountd" version="1-3" extrainfo="RPC #100005" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="52113"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="mountd" version="1-3" extrainfo="RPC #100005" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="60327"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="mountd" version="1-3" extrainfo="RPC #100005" method="probed" conf="10"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="39126"/>
+<osmatch name="Linux 4.2" accuracy="95" line="67261">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4.2</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32" accuracy="91" line="54319">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.39" accuracy="91" line="58229">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.6.39</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10 - 3.12" accuracy="91" line="63342">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.4" accuracy="91" line="65500">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.5" accuracy="91" line="65596">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3.5</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.4" accuracy="91" line="67443">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
+</osmatch>
+<osmatch name="Synology DiskStation Manager 5.1" accuracy="91" line="68527">
+<osclass type="storage-misc" vendor="Linux" osfamily="Linux" accuracy="91"><cpe>cpe:/o:linux:linux_kernel</cpe></osclass>
+<osclass type="storage-misc" vendor="Synology" osfamily="DiskStation Manager" osgen="5.X" accuracy="91"><cpe>cpe:/a:synology:diskstation_manager:5.1</cpe></osclass>
+</osmatch>
+<osmatch name="WatchGuard Fireware 11.8" accuracy="91" line="104852">
+<osclass type="firewall" vendor="WatchGuard" osfamily="Fireware" osgen="11.X" accuracy="91"><cpe>cpe:/o:watchguard:fireware:11.8</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.35" accuracy="90" line="57208">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:2.6.35</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.91%E=4%D=12/9%OT=22%CT=1%CU=39126%PV=Y%DS=2%DC=T%G=Y%TM=61B2630&#xa;OS:8%P=x86_64-pc-linux-gnu)SEQ(SP=105%GCD=1%ISR=10A%TI=Z%II=I%TS=A)OPS(O1=M&#xa;OS:4ECST11NW7%O2=M4ECST11NW7%O3=M4ECNNT11NW7%O4=M4ECST11NW7%O5=M4ECST11NW7%&#xa;OS:O6=M4ECST11)WIN(W1=68DF%W2=68DF%W3=68DF%W4=68DF%W5=68DF%W6=68DF)ECN(R=Y%&#xa;OS:DF=Y%T=40%W=6903%O=M4ECNNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=&#xa;OS:0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;OS:T6(R=N)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%&#xa;OS:RUD=G)IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="2853023" lastboot="Sat Nov  6 15:41:29 2021"/>
+<distance value="2"/>
+<tcpsequence index="261" difficulty="Good luck!" values="AA9F8276,A6D1A583,8267F918,35FEE5FF,C858F8FD,E513BA4"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="AA0D8BF8,AA0D8C5D,AA0D8CC2,AA0D8D26,AA0D8D87,AA0D8DEE"/>
+<trace port="80" proto="tcp">
+<hop ttl="1" ipaddr="172.27.232.1" rtt="20.19"/>
+<hop ttl="2" ipaddr="10.0.0.123" rtt="20.23"/>
+</trace>
+<times srtt="21474" rttvar="1879" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1639080712"/>
+<taskend task="NSE" time="1639080712"/>
+<taskbegin task="NSE" time="1639080712"/>
+<taskend task="NSE" time="1639080712"/>
+<taskbegin task="NSE" time="1639080712"/>
+<taskend task="NSE" time="1639080712"/>
+<runstats><finished time="1639080712" timestr="Thu Dec  9 15:11:52 2021" summary="Nmap done at Thu Dec  9 15:11:52 2021; 1 IP address (1 host up) scanned in 74.14 seconds" elapsed="74.14" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
