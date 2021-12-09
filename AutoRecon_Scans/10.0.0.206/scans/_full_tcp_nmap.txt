@@ -1,0 +1,167 @@
+# Nmap 7.91 scan initiated Thu Dec  9 15:40:55 2021 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /home/kali/Desktop/results/10.0.0.206/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/results/10.0.0.206/scans/xml/_full_tcp_nmap.xml 10.0.0.206
+adjust_timeouts2: packet supposedly had rtt of -216870 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -216870 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -484539 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -484539 microseconds.  Ignoring time.
+Nmap scan report for 10.0.0.206
+Host is up, received user-set (0.028s latency).
+Scanned at 2021-12-09 15:40:55 EST for 130s
+Not shown: 65519 closed ports
+Reason: 65519 resets
+PORT      STATE SERVICE       REASON          VERSION
+135/tcp   open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+139/tcp   open  netbios-ssn   syn-ack ttl 127 Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds  syn-ack ttl 127 Windows Server 2019 Standard Evaluation 17763 microsoft-ds
+3389/tcp  open  ms-wbt-server syn-ack ttl 127 Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: CFO-LAPTOP
+|   NetBIOS_Domain_Name: CFO-LAPTOP
+|   NetBIOS_Computer_Name: CFO-LAPTOP
+|   DNS_Domain_Name: CFO-LAPTOP
+|   DNS_Computer_Name: CFO-LAPTOP
+|   Product_Version: 10.0.17763
+|_  System_Time: 2021-12-09T20:42:57+00:00
+| ssl-cert: Subject: commonName=CFO-LAPTOP
+| Issuer: commonName=CFO-LAPTOP
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-11-29T17:14:39
+| Not valid after:  2022-05-31T17:14:39
+| MD5:   7173 4f61 b7c9 9f82 25e6 f1d3 be53 77ad
+| SHA-1: 1ff2 e3c6 cc87 732d b455 b655 7b18 9acd d33e c843
+| -----BEGIN CERTIFICATE-----
+| MIIC2DCCAcCgAwIBAgIQZN4kgjONwq5GraMsmmsmqzANBgkqhkiG9w0BAQsFADAV
+| MRMwEQYDVQQDEwpDRk8tTEFQVE9QMB4XDTIxMTEyOTE3MTQzOVoXDTIyMDUzMTE3
+| MTQzOVowFTETMBEGA1UEAxMKQ0ZPLUxBUFRPUDCCASIwDQYJKoZIhvcNAQEBBQAD
+| ggEPADCCAQoCggEBAMot3kgz1jCvbgnHFFc/8ozSKi9sl4HlZtsUl64+MI4rw766
+| nEhNowXKPA2wXcs9RzGxpCsGKGvM9wyO0ts15pb/wO51eabkGCYmDJEpvi1qxzOY
+| tlrb5Padg7QQ5nzYZ2sfFtx4lvGNh/Ks8V2zvv9Q9gbBDNHK+dQFsutWCDYPkgTd
+| sD10Lr/mcWf5ozrY714XGy3n3lKFY+B+3NhLPDwMkakFGqh8uIIM+CWvXfSMYr7W
+| 39Gctjd6U+yP7HEeMTTK/Ym0FcJj0b7nSNEYVB8F3JkwfGq3vOeKVLHsLbatOkqV
+| YbtycloXfGcNPxJmDlofWN16XDuu0+vra/383t0CAwEAAaMkMCIwEwYDVR0lBAww
+| CgYIKwYBBQUHAwEwCwYDVR0PBAQDAgQwMA0GCSqGSIb3DQEBCwUAA4IBAQARFGTp
+| uzRkegCSid/5+E2IUPwYgfPl5ki51QcgqM/s0N9Eo2aTIIp3pYL0rBH6QF8jAGDt
+| joCHya9CGn6lm9t+2Hh7eMIHc9vgYtQy9t7tLxL77EM/qyqW8b2Os+iPuiqIQOZd
+| XEocT9Xcv8khSxu2GxA3Qnc3XdiDXY088S0rZsnzs8tmyk04m3rJcsahh3zIpmRo
+| Lwlg/L7G8KY1T7ANhabylqXGviGSpFW48Q5MExM6LDcbQ9I7qFfbjnTPpyHOE0nF
+| 3N5IPJMKz/Y5nDfgoDcYfKHYkXg6Qwva/nwtPSsNkGLPgNsu+PQd46ZMkV7NpVyX
+| JylQOhv4en3BdguM
+|_-----END CERTIFICATE-----
+|_ssl-date: 2021-12-09T20:43:04+00:00; -1s from scanner time.
+5357/tcp  open  http          syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Service Unavailable
+5985/tcp  open  http          syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+8089/tcp  open  ssl/http      syn-ack ttl 127 Splunkd httpd
+| http-methods: 
+|_  Supported Methods: GET HEAD OPTIONS
+| http-robots.txt: 1 disallowed entry 
+|_/
+|_http-server-header: Splunkd
+|_http-title: splunkd
+| ssl-cert: Subject: commonName=SplunkServerDefaultCert/organizationName=SplunkUser
+| Issuer: commonName=SplunkCommonCA/organizationName=Splunk/stateOrProvinceName=CA/countryName=US/localityName=San Francisco/emailAddress=support@splunk.com
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-06-08T20:39:32
+| Not valid after:  2024-06-07T20:39:32
+| MD5:   1aee 7d33 a232 f0ba ef08 c1fc bbe1 3189
+| SHA-1: 0be8 243b 9dab 8c8f 0d8d 30e4 8d20 12db d272 491e
+| -----BEGIN CERTIFICATE-----
+| MIIDMjCCAhoCCQDQwBFYjvi9JjANBgkqhkiG9w0BAQsFADB/MQswCQYDVQQGEwJV
+| UzELMAkGA1UECAwCQ0ExFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xDzANBgNVBAoM
+| BlNwbHVuazEXMBUGA1UEAwwOU3BsdW5rQ29tbW9uQ0ExITAfBgkqhkiG9w0BCQEW
+| EnN1cHBvcnRAc3BsdW5rLmNvbTAeFw0yMTA2MDgyMDM5MzJaFw0yNDA2MDcyMDM5
+| MzJaMDcxIDAeBgNVBAMMF1NwbHVua1NlcnZlckRlZmF1bHRDZXJ0MRMwEQYDVQQK
+| DApTcGx1bmtVc2VyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqMF5
+| mQmUzPCXxLCpMY9jS2bjY5NjYC2JvM8OJbflFXMEPnfmsv45bpQwxI/yqFUirvaZ
+| q3UDbJiC2GaLjYIZUwrQ7ZLZxQcC22rGGusZTQg9RsLWnWxO95WngibRgPy8yklJ
+| MtZ5XOcw39SNOAg8WGb/8wbk7pKOwri/pLAwnwrBR46iuwvlOtryZoV3Hw+f/3l/
+| NlGccVMPV56cEa3dr/GrSOwmSIdYr4km8uVuw4CtV6uOobSiop1Gontk8RTPA379
+| RIDwQeuaNLH6eqqN6e437h/kkMyoPMUsD2j8ssQ/gEECntCsfI659Ymk3J2XcqCI
+| k+Gg7W32zJ+XI9QVNQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQB29UWjezCnlBN5
+| /KNKacl8zxkKOoOPi43/hbyhGvXKtzlO02jl0759sEROZH8gJZArrh+7x0rGIzQd
+| oDfgyOHC9eN5u/A4rdUuzHyW8kC5851NB8xZwgclnjED9Yc+8fG020D5tYh7GZDX
+| A3nZcCXualiKLr/laduXvOafxZ0wOlVTg7DZJzTo5yMR0WGT6akz1sF7HJ2Oqlc6
+| BfkJ7jirPw29KFquqYpo+d3c+kJ9NdDRyvmKF37+9Yu+kO78+z+sRP3k1HeOWYSN
+| cd7HUbHQT4J38zN9J0cSVQLNLiWKJFcXUeAK6rY59z53Egs0oA9QtudvOIV/Tj3W
+| HnlNzuU9
+|_-----END CERTIFICATE-----
+47001/tcp open  http          syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49664/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49665/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49666/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49667/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49669/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49673/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49675/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49688/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+Aggressive OS guesses: IPCop 2 firewall (Linux 3.4) (87%), Linux 3.2 (87%), Linux 4.9 (87%), IPCop 2.0 (Linux 2.6.32) (86%), Linux 2.6.32 (86%), Tiandy NVR (86%), Android 5.0.1 (86%), Linux 3.18 (86%), Microsoft Windows Server 2012 (85%), Microsoft Windows Server 2012 or Windows Server 2012 R2 (85%)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=12/9%OT=135%CT=1%CU=42174%PV=Y%DS=2%DC=T%G=Y%TM=61B26A
+OS:59%P=x86_64-pc-linux-gnu)SEQ(SP=FE%GCD=1%ISR=10F%TS=U)OPS(O1=M4ECNW8NNS%
+OS:O2=M4ECNW8NNS%O3=M4ECNW8%O4=M4ECNW8NNS%O5=M4ECNW8NNS%O6=M4ECNNS)WIN(W1=F
+OS:FFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FF70)ECN(R=Y%DF=Y%T=80%W=FFFF%O=M
+OS:4ECNW8NNS%CC=Y%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T
+OS:4(R=N)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T5(R=N)T6(R=N)T7(R=N
+OS:)U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=N)
+
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=254 (Good luck!)
+IP ID Sequence Generation: Busy server or unknown class
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 1h35m58s, deviation: 3h34m39s, median: -1s
+| nbstat: NetBIOS name: CFO-LAPTOP, NetBIOS user: <unknown>, NetBIOS MAC: 06:d3:9a:8a:39:5d (unknown)
+| Names:
+|   CFO-LAPTOP<00>       Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   CFO-LAPTOP<20>       Flags: <unique><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+| Statistics:
+|   06 d3 9a 8a 39 5d 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 49357/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 24405/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 26718/udp): CLEAN (Failed to receive data)
+|   Check 4 (port 18369/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-os-discovery: 
+|   OS: Windows Server 2019 Standard Evaluation 17763 (Windows Server 2019 Standard Evaluation 6.3)
+|   Computer name: CFO-LAPTOP
+|   NetBIOS computer name: CFO-LAPTOP\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2021-12-09T12:42:56-08:00
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2021-12-09T20:42:57
+|_  start_date: N/A
+
+TRACEROUTE (using port 1025/tcp)
+HOP RTT      ADDRESS
+1   19.20 ms 172.27.232.1
+2   19.26 ms 10.0.0.206
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Dec  9 15:43:05 2021 -- 1 IP address (1 host up) scanned in 130.36 seconds

@@ -1,0 +1,24 @@
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          10.0.0.206
++ Target Hostname:    10.0.0.206
++ Target Port:        8089
+---------------------------------------------------------------------------
++ SSL Info:        Subject:  /CN=SplunkServerDefaultCert/O=SplunkUser
+                   Ciphers:  ECDHE-RSA-AES256-GCM-SHA384
+                   Issuer:   /C=US/ST=CA/L=San Francisco/O=Splunk/CN=SplunkCommonCA/emailAddress=support@splunk.com
++ Start Time:         2021-12-09 15:42:11 (GMT-5)
+---------------------------------------------------------------------------
++ Server: Splunkd
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The site uses SSL and the Strict-Transport-Security HTTP header is not defined.
++ The site uses SSL and Expect-CT header is not present.
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ Hostname '10.0.0.206' does not match certificate's names: SplunkServerDefaultCert
++ Allowed HTTP Methods: GET, POST, HEAD, OPTIONS 
++ ERROR: Error limit (20) reached for host, giving up. Last error: opening stream: can't connect: Connect failed: ; Connection refused at /var/lib/nikto/plugins/LW2.pm line 5157.
+: Connection refused
++ Scan terminated:  20 error(s) and 5 item(s) reported on remote host
++ End Time:           2021-12-09 15:55:29 (GMT-5) (798 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested

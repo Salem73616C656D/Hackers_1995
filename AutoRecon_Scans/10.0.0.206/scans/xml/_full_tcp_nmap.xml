@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Thu Dec  9 15:40:55 2021 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/results/10.0.0.206/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/results/10.0.0.206/scans/xml/_full_tcp_nmap.xml 10.0.0.206 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/results/10.0.0.206/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/results/10.0.0.206/scans/xml/_full_tcp_nmap.xml 10.0.0.206" start="1639082455" startstr="Thu Dec  9 15:40:55 2021" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1639082455"/>
+<taskend task="NSE" time="1639082455"/>
+<taskbegin task="NSE" time="1639082455"/>
+<taskend task="NSE" time="1639082455"/>
+<taskbegin task="NSE" time="1639082455"/>
+<taskend task="NSE" time="1639082455"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1639082455"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1639082455"/>
+<taskbegin task="SYN Stealth Scan" time="1639082455"/>
+<taskend task="SYN Stealth Scan" time="1639082498" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1639082499"/>
+<taskprogress task="Service scan" time="1639082537" percent="50.00" remaining="38" etc="1639082575"/>
+<taskend task="Service scan" time="1639082561" extrainfo="16 services on 1 host"/>
+<taskbegin task="Traceroute" time="1639082576"/>
+<taskend task="Traceroute" time="1639082576"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1639082576"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1639082577"/>
+<taskbegin task="NSE" time="1639082577"/>
+<taskend task="NSE" time="1639082585"/>
+<taskbegin task="NSE" time="1639082585"/>
+<taskend task="NSE" time="1639082585"/>
+<taskbegin task="NSE" time="1639082585"/>
+<taskend task="NSE" time="1639082585"/>
+<host starttime="1639082455" endtime="1639082585"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.0.0.206" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65519">
+<extrareasons reason="resets" count="65519"/>
+</extraports>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" product="Windows Server 2019 Standard Evaluation 17763 microsoft-ds" ostype="Windows Server 2008 R2 - 2012" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="rdp-ntlm-info" output="&#xa;  Target_Name: CFO-LAPTOP&#xa;  NetBIOS_Domain_Name: CFO-LAPTOP&#xa;  NetBIOS_Computer_Name: CFO-LAPTOP&#xa;  DNS_Domain_Name: CFO-LAPTOP&#xa;  DNS_Computer_Name: CFO-LAPTOP&#xa;  Product_Version: 10.0.17763&#xa;  System_Time: 2021-12-09T20:42:57+00:00"><elem key="Target_Name">CFO-LAPTOP</elem>
+<elem key="NetBIOS_Domain_Name">CFO-LAPTOP</elem>
+<elem key="NetBIOS_Computer_Name">CFO-LAPTOP</elem>
+<elem key="DNS_Domain_Name">CFO-LAPTOP</elem>
+<elem key="DNS_Computer_Name">CFO-LAPTOP</elem>
+<elem key="Product_Version">10.0.17763</elem>
+<elem key="System_Time">2021-12-09T20:42:57+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=CFO-LAPTOP&#xa;Issuer: commonName=CFO-LAPTOP&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2021-11-29T17:14:39&#xa;Not valid after:  2022-05-31T17:14:39&#xa;MD5:   7173 4f61 b7c9 9f82 25e6 f1d3 be53 77ad&#xa;SHA-1: 1ff2 e3c6 cc87 732d b455 b655 7b18 9acd d33e c843&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC2DCCAcCgAwIBAgIQZN4kgjONwq5GraMsmmsmqzANBgkqhkiG9w0BAQsFADAV&#xa;MRMwEQYDVQQDEwpDRk8tTEFQVE9QMB4XDTIxMTEyOTE3MTQzOVoXDTIyMDUzMTE3&#xa;MTQzOVowFTETMBEGA1UEAxMKQ0ZPLUxBUFRPUDCCASIwDQYJKoZIhvcNAQEBBQAD&#xa;ggEPADCCAQoCggEBAMot3kgz1jCvbgnHFFc/8ozSKi9sl4HlZtsUl64+MI4rw766&#xa;nEhNowXKPA2wXcs9RzGxpCsGKGvM9wyO0ts15pb/wO51eabkGCYmDJEpvi1qxzOY&#xa;tlrb5Padg7QQ5nzYZ2sfFtx4lvGNh/Ks8V2zvv9Q9gbBDNHK+dQFsutWCDYPkgTd&#xa;sD10Lr/mcWf5ozrY714XGy3n3lKFY+B+3NhLPDwMkakFGqh8uIIM+CWvXfSMYr7W&#xa;39Gctjd6U+yP7HEeMTTK/Ym0FcJj0b7nSNEYVB8F3JkwfGq3vOeKVLHsLbatOkqV&#xa;YbtycloXfGcNPxJmDlofWN16XDuu0+vra/383t0CAwEAAaMkMCIwEwYDVR0lBAww&#xa;CgYIKwYBBQUHAwEwCwYDVR0PBAQDAgQwMA0GCSqGSIb3DQEBCwUAA4IBAQARFGTp&#xa;uzRkegCSid/5+E2IUPwYgfPl5ki51QcgqM/s0N9Eo2aTIIp3pYL0rBH6QF8jAGDt&#xa;joCHya9CGn6lm9t+2Hh7eMIHc9vgYtQy9t7tLxL77EM/qyqW8b2Os+iPuiqIQOZd&#xa;XEocT9Xcv8khSxu2GxA3Qnc3XdiDXY088S0rZsnzs8tmyk04m3rJcsahh3zIpmRo&#xa;Lwlg/L7G8KY1T7ANhabylqXGviGSpFW48Q5MExM6LDcbQ9I7qFfbjnTPpyHOE0nF&#xa;3N5IPJMKz/Y5nDfgoDcYfKHYkXg6Qwva/nwtPSsNkGLPgNsu+PQd46ZMkV7NpVyX&#xa;JylQOhv4en3BdguM&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">CFO-LAPTOP</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">CFO-LAPTOP</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">CA2DDE4833D630AF6E09C714573FF28CD22A2F6C9781E566DB1497AE3E308E2BC3BEBA9C484DA305CA3C0DB05DCB3D4731B1A42B06286BCCF70C8ED2DB35E696FFC0EE7579A6E41826260C9129BE2D6AC73398B65ADBE4F69D83B410E67CD8676B1F16DC7896F18D87F2ACF15DB3BEFF50F606C10CD1CAF9D405B2EB5608360F9204DDB03D742EBFE67167F9A33AD8EF5E171B2DE7DE528563E07EDCD84B3C3C0C91A9051AA87CB8820CF825AF5DF48C62BED6DFD19CB6377A53EC8FEC711E3134CAFD89B415C263D1BEE748D118541F05DC99307C6AB7BCE78A54B1EC2DB6AD3A4A9561BB72725A177C670D3F12660E5A1F58DD7A5C3BAED3EBEB6BFDFCDEDD</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2021-11-29T17:14:39</elem>
+<elem key="notAfter">2022-05-31T17:14:39</elem>
+</table>
+<elem key="md5">71734f61b7c99f8225e6f1d3be5377ad</elem>
+<elem key="sha1">1ff2e3c6cc87732db455b6557b189acdd33ec843</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC2DCCAcCgAwIBAgIQZN4kgjONwq5GraMsmmsmqzANBgkqhkiG9w0BAQsFADAV&#xa;MRMwEQYDVQQDEwpDRk8tTEFQVE9QMB4XDTIxMTEyOTE3MTQzOVoXDTIyMDUzMTE3&#xa;MTQzOVowFTETMBEGA1UEAxMKQ0ZPLUxBUFRPUDCCASIwDQYJKoZIhvcNAQEBBQAD&#xa;ggEPADCCAQoCggEBAMot3kgz1jCvbgnHFFc/8ozSKi9sl4HlZtsUl64+MI4rw766&#xa;nEhNowXKPA2wXcs9RzGxpCsGKGvM9wyO0ts15pb/wO51eabkGCYmDJEpvi1qxzOY&#xa;tlrb5Padg7QQ5nzYZ2sfFtx4lvGNh/Ks8V2zvv9Q9gbBDNHK+dQFsutWCDYPkgTd&#xa;sD10Lr/mcWf5ozrY714XGy3n3lKFY+B+3NhLPDwMkakFGqh8uIIM+CWvXfSMYr7W&#xa;39Gctjd6U+yP7HEeMTTK/Ym0FcJj0b7nSNEYVB8F3JkwfGq3vOeKVLHsLbatOkqV&#xa;YbtycloXfGcNPxJmDlofWN16XDuu0+vra/383t0CAwEAAaMkMCIwEwYDVR0lBAww&#xa;CgYIKwYBBQUHAwEwCwYDVR0PBAQDAgQwMA0GCSqGSIb3DQEBCwUAA4IBAQARFGTp&#xa;uzRkegCSid/5+E2IUPwYgfPl5ki51QcgqM/s0N9Eo2aTIIp3pYL0rBH6QF8jAGDt&#xa;joCHya9CGn6lm9t+2Hh7eMIHc9vgYtQy9t7tLxL77EM/qyqW8b2Os+iPuiqIQOZd&#xa;XEocT9Xcv8khSxu2GxA3Qnc3XdiDXY088S0rZsnzs8tmyk04m3rJcsahh3zIpmRo&#xa;Lwlg/L7G8KY1T7ANhabylqXGviGSpFW48Q5MExM6LDcbQ9I7qFfbjnTPpyHOE0nF&#xa;3N5IPJMKz/Y5nDfgoDcYfKHYkXg6Qwva/nwtPSsNkGLPgNsu+PQd46ZMkV7NpVyX&#xa;JylQOhv4en3BdguM&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2021-12-09T20:43:04+00:00; -1s from scanner time."><elem key="date">2021-12-09T20:43:04+00:00</elem>
+<elem key="delta">-1.0</elem>
+</script></port>
+<port protocol="tcp" portid="5357"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Service Unavailable"><elem key="title">Service Unavailable</elem>
+</script></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="8089"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Splunkd httpd" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:splunk:splunk</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-robots.txt" output="1 disallowed entry &#xa;/"/><script id="http-server-header" output="Splunkd"><elem>Splunkd</elem>
+</script><script id="http-title" output="splunkd"><elem key="title">splunkd</elem>
+</script><script id="ssl-cert" output="Subject: commonName=SplunkServerDefaultCert/organizationName=SplunkUser&#xa;Issuer: commonName=SplunkCommonCA/organizationName=Splunk/stateOrProvinceName=CA/countryName=US/localityName=San Francisco/emailAddress=support@splunk.com&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2021-06-08T20:39:32&#xa;Not valid after:  2024-06-07T20:39:32&#xa;MD5:   1aee 7d33 a232 f0ba ef08 c1fc bbe1 3189&#xa;SHA-1: 0be8 243b 9dab 8c8f 0d8d 30e4 8d20 12db d272 491e&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDMjCCAhoCCQDQwBFYjvi9JjANBgkqhkiG9w0BAQsFADB/MQswCQYDVQQGEwJV&#xa;UzELMAkGA1UECAwCQ0ExFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xDzANBgNVBAoM&#xa;BlNwbHVuazEXMBUGA1UEAwwOU3BsdW5rQ29tbW9uQ0ExITAfBgkqhkiG9w0BCQEW&#xa;EnN1cHBvcnRAc3BsdW5rLmNvbTAeFw0yMTA2MDgyMDM5MzJaFw0yNDA2MDcyMDM5&#xa;MzJaMDcxIDAeBgNVBAMMF1NwbHVua1NlcnZlckRlZmF1bHRDZXJ0MRMwEQYDVQQK&#xa;DApTcGx1bmtVc2VyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqMF5&#xa;mQmUzPCXxLCpMY9jS2bjY5NjYC2JvM8OJbflFXMEPnfmsv45bpQwxI/yqFUirvaZ&#xa;q3UDbJiC2GaLjYIZUwrQ7ZLZxQcC22rGGusZTQg9RsLWnWxO95WngibRgPy8yklJ&#xa;MtZ5XOcw39SNOAg8WGb/8wbk7pKOwri/pLAwnwrBR46iuwvlOtryZoV3Hw+f/3l/&#xa;NlGccVMPV56cEa3dr/GrSOwmSIdYr4km8uVuw4CtV6uOobSiop1Gontk8RTPA379&#xa;RIDwQeuaNLH6eqqN6e437h/kkMyoPMUsD2j8ssQ/gEECntCsfI659Ymk3J2XcqCI&#xa;k+Gg7W32zJ+XI9QVNQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQB29UWjezCnlBN5&#xa;/KNKacl8zxkKOoOPi43/hbyhGvXKtzlO02jl0759sEROZH8gJZArrh+7x0rGIzQd&#xa;oDfgyOHC9eN5u/A4rdUuzHyW8kC5851NB8xZwgclnjED9Yc+8fG020D5tYh7GZDX&#xa;A3nZcCXualiKLr/laduXvOafxZ0wOlVTg7DZJzTo5yMR0WGT6akz1sF7HJ2Oqlc6&#xa;BfkJ7jirPw29KFquqYpo+d3c+kJ9NdDRyvmKF37+9Yu+kO78+z+sRP3k1HeOWYSN&#xa;cd7HUbHQT4J38zN9J0cSVQLNLiWKJFcXUeAK6rY59z53Egs0oA9QtudvOIV/Tj3W&#xa;HnlNzuU9&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">SplunkServerDefaultCert</elem>
+<elem key="organizationName">SplunkUser</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">SplunkCommonCA</elem>
+<elem key="countryName">US</elem>
+<elem key="emailAddress">support@splunk.com</elem>
+<elem key="localityName">San Francisco</elem>
+<elem key="organizationName">Splunk</elem>
+<elem key="stateOrProvinceName">CA</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">A8C179990994CCF097C4B0A9318F634B66E3639363602D89BCCF0E25B7E51573043E77E6B2FE396E9430C48FF2A85522AEF699AB75036C9882D8668B8D8219530AD0ED92D9C50702DB6AC61AEB194D083D46C2D69D6C4EF795A78226D180FCBCCA494932D6795CE730DFD48D38083C5866FFF306E4EE928EC2B8BFA4B0309F0AC1478EA2BB0BE53ADAF26685771F0F9FFF797F36519C71530F579E9C11ADDDAFF1AB48EC26488758AF8926F2E56EC380AD57AB8EA1B4A2A29D46A27B64F114CF037EFD4480F041EB9A34B1FA7AAA8DE9EE37EE1FE490CCA83CC52C0F68FCB2C43F8041029ED0AC7C8EB9F589A4DC9D9772A08893E1A0ED6DF6CC9F9723D41535</elem>
+<elem key="exponent">65537</elem>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2021-06-08T20:39:32</elem>
+<elem key="notAfter">2024-06-07T20:39:32</elem>
+</table>
+<elem key="md5">1aee7d33a232f0baef08c1fcbbe13189</elem>
+<elem key="sha1">0be8243b9dab8c8f0d8d30e48d2012dbd272491e</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDMjCCAhoCCQDQwBFYjvi9JjANBgkqhkiG9w0BAQsFADB/MQswCQYDVQQGEwJV&#xa;UzELMAkGA1UECAwCQ0ExFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xDzANBgNVBAoM&#xa;BlNwbHVuazEXMBUGA1UEAwwOU3BsdW5rQ29tbW9uQ0ExITAfBgkqhkiG9w0BCQEW&#xa;EnN1cHBvcnRAc3BsdW5rLmNvbTAeFw0yMTA2MDgyMDM5MzJaFw0yNDA2MDcyMDM5&#xa;MzJaMDcxIDAeBgNVBAMMF1NwbHVua1NlcnZlckRlZmF1bHRDZXJ0MRMwEQYDVQQK&#xa;DApTcGx1bmtVc2VyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqMF5&#xa;mQmUzPCXxLCpMY9jS2bjY5NjYC2JvM8OJbflFXMEPnfmsv45bpQwxI/yqFUirvaZ&#xa;q3UDbJiC2GaLjYIZUwrQ7ZLZxQcC22rGGusZTQg9RsLWnWxO95WngibRgPy8yklJ&#xa;MtZ5XOcw39SNOAg8WGb/8wbk7pKOwri/pLAwnwrBR46iuwvlOtryZoV3Hw+f/3l/&#xa;NlGccVMPV56cEa3dr/GrSOwmSIdYr4km8uVuw4CtV6uOobSiop1Gontk8RTPA379&#xa;RIDwQeuaNLH6eqqN6e437h/kkMyoPMUsD2j8ssQ/gEECntCsfI659Ymk3J2XcqCI&#xa;k+Gg7W32zJ+XI9QVNQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQB29UWjezCnlBN5&#xa;/KNKacl8zxkKOoOPi43/hbyhGvXKtzlO02jl0759sEROZH8gJZArrh+7x0rGIzQd&#xa;oDfgyOHC9eN5u/A4rdUuzHyW8kC5851NB8xZwgclnjED9Yc+8fG020D5tYh7GZDX&#xa;A3nZcCXualiKLr/laduXvOafxZ0wOlVTg7DZJzTo5yMR0WGT6akz1sF7HJ2Oqlc6&#xa;BfkJ7jirPw29KFquqYpo+d3c+kJ9NdDRyvmKF37+9Yu+kO78+z+sRP3k1HeOWYSN&#xa;cd7HUbHQT4J38zN9J0cSVQLNLiWKJFcXUeAK6rY59z53Egs0oA9QtudvOIV/Tj3W&#xa;HnlNzuU9&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="47001"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="49664"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49665"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49666"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49667"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49669"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49673"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49675"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49688"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="135"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="42174"/>
+<osmatch name="IPCop 2 firewall (Linux 3.4)" accuracy="87" line="62225">
+<osclass type="firewall" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+<osclass type="firewall" vendor="IPCop" osfamily="IPCop" osgen="2.X" accuracy="87"><cpe>cpe:/o:ipcop:ipcop:2</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.2" accuracy="87" line="65086">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:3.2</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.9" accuracy="87" line="67972">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:4.9</cpe></osclass>
+</osmatch>
+<osmatch name="IPCop 2.0 (Linux 2.6.32)" accuracy="86" line="47615">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="86"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+<osclass type="firewall" vendor="IPCop" osfamily="IPCop" osgen="2.X" accuracy="86"><cpe>cpe:/o:ipcop:ipcop:2.0</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32" accuracy="86" line="56141">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="86"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Tiandy NVR" accuracy="86" line="102656">
+<osclass type="media device" vendor="Tiandy" osfamily="embedded" accuracy="86"/>
+</osmatch>
+<osmatch name="Android 5.0.1" accuracy="86" line="31567">
+<osclass type="phone" vendor="Google" osfamily="Android" osgen="5.X" accuracy="86"><cpe>cpe:/o:google:android:5.0.1</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.18" accuracy="86" line="64486">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="86"><cpe>cpe:/o:linux:linux_kernel:3.18</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2012" accuracy="85" line="75542">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="85"><cpe>cpe:/o:microsoft:windows_server_2012</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2012 or Windows Server 2012 R2" accuracy="85" line="75675">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="85"><cpe>cpe:/o:microsoft:windows_server_2012:r2</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.91%E=4%D=12/9%OT=135%CT=1%CU=42174%PV=Y%DS=2%DC=T%G=Y%TM=61B26A&#xa;OS:59%P=x86_64-pc-linux-gnu)SEQ(SP=FE%GCD=1%ISR=10F%TS=U)OPS(O1=M4ECNW8NNS%&#xa;OS:O2=M4ECNW8NNS%O3=M4ECNW8%O4=M4ECNW8NNS%O5=M4ECNW8NNS%O6=M4ECNNS)WIN(W1=F&#xa;OS:FFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FF70)ECN(R=Y%DF=Y%T=80%W=FFFF%O=M&#xa;OS:4ECNW8NNS%CC=Y%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T&#xa;OS:4(R=N)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T5(R=N)T6(R=N)T7(R=N&#xa;OS:)U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=N)&#xa;"/>
+</os>
+<distance value="2"/>
+<tcpsequence index="254" difficulty="Good luck!" values="7D4B4743,E69DD0E2,342FACA9,7551A5F4,163415B1,9DFB23D8"/>
+<ipidsequence class="Busy server or unknown class" values="F91E,F9C8,FA73,FB25,FBCC,FC71"/>
+<tcptssequence class="none returned (unsupported)"/>
+<hostscript><script id="clock-skew" output="mean: 1h35m58s, deviation: 3h34m39s, median: -1s"><elem key="stddev">12879</elem>
+<elem key="count">5</elem>
+<elem key="median">-1</elem>
+<elem key="mean">5758</elem>
+</script><script id="nbstat" output="NetBIOS name: CFO-LAPTOP, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 06:d3:9a:8a:39:5d (unknown)&#xa;Names:&#xa;  CFO-LAPTOP&lt;00&gt;       Flags: &lt;unique&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;00&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;  CFO-LAPTOP&lt;20&gt;       Flags: &lt;unique&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1e&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1d&gt;        Flags: &lt;unique&gt;&lt;active&gt;&#xa;  \x01\x02__MSBROWSE__\x02&lt;01&gt;  Flags: &lt;group&gt;&lt;active&gt;&#xa;Statistics:&#xa;  06 d3 9a 8a 39 5d 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00"/><script id="p2p-conficker" output="&#xa;  Checking for Conficker.C or higher...&#xa;  Check 1 (port 49357/tcp): CLEAN (Couldn&apos;t connect)&#xa;  Check 2 (port 24405/tcp): CLEAN (Couldn&apos;t connect)&#xa;  Check 3 (port 26718/udp): CLEAN (Failed to receive data)&#xa;  Check 4 (port 18369/udp): CLEAN (Timeout)&#xa;  0/4 checks are positive: Host is CLEAN or ports are blocked&#xa;"/><script id="smb-os-discovery" output="&#xa;  OS: Windows Server 2019 Standard Evaluation 17763 (Windows Server 2019 Standard Evaluation 6.3)&#xa;  Computer name: CFO-LAPTOP&#xa;  NetBIOS computer name: CFO-LAPTOP\x00&#xa;  Workgroup: WORKGROUP\x00&#xa;  System time: 2021-12-09T12:42:56-08:00&#xa;"><elem key="os">Windows Server 2019 Standard Evaluation 17763</elem>
+<elem key="lanmanager">Windows Server 2019 Standard Evaluation 6.3</elem>
+<elem key="server">CFO-LAPTOP\x00</elem>
+<elem key="date">2021-12-09T12:42:56-08:00</elem>
+<elem key="fqdn">CFO-LAPTOP</elem>
+<elem key="domain_dns">CFO-LAPTOP</elem>
+<elem key="workgroup">WORKGROUP\x00</elem>
+</script><script id="smb-security-mode" output="&#xa;  account_used: &lt;blank&gt;&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">&lt;blank&gt;</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2021-12-09T20:42:57&#xa;  start_date: N/A"><elem key="date">2021-12-09T20:42:57</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><trace port="1025" proto="tcp">
+<hop ttl="1" ipaddr="172.27.232.1" rtt="19.20"/>
+<hop ttl="2" ipaddr="10.0.0.206" rtt="19.26"/>
+</trace>
+<times srtt="27666" rttvar="7436" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1639082585"/>
+<taskend task="NSE" time="1639082585"/>
+<taskbegin task="NSE" time="1639082585"/>
+<taskend task="NSE" time="1639082585"/>
+<taskbegin task="NSE" time="1639082585"/>
+<taskend task="NSE" time="1639082585"/>
+<runstats><finished time="1639082585" timestr="Thu Dec  9 15:43:05 2021" summary="Nmap done at Thu Dec  9 15:43:05 2021; 1 IP address (1 host up) scanned in 130.36 seconds" elapsed="130.36" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
