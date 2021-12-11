@@ -1,5 +1,24 @@
 # Hackers (1995)
-401d3 Final Project
+## 401d3 Final Project
+Perform a penetration test on given AWS network over VPN using Kali and various tools.
+
+### Tools
+- AutoRecon
+- Nmap
+- Nikto
+- Mimikatz
+- Hydra
+- OWASP ZAP
+- BurpSuite
+
+### Targets
+- 10.0.0.74
+- 10.0.0.82
+- 10.0.0.123
+- 10.0.0.126
+- 10.0.0.175
+- 10.0.0.197
+- 10.0.0.206
 
 ## What We Offer
 
