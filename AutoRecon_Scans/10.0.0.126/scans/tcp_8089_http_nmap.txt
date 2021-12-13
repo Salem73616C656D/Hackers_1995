@@ -1,0 +1,186 @@
+# Nmap 7.91 scan initiated Mon Dec 13 14:19:00 2021 as: nmap -vv --reason -Pn -sV -p 8089 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /home/kali/results/10.0.0.126/scans/tcp_8089_http_nmap.txt -oX /home/kali/results/10.0.0.126/scans/xml/tcp_8089_https_nmap.xml 10.0.0.126
+Nmap scan report for 10.0.0.126
+Host is up, received user-set (0.067s latency).
+Scanned at 2021-12-13 14:19:01 EST for 366s
+
+PORT     STATE SERVICE  REASON          VERSION
+8089/tcp open  ssl/http syn-ack ttl 127 Splunkd httpd
+| http-auth-finder: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.0.0.126
+|   url                                                         method
+|   https://10.0.0.126:8089/servicesNS                          HTTP: Basic
+|   https://10.0.0.126:8089/services                            HTTP: Basic
+|_  https://10.0.0.126:8089/services/auth/user/%7batom:name%7d  HTTP: Basic
+|_http-chrono: Request times for /; avg: 420.40ms; min: 414.62ms; max: 424.15ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.0.0.126
+|     
+|     Path: https://10.0.0.126:8089/
+|     Line number: 2
+|     Comment: 
+|         <!--This is to override browser formatting; see server.conf[httpServer] to disable. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .-->
+|     
+|     Path: https://10.0.0.126:8089/static/atom.xsl
+|     Line number: 2
+|     Comment: 
+|_        <!--  -->
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.0.0.126
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: https://10.0.0.126:8089/static/atom.xsl
+|     Form id: controlpoint{position()}
+|_    Form action: {@href}
+|_http-date: Mon, 13 Dec 2021 19:20:12 GMT; -15s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /robots.txt: Robots file
+|_  /services/: Potentially interesting folder (401 Unauthorized)
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=10.0.0.126
+|   Found the following error pages: 
+|   
+|   Error Code: 401
+|   	https://10.0.0.126:8089/services/auth/user/%7batom:name%7d
+|   
+|   Error Code: 401
+|   	https://10.0.0.126:8089/services
+|   
+|   Error Code: 401
+|   	https://10.0.0.126:8089/servicesNS
+|   
+|   Error Code: 404
+|   	https://10.0.0.126:8089/static
+|   
+|   Error Code: 404
+|   	https://10.0.0.126:8089/rpc
+|   
+|   Error Code: 404
+|   	https://10.0.0.126:8089/static/%7batom:link%5b@rel=
+|   
+|   Error Code: 404
+|_  	https://10.0.0.126:8089/static/%7b@href%7d
+| http-feed: 
+| Spidering limited to: maxpagecount=40; withinhost=10.0.0.126
+|   Found the following feeds: 
+|_    Atom (version 8.2.0): https://10.0.0.126:8089/
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   Date: Mon, 13 Dec 2021 19:20:36 GMT
+|   Content-Type: text/xml; charset=UTF-8
+|   X-Content-Type-Options: nosniff
+|   Content-Length: 2168
+|   Connection: Close
+|   X-Frame-Options: SAMEORIGIN
+|   Server: Splunkd
+|   
+|_  (Request type: HEAD)
+|_http-iis-webdav-vuln: WebDAV is DISABLED. Server is not currently vulnerable.
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash 7a837ea5bb65c752c52bdebd03eaed87
+|_Credits query returned unknown hash 7a837ea5bb65c752c52bdebd03eaed87
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-robots.txt: 1 disallowed entry 
+|_/
+| http-security-headers: 
+|   Strict_Transport_Security: 
+|     HSTS not configured in HTTPS Server
+|   X_Frame_Options: 
+|     Header: X-Frame-Options: SAMEORIGIN
+|     Description: The browser must not display this content in any frame from a page of different origin than the content itself.
+|   X_Content_Type_Options: 
+|     Header: X-Content-Type-Options: nosniff
+|_    Description: Will prevent the browser from MIME-sniffing a response away from the declared content-type. 
+|_http-server-header: Splunkd
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1
+|     /static/
+|       xsl: 1
+|   Longest directory structure:
+|     Depth: 1
+|     Dir: /static/
+|   Total files found (by extension):
+|_    Other: 1; xsl: 1
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: splunkd
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_128 names had status 200
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+| ssl-cert: Subject: commonName=SplunkServerDefaultCert/organizationName=SplunkUser
+| Issuer: commonName=SplunkCommonCA/organizationName=Splunk/stateOrProvinceName=CA/countryName=US/localityName=San Francisco/emailAddress=support@splunk.com
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-12-03T21:43:44
+| Not valid after:  2024-12-02T21:43:44
+| MD5:   d82f 566a 969f 6944 2c48 8df2 8158 77bd
+| SHA-1: 0e01 6dc8 93cb 27f5 3dfb 3c55 aac4 3bf2 11b9 e0a1
+| -----BEGIN CERTIFICATE-----
+| MIIDMjCCAhoCCQDyjf5yluJp5TANBgkqhkiG9w0BAQsFADB/MQswCQYDVQQGEwJV
+| UzELMAkGA1UECAwCQ0ExFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xDzANBgNVBAoM
+| BlNwbHVuazEXMBUGA1UEAwwOU3BsdW5rQ29tbW9uQ0ExITAfBgkqhkiG9w0BCQEW
+| EnN1cHBvcnRAc3BsdW5rLmNvbTAeFw0yMTEyMDMyMTQzNDRaFw0yNDEyMDIyMTQz
+| NDRaMDcxIDAeBgNVBAMMF1NwbHVua1NlcnZlckRlZmF1bHRDZXJ0MRMwEQYDVQQK
+| DApTcGx1bmtVc2VyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApiNn
+| ZAMyj4HjCXh7tKdqJKd4Cadqbql/VlToJvngdhrCDjKAt4S8zQFY3k6v8OR/xk1M
+| /BGKAkyiVCffxoYME4zHCgtx3qDP9WQTeaeNQAcp9tn3YgQFHWOPkDkaWhjoNZLK
+| ytz24Qqnsr5eA8DVPgAyPTNz69dlMdxVRIF4t1nJe4P5ay06Oe8tCqXSs6LQxBkQ
+| 3piBlkk9Qx7GdqC92nzkCBr6OzjtIcVgrRsw2QfRrcHCMqrqcTldhn0Djf5oT4Bf
+| xQMvNcGYWXxafHuaDopa2ggKMCioRamzv2ReU4cN0v1w9WsZrLOU2/35W447MLa4
+| toUT7z+mLkN4lx1cnQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQDH322uGXWH5CFT
+| 1O8fCfEIUXp+GdG1sCPwwYD1pd0XpYUljER3Nu1er+oyYTydzZSd/jZlNd/8hVRr
+| IMavG/ZaQXt+vpFSEWT6RpEL2+v19nx2HgqR+cXm6ZBlsYFlUWGlqQXFFvn8TRYD
+| uikUCkRMR9ra5osRyJrzM2BjuCmIY9r5+K9WcVmlmhM/i3ZSnlX03FHPLV+ChgZw
+| 2CAxmNSiHIRmLV5HWWQgxFyRib10XylIi2zN9ZXlBt1h1Y8AoR2gMjVExU5egMPi
+| bbanBE2zroWEHNUj5kk+RwgxY1ddeXGyZESf7+MpkSRNxn3Jg/XFxq23x6WvBh0l
+| 7EAWe1pb
+|_-----END CERTIFICATE-----
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|     compressors: 
+|       DEFLATE
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+|_sslv2-drown: 
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Dec 13 14:25:07 2021 -- 1 IP address (1 host up) scanned in 366.69 seconds

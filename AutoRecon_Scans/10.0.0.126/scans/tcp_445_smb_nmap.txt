@@ -1,0 +1,87 @@
+# Nmap 7.91 scan initiated Mon Dec 13 14:18:57 2021 as: nmap -vv --reason -Pn -sV -p 445 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args=unsafe=1 -oN /home/kali/results/10.0.0.126/scans/tcp_445_smb_nmap.txt -oX /home/kali/results/10.0.0.126/scans/xml/tcp_445_smb_nmap.xml 10.0.0.126
+Nmap scan report for 10.0.0.126
+Host is up, received user-set (0.071s latency).
+Scanned at 2021-12-13 14:18:57 EST for 73s
+
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 127 Windows Server 2019 Standard Evaluation 17763 microsoft-ds
+|_smb-enum-services: ERROR: Script execution failed (use -d to debug)
+Service Info: OS: Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| nbstat: NetBIOS name: ACCOUNTING1, NetBIOS user: <unknown>, NetBIOS MAC: 06:7f:63:8b:d1:63 (unknown)
+| Names:
+|   ACCOUNTING1<00>      Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   ACCOUNTING1<20>      Flags: <unique><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+| Statistics:
+|   06 7f 63 8b d1 63 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+| smb-enum-shares: 
+|   note: ERROR: Enumerating shares failed, guessing at common ones (NT_STATUS_ACCESS_DENIED)
+|   account_used: <blank>
+|   \\10.0.0.126\ADMIN$: 
+|     warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED
+|     Anonymous access: <none>
+|   \\10.0.0.126\C$: 
+|     warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED
+|     Anonymous access: <none>
+|   \\10.0.0.126\IPC$: 
+|     warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED
+|_    Anonymous access: READ
+| smb-mbenum: 
+|_  ERROR: Call to Browser Service failed with status = 2184
+| smb-os-discovery: 
+|   OS: Windows Server 2019 Standard Evaluation 17763 (Windows Server 2019 Standard Evaluation 6.3)
+|   Computer name: accounting1
+|   NetBIOS computer name: ACCOUNTING1\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2021-12-13T11:19:05-08:00
+|_smb-print-text: false
+| smb-protocols: 
+|   dialects: 
+|     NT LM 0.12 (SMBv1) [dangerous, but default]
+|     2.02
+|     2.10
+|     3.00
+|     3.02
+|_    3.11
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb-vuln-ms10-061: NT_STATUS_ACCESS_DENIED
+| smb2-capabilities: 
+|   2.02: 
+|     Distributed File System
+|   2.10: 
+|     Distributed File System
+|     Leasing
+|     Multi-credit operations
+|   3.00: 
+|     Distributed File System
+|     Leasing
+|     Multi-credit operations
+|   3.02: 
+|     Distributed File System
+|     Leasing
+|     Multi-credit operations
+|   3.11: 
+|     Distributed File System
+|     Leasing
+|_    Multi-credit operations
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2021-12-13T19:19:05
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Dec 13 14:20:10 2021 -- 1 IP address (1 host up) scanned in 73.79 seconds

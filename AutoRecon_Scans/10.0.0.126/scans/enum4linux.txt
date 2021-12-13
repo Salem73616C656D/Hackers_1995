@@ -1,0 +1,34 @@
+Starting enum4linux v0.8.9 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Mon Dec 13 14:18:57 2021
+
+ ========================== 
+|    Target Information    |
+ ========================== 
+Target ........... 10.0.0.126
+RID Range ........ 500-550,1000-1050
+Username ......... ''
+Password ......... ''
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
+
+
+ ================================================== 
+|    Enumerating Workgroup/Domain on 10.0.0.126    |
+ ================================================== 
+[+] Got domain/workgroup name: WORKGROUP
+
+ ========================================== 
+|    Nbtstat Information for 10.0.0.126    |
+ ========================================== 
+Looking up status of 10.0.0.126
+	ACCOUNTING1     <00> -         B <ACTIVE>  Workstation Service
+	WORKGROUP       <00> - <GROUP> B <ACTIVE>  Domain/Workgroup Name
+	ACCOUNTING1     <20> -         B <ACTIVE>  File Server Service
+	WORKGROUP       <1e> - <GROUP> B <ACTIVE>  Browser Service Elections
+	WORKGROUP       <1d> -         B <ACTIVE>  Master Browser
+	..__MSBROWSE__. <01> - <GROUP> B <ACTIVE>  Master Browser
+
+	MAC Address = 06-7F-63-8B-D1-63
+
+ =================================== 
+|    Session Check on 10.0.0.126    |
+ =================================== 
+[E] Server doesn't allow session using username '', password ''.  Aborting remainder of tests.

@@ -1,0 +1,170 @@
+# Nmap 7.91 scan initiated Mon Dec 13 14:18:04 2021 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /home/kali/results/10.0.0.126/scans/_full_tcp_nmap.txt -oX /home/kali/results/10.0.0.126/scans/xml/_full_tcp_nmap.xml 10.0.0.126
+adjust_timeouts2: packet supposedly had rtt of -227984 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -227984 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -481179 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -481179 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -197785 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -197785 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -211258 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -211258 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -649143 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -649143 microseconds.  Ignoring time.
+Nmap scan report for 10.0.0.126
+Host is up, received user-set (0.067s latency).
+Scanned at 2021-12-13 14:18:05 EST for 178s
+Not shown: 65520 closed ports
+Reason: 65520 resets
+PORT      STATE SERVICE       REASON          VERSION
+135/tcp   open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+139/tcp   open  netbios-ssn   syn-ack ttl 127 Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds  syn-ack ttl 127 Windows Server 2019 Standard Evaluation 17763 microsoft-ds
+3389/tcp  open  ms-wbt-server syn-ack ttl 127 Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: ACCOUNTING1
+|   NetBIOS_Domain_Name: ACCOUNTING1
+|   NetBIOS_Computer_Name: ACCOUNTING1
+|   DNS_Domain_Name: accounting1
+|   DNS_Computer_Name: accounting1
+|   Product_Version: 10.0.17763
+|_  System_Time: 2021-12-13T19:20:54+00:00
+| ssl-cert: Subject: commonName=accounting1
+| Issuer: commonName=accounting1
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-11-28T21:59:40
+| Not valid after:  2022-05-30T21:59:40
+| MD5:   ab50 31ef af0c e8ec 8bc3 8263 3c6f 4845
+| SHA-1: e791 6501 7721 9409 5d99 b9c4 412b 5634 5dcc 82ed
+| -----BEGIN CERTIFICATE-----
+| MIIC2jCCAcKgAwIBAgIQRXQkK1UXeqhFl/qEyUmLsTANBgkqhkiG9w0BAQsFADAW
+| MRQwEgYDVQQDEwthY2NvdW50aW5nMTAeFw0yMTExMjgyMTU5NDBaFw0yMjA1MzAy
+| MTU5NDBaMBYxFDASBgNVBAMTC2FjY291bnRpbmcxMIIBIjANBgkqhkiG9w0BAQEF
+| AAOCAQ8AMIIBCgKCAQEAz1Ipki4oZq79ArJkVsUH4crcxPYvQJa3fVHA9kDnBeIy
+| Bgf91HWTBATQb2AkkSkGZ2usHa0m+4LdHRZ7PDrpk3K8+idIW5BZquhkKjCGgsQF
+| 0E7Rso4nDJn67XIdaOdhQlmQ3+zVolFIOKZ1lOH7V53g2J9I2p3NSNvtWwRIbH5w
+| a1mkuTcRPBqRK4lVsKn0Gk/Etk2Ym+YOh1dbWBckgtwqa7nzRFs9pfOivur8sUEQ
+| q6yYRnNVFNNRvQniv5bccwLQIUHeKsgc+dYSPwf6YHKZXZuUF7RR3+o0bONoz7RI
+| 6Eg6m3ftRgoKJ1nFa5TmWE0zPwYtJVzN2z/vc80+jQIDAQABoyQwIjATBgNVHSUE
+| DDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBAF+P
+| SZi67uD7mfPC2+nFPN9NmlPuhMAvSrQs9rgAm/lkHEou6X8L7yVeiKH9ZRCQsglq
+| XQ9UA6iMgy1N/qqs08znB81KJszlTKfHYRuRommhabXR1rRhtT9AVJj0VShvcar4
+| LYFZnHjRoAsfVYQfNQ6td+HKw1EVcT9SQV8RHym0Eaihj1xmwhNE0jAINFv/wT+C
+| 3COrXV6bDtIS+5vS62Otpa+t9mEy9/YGTsh/3PwhZfIRKpDQMHLVzbK78vsq5iAn
+| MNYG+arxfnvjkhJe0gtLtCmeknkambRgwU0BeGBM6gHLERpb05zkdu3pkJOcYx+B
+| p30wMwwZEMwm9Hy67fk=
+|_-----END CERTIFICATE-----
+|_ssl-date: 2021-12-13T19:21:03+00:00; 0s from scanner time.
+5985/tcp  open  http          syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+8089/tcp  open  ssl/http      syn-ack ttl 127 Splunkd httpd
+| http-methods: 
+|_  Supported Methods: GET HEAD OPTIONS
+| http-robots.txt: 1 disallowed entry 
+|_/
+|_http-server-header: Splunkd
+|_http-title: splunkd
+| ssl-cert: Subject: commonName=SplunkServerDefaultCert/organizationName=SplunkUser
+| Issuer: commonName=SplunkCommonCA/organizationName=Splunk/stateOrProvinceName=CA/countryName=US/localityName=San Francisco/emailAddress=support@splunk.com
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-12-03T21:43:44
+| Not valid after:  2024-12-02T21:43:44
+| MD5:   d82f 566a 969f 6944 2c48 8df2 8158 77bd
+| SHA-1: 0e01 6dc8 93cb 27f5 3dfb 3c55 aac4 3bf2 11b9 e0a1
+| -----BEGIN CERTIFICATE-----
+| MIIDMjCCAhoCCQDyjf5yluJp5TANBgkqhkiG9w0BAQsFADB/MQswCQYDVQQGEwJV
+| UzELMAkGA1UECAwCQ0ExFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xDzANBgNVBAoM
+| BlNwbHVuazEXMBUGA1UEAwwOU3BsdW5rQ29tbW9uQ0ExITAfBgkqhkiG9w0BCQEW
+| EnN1cHBvcnRAc3BsdW5rLmNvbTAeFw0yMTEyMDMyMTQzNDRaFw0yNDEyMDIyMTQz
+| NDRaMDcxIDAeBgNVBAMMF1NwbHVua1NlcnZlckRlZmF1bHRDZXJ0MRMwEQYDVQQK
+| DApTcGx1bmtVc2VyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApiNn
+| ZAMyj4HjCXh7tKdqJKd4Cadqbql/VlToJvngdhrCDjKAt4S8zQFY3k6v8OR/xk1M
+| /BGKAkyiVCffxoYME4zHCgtx3qDP9WQTeaeNQAcp9tn3YgQFHWOPkDkaWhjoNZLK
+| ytz24Qqnsr5eA8DVPgAyPTNz69dlMdxVRIF4t1nJe4P5ay06Oe8tCqXSs6LQxBkQ
+| 3piBlkk9Qx7GdqC92nzkCBr6OzjtIcVgrRsw2QfRrcHCMqrqcTldhn0Djf5oT4Bf
+| xQMvNcGYWXxafHuaDopa2ggKMCioRamzv2ReU4cN0v1w9WsZrLOU2/35W447MLa4
+| toUT7z+mLkN4lx1cnQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQDH322uGXWH5CFT
+| 1O8fCfEIUXp+GdG1sCPwwYD1pd0XpYUljER3Nu1er+oyYTydzZSd/jZlNd/8hVRr
+| IMavG/ZaQXt+vpFSEWT6RpEL2+v19nx2HgqR+cXm6ZBlsYFlUWGlqQXFFvn8TRYD
+| uikUCkRMR9ra5osRyJrzM2BjuCmIY9r5+K9WcVmlmhM/i3ZSnlX03FHPLV+ChgZw
+| 2CAxmNSiHIRmLV5HWWQgxFyRib10XylIi2zN9ZXlBt1h1Y8AoR2gMjVExU5egMPi
+| bbanBE2zroWEHNUj5kk+RwgxY1ddeXGyZESf7+MpkSRNxn3Jg/XFxq23x6WvBh0l
+| 7EAWe1pb
+|_-----END CERTIFICATE-----
+47001/tcp open  http          syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49664/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49665/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49666/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49667/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49669/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49670/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49675/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49687/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+Aggressive OS guesses: Linux 2.6.32 (87%), Linux 3.2 (87%), Tiandy NVR (87%), Microsoft Windows XP SP3 (86%), IPCop 2.0 (Linux 2.6.32) (86%), IPCop 2 firewall (Linux 3.4) (86%), Linux 4.9 (86%), Android 5.0.1 (86%), Linux 3.18 (86%), Microsoft Windows Server 2012 or Windows Server 2012 R2 (85%)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=12/13%OT=135%CT=1%CU=34478%PV=Y%DS=2%DC=T%G=Y%TM=61B79
+OS:D1F%P=x86_64-pc-linux-gnu)SEQ(SP=107%GCD=1%ISR=10F%TS=U)OPS(O1=M4ECNW8NN
+OS:S%O2=M4ECNW8NNS%O3=M4ECNW8%O4=M4ECNW8NNS%O5=M4ECNW8NNS%O6=M4ECNNS)WIN(W1
+OS:=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FF70)ECN(R=Y%DF=Y%T=80%W=FFFF%O
+OS:=M4ECNW8NNS%CC=Y%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N
+OS:)T4(R=N)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=N)T7(R=N)U1(R
+OS:=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=N)
+
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=263 (Good luck!)
+IP ID Sequence Generation: Busy server or unknown class
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 1h36m00s, deviation: 3h34m40s, median: 0s
+| nbstat: NetBIOS name: ACCOUNTING1, NetBIOS user: <unknown>, NetBIOS MAC: 06:7f:63:8b:d1:63 (unknown)
+| Names:
+|   ACCOUNTING1<00>      Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   ACCOUNTING1<20>      Flags: <unique><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+| Statistics:
+|   06 7f 63 8b d1 63 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 14086/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 9479/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 57563/udp): CLEAN (Timeout)
+|   Check 4 (port 22329/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-os-discovery: 
+|   OS: Windows Server 2019 Standard Evaluation 17763 (Windows Server 2019 Standard Evaluation 6.3)
+|   Computer name: accounting1
+|   NetBIOS computer name: ACCOUNTING1\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2021-12-13T11:20:55-08:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2021-12-13T19:20:55
+|_  start_date: N/A
+
+TRACEROUTE (using port 23/tcp)
+HOP RTT      ADDRESS
+1   67.34 ms 172.27.232.1
+2   67.39 ms 10.0.0.126
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Dec 13 14:21:03 2021 -- 1 IP address (1 host up) scanned in 179.14 seconds
