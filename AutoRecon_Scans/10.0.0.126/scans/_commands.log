@@ -1,6 +1,0 @@
-nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN "/home/kali/Desktop/results/10.0.0.126/scans/_full_tcp_nmap.txt" -oX "/home/kali/Desktop/results/10.0.0.126/scans/xml/_full_tcp_nmap.xml" 10.0.0.126
-
-nmap -vv --reason -Pn -sV -sC --version-all -oN "/home/kali/Desktop/results/10.0.0.126/scans/_quick_tcp_nmap.txt" -oX "/home/kali/Desktop/results/10.0.0.126/scans/xml/_quick_tcp_nmap.xml" 10.0.0.126
-
-nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN "/home/kali/Desktop/results/10.0.0.126/scans/_top_20_udp_nmap.txt" -oX "/home/kali/Desktop/results/10.0.0.126/scans/xml/_top_20_udp_nmap.xml" 10.0.0.126
-
